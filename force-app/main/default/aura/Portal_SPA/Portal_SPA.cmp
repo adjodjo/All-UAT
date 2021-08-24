@@ -1,0 +1,138 @@
+<aura:component controller="LightningComponentController" implements="flexipage:availableForAllPageTypes,force:appHostable,force:hasRecordId" access="global">
+    
+     <aura:attribute name="LanguageSetting" type="String" default=""/>
+    <aura:attribute name="recordId" type="String"/>
+    <aura:attribute name="isLang" type="String" default=""/>
+ <aura:attribute name="isOpen" type="boolean" default="false"/> 
+    <aura:attribute name="message" description="Message content, can be HTML" type="String" default=""/>
+    
+    <aura:handler name="init" value="{!this}" action="{!c.SetPortalEIPApp}"/>
+    
+    <aura:if isTrue="{!v.isLang == 'fr' }" >
+
+        <div class="slds-m-around-xx-large" align = "center">
+            
+            <!-- BOXED AREA 1-->
+        <fieldset class="slds-box  slds-container--small">
+        <legend id="newexpenseform" class="slds-text-heading--small 
+          slds-p-vertical--medium">
+          DEMANDE DE RACHAT
+        </legend>
+            
+            <table>
+                <tr align = "center">
+                    <ui:button label="Ouvrir l'application Buyout" press="{!c.openActionWindow}"   />
+                </tr>
+             </table> 
+              </fieldset>  
+          <!-- BOXED AREA 2-->
+        <fieldset class="slds-box  slds-container--medium">
+        <legend id="newexpenseform" class="slds-text-heading--small 
+          slds-p-vertical--medium">
+          LETTRES
+        </legend>
+                <table  style="width:100%; border-spacing:5px">   
+                <tr >
+                    <td align = "center">
+                    	<ui:button label="Créer une lettre ou un lot de lettres" press="{!c.openCreateLetter}"   />
+                    </td>
+                    
+                    <td align = "center">
+                         <ui:button label="Liste des lettres d'un contrat" press="{!c.openContractLetter}"   />
+                    </td>
+                    <td align = "center">
+                         <ui:button label="Liste des lots de lettres" press="{!c.openBatchLetter}"   />                    
+                    </td>
+                </tr>
+            </table>                 
+         </fieldset>           
+                  <!--  <lightning:button label="Open the BUYOUT Application" variant="brand" onclick="{!c.handleOpenInNewWindow}" /> -->
+        </div>
+    </aura:if>
+    
+    <aura:if isTrue="{!v.isLang == 'en' }" >
+
+        <div class="slds-m-around-xx-large" align = "center">
+            
+             <!-- BOXED AREA 1-->
+        <fieldset class="slds-box slds-container--small">
+        <legend id="newexpenseform" class="slds-text-heading--small 
+          slds-p-vertical--medium">
+          BUYOUT
+        </legend>
+            
+            <table>
+                <tr align = "center">
+                    <ui:button label="Open Buyout Application" press="{!c.openActionWindow}"   />
+                </tr>
+             </table> 
+          </fieldset>   
+          <!-- BOXED AREA 2-->
+        <fieldset class="slds-box  slds-container--medium">
+        <legend id="newexpenseform" class="slds-text-heading--small 
+          slds-p-vertical--medium">
+          LETTERS
+        </legend>
+           
+            <table  style="width:100%; border-spacing:5px">   
+                <tr >
+                    <td align = "center">
+                    	<ui:button label="Create a letter or letters batch" press="{!c.openCreateLetter}"   />
+                    </td>
+                    
+                    <td align = "center">
+                         <ui:button label="Contract letters list" press="{!c.openContractLetter}"   />
+                    </td>
+                    <td align = "center">
+                         <ui:button label="Batch letters list" press="{!c.openBatchLetter}"   />                    
+                    </td>
+                </tr>
+            </table>   
+           </fieldset>               
+                  <!--  <lightning:button label="Open the BUYOUT Application" variant="brand" onclick="{!c.handleOpenInNewWindow}" /> -->
+        </div>
+    </aura:if>
+    
+     <aura:if isTrue="{!v.isOpen}">
+
+    <!--###### MODAL BOX Start######--> 
+    <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+        <div class="slds-modal__container">
+            <!-- ###### MODAL BOX HEADER Start ######  bare-inverse
+            <header class="slds-modal__header">
+                <lightning:buttonIcon iconName="utility:close"
+                                    onclick="{! c.closeModel }"
+                                    alternativeText="close"
+                                    variant="brand"
+                                    class="slds-modal__close"/>
+                <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">Case Status</h2>
+            </header>-->
+            <!--###### MODAL BOX BODY Part Start######-->
+            <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                <p>
+                    <aura:unescapedHtml value="{!v.message}"/>
+                </p>
+            </div>
+            <!--###### MODAL BOX FOOTER Part Start ######-->
+            <footer class="slds-modal__footer">
+                <lightning:button variant="neutral" 
+                                label="Cancel"
+                                title="Cancel"
+                                onclick="{! c.closeModel }"/>
+            </footer>
+        </div>
+    </section>
+    <div class="slds-backdrop slds-backdrop_open"></div>
+    <!--###### MODAL BOX Part END Here ######
+
+        <c:sendBuyoutMessage aura:id="SBMComponent" />  -->
+
+    </aura:if>
+
+    
+	<div align="right">
+    Version: 2021.08.01.0
+    </div>
+
+	
+</aura:component>

@@ -1,0 +1,130 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+    
+    <aura:attribute name="ListBuyout" type="Object[]" access="global"/>
+    <aura:attribute name="isLang" type="String" default=""/>
+    
+     <aura:handler name="init" value="{!this}" action="{!c.init}"/>
+    
+     <aura:if isTrue="{!v.isLang == 'en' }" >
+    
+     <div class="slds-text-heading_medium">
+                        Historic Buyout
+                    </div> 
+    <br/>
+     </aura:if>
+    <aura:if isTrue="{!v.isLang == 'fr' }" >
+    
+     <div class="slds-text-heading_medium">
+                        Offre de rachat historisée
+                    </div> 
+    <br/>
+     </aura:if>
+    
+     <div class="slds-box">
+       
+    <table class="slds-table slds-table_cell-buffer slds-table_bordered">
+         <aura:if isTrue="{!v.isLang == 'en' }" >
+        <thead>
+            <tr class="slds-line-height_reset">
+                <th class="" scope="col">
+                    <div class="slds-truncate" title="History Number">History Number</div>
+                </th>
+                <th class="" scope="col">
+                    <div class="slds-truncate" title="History Number">Buyout Number</div>
+                </th>
+                <th class="" scope="col">
+                    <div class="slds-truncate" title="Account">Account</div>
+                </th>
+                
+                <th class="" scope="col">
+                    <div class="slds-truncate" title="Contact">Contact</div>
+                </th>
+                <th class="" scope="col">
+                    <div class="slds-truncate" title="History Number">Infolease Contract</div>
+                </th>
+                <th class="" scope="col">
+                    <div class="slds-truncate" title="History Number">CustId</div>
+                </th>
+                <th class="" scope="col">
+                    <div class="slds-truncate" title="Total Amount">Total Amount</div>
+                </th>
+                <th class="" scope="col">
+                    <div class="slds-truncate" title="Buyout Date">Buyout Date</div>
+                </th>
+                <th class="" scope="col">
+                    <div class="slds-truncate" title="With Invoice">With Invoice</div>
+                </th>
+            </tr>
+        </thead>
+        </aura:if>
+        <aura:if isTrue="{!v.isLang == 'fr' }" >
+        <thead>
+            <tr class="slds-line-height_reset">
+                <th class="" scope="col">
+                    <div class="slds-truncate" title="History Number">Numéro historique</div>
+                </th>
+                <th class="" scope="col">
+                    <div class="slds-truncate" title="History Number">Numéro Offre de rachat</div>
+                </th>
+                <th class="" scope="col">
+                    <div class="slds-truncate" title="Account">Compte</div>
+                </th>
+                
+                <th class="" scope="col">
+                    <div class="slds-truncate" title="Contact">Contact</div>
+                </th>
+                <th class="" scope="col">
+                    <div class="slds-truncate" title="Contact">Contrat Infilease</div>
+                </th>
+                <th class="" scope="col">
+                    <div class="slds-truncate" title="Contact">CustId</div>
+                </th>
+                <th class="" scope="col">
+                    <div class="slds-truncate" title="Total Amount">Montant Total</div>
+                </th>
+                <th class="" scope="col">
+                    <div class="slds-truncate" title="Buyout Date">Date de l'offre</div>
+                </th>
+                <th class="" scope="col">
+                    <div class="slds-truncate" title="With Invoice">Avec Facture</div>
+                </th>
+            </tr>
+        </thead>
+        </aura:if>
+        <tbody>
+            <aura:iteration items="{!v.ListBuyout}" var="hist" >
+                <tr class="slds-hint-parent">
+                    
+                    <td><div class="slds-truncate" title="{!hist.Name}">
+                        <a href="{!'/'+hist.Id}" target="_blank">{!hist.Name}</a></div></td>
+                    <td><div class="slds-truncate" title="{!hist.Buyout_Number__c}">{!hist.Buyout_Number__c}</div></td>
+                    <td><div class="slds-truncate" title="{!hist.Account__r.Name}">{!hist.Account__r.Name}</div></td>
+                    <td><div class="slds-truncate" title="{!hist.Contact__r.Name}">{!hist.Contact__r.Name}</div></td>
+                     <td><div class="slds-truncate" title="{!hist.Contrat_InfoLease__c}">{!hist.Contrat_InfoLease__c}</div></td>
+                     <td><div class="slds-truncate" title="{!hist.CustId__c}">{!hist.CustId__c}</div></td>
+                    <td><lightning:formattedNumber value="{!hist.Buyout_Total_Amount__c}" maximumFractionDigits="2"/></td>
+                    <td><div class="slds-truncate" title="{!hist.Date_Buyout__c}">{!hist.Date_Buyout__c}</div></td>
+                    <td>
+                        <aura:if isTrue="{!hist.With_Invoice__c}">
+                        <lightning:icon iconName="action:approval" alternativeText="Approved" title="Approved" size="xx-small"/>
+                            </aura:if>
+                        
+                         <aura:if isTrue="{! !hist.With_Invoice__c}">
+                        <lightning:icon iconName="action:close" alternativeText="closed" title="closed" size="xx-small"/>
+                        </aura:if>
+                    </td>
+                </tr>
+            </aura:iteration>
+            
+        </tbody>
+    </table>
+        </div> 
+    <!--  
+    <aura:iteration items="{!v.ListBuyout}" var="s">
+            {!s.Name}
+     </aura:iteration>
+        
+   -->
+    
+    
+</aura:component>

@@ -1,0 +1,223 @@
+<aura:component controller="RedirectController" implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,force:hasSObjectName,force:lightningQuickAction" access="global" >
+	<aura:attribute name="isLang" type="String" default=""/>
+    <aura:attribute name="recordId" type="String"/>
+    <aura:attribute name="sobjecttype" type="String" default="{!v.sObjectName}"/>
+    <aura:attribute name="isPopupShow" type="boolean" default="false"/>
+    <aura:attribute name="isPopupShowClosed" type="boolean" default="false"/>
+    <aura:attribute name="isCaseClose" type="boolean" default="true"/>
+    <aura:attribute name="isCaseAssign" type="boolean" default="true"/>
+    <aura:attribute name="isCaseRelated" type="boolean" default="true"/>
+    <aura:attribute name="caseRec" type="Object" />
+    <aura:attribute name="picklistValues" type="String[]" />
+    <aura:attribute name="fieldName" type="String" />
+    <aura:attribute name="statusCase" type="String" />
+    <lightning:workspaceAPI aura:id="workspace"/>
+  
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <lightning:card>
+        <div style="text-align : center;">
+            
+            <aura:if isTrue="{!v.isLang == 'en' }" >
+           
+                <lightning:button label="Assign Me" variant="brand" onclick="{!c.callAssignComponent}" disabled="{! !v.isCaseAssign}" />
+                
+                <lightning:button label="Go To EIP" variant="brand" onclick="{!c.callEIPModule}" disabled="{! !v.isCaseClose}"/>
+                
+                <lightning:button label="On Hold"  variant="brand" onclick="{!c.openPopupHold}" disabled="{! !v.isCaseClose}"/>
+                
+                <lightning:button label="Resolved"  variant="brand" onclick="{!c.openPopup}" disabled="{! !v.isCaseClose}"/>
+                
+                <lightning:button label="Closed"  variant="brand" onclick="{!c.openPopupClosed}"/>
+                
+                <lightning:button label="Open Related Case" variant="brand" onclick="{!c.openRelatedCase}" disabled= "{!v.isCaseRelated}" />
+                
+            
+            </aura:if>
+             <aura:if isTrue="{!v.isLang == 'fr' }" >
+           
+                <lightning:button label="M'assigner" variant="brand" onclick="{!c.callAssignComponent}" disabled="{! !v.isCaseAssign}" />
+                
+                <lightning:button label="Aller à EIP" variant="brand" onclick="{!c.callEIPModule}" disabled="{! !v.isCaseClose}"/>
+                
+                 <lightning:button label="En Attente"  variant="brand" onclick="{!c.openPopupHold}" disabled="{! !v.isCaseClose}"/>
+                
+                <lightning:button label="Résolu"  variant="brand" onclick="{!c.openPopup}" disabled="{! !v.isCaseClose}"/>
+                
+                <lightning:button label="Fermer"  variant="brand" onclick="{!c.openPopupClosed}"/>
+                 
+                <lightning:button label="Ouvrir nouvelle requête" variant="brand" onclick="{!c.openRelatedCase}" disabled= "{!v.isCaseRelated}" />
+            
+            </aura:if>
+        </div>
+        <aura:if isTrue="{!v.isPopupShow}">
+        <div class="slds-m-around_xx-large">
+         <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+                <div class="slds-modal__container">
+                    <!-- Modal/Popup Box Header Starts here-->
+                    <header class="slds-modal__header">
+                        <lightning:buttonIcon iconName="utility:close"
+                                              onclick="{! c.closeModel }"
+                                              alternativeText="close"
+                                              variant="bare-inverse"
+                                              class="slds-modal__close"/>
+                    
+                    </header>
+                    <!--Modal/Popup Box Body Starts here-->
+                    <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                         <aura:if isTrue="{!v.isLang == 'en' }" >
+                             <lightning:recordEditForm aura:id="reviewForm"
+                                                       objectApiName="Case" >
+                                 <div style="line-height:2;">
+                                     Contact Name
+                                     <lightning:inputField variant="label-hidden"  fieldName="ContactId" value="{!v.caseRec.ContactId}"/>
+                                 </div>
+                                 <div >
+                                     Subject
+                                     <lightning:inputField variant="label-hidden"  fieldName="Subject" value="{!v.caseRec.Subject}"/>
+                                 </div> 
+                                 <div >
+                                     <lightning:select aura:id="select" name="resolution"  label="Resolution" value="{!v.caseRec.Resolution__c}" required="true">
+                                          <option value="" text="-- None --" /> 
+                                         <aura:iteration items="{!v.picklistValues}" var="item">                                        
+                                             <option value="{!item}">{!item}</option>
+                                         </aura:iteration>
+                                    </lightning:select>
+                                 </div>
+                                 <div >
+                                     Description
+                                     <lightning:inputField variant="label-hidden"  fieldName="Description" value="{!v.caseRec.Comments}"/>
+                                 </div>
+                            </lightning:recordEditForm>
+                        </aura:if>
+                        
+                         <aura:if isTrue="{!v.isLang == 'fr' }" >
+                             <lightning:recordEditForm aura:id="reviewForm"
+                                                       objectApiName="Case" >
+                                 <div style="line-height:2;">
+                                     Nom du contact
+                                     <lightning:inputField variant="label-hidden"  fieldName="ContactId" value="{!v.caseRec.ContactId}"/>
+                                 </div>
+                                 <div >
+                                     Sujet
+                                     <lightning:inputField variant="label-hidden"  fieldName="Subject" value="{!v.caseRec.Subject}"/>
+                                 </div> 
+                                 <div >
+                                     <lightning:select aura:id="select" name="resolution"  label="Resolution" value="{!v.caseRec.Resolution__c}" required="true">
+                                          <option value="" text="-- None --" /> 
+                                         <aura:iteration items="{!v.picklistValues}" var="item">                                        
+                                             <option value="{!item}">{!item}</option>
+                                         </aura:iteration>
+                                    </lightning:select>
+                                 </div>
+                                 <div >
+                                     Description
+                                     <lightning:inputField variant="label-hidden"  fieldName="Description" value="{!v.caseRec.Comments}"/>
+                                 </div>
+                            </lightning:recordEditForm>
+                        </aura:if>
+                        
+                    </div>
+                    <!--Modal/Popup Box Footer Starts here-->
+                    <footer class="slds-modal__footer">
+                        <lightning:button variant="neutral"
+                                          label="Cancel"
+                                          title="Cancel"
+                                          onclick="{! c.closeModel }"/>
+                        <lightning:button variant="brand"
+                                          label="Save"
+                                          title="Save"
+                                          onclick="{!c.submitDetails}"/>
+                    </footer>
+                </div>
+            </section>
+            <div class="slds-backdrop slds-backdrop_open"></div>
+         <!--</aura:if>-->
+    </div>
+            </aura:if>
+        
+        
+          
+        <aura:if isTrue="{!v.isPopupShowClosed}">
+        <div class="slds-m-around_xx-large">
+         <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+                <div class="slds-modal__container">
+                    <!-- Modal/Popup Box Header Starts here-->
+                    <header class="slds-modal__header">
+                        <lightning:buttonIcon iconName="utility:close"
+                                              onclick="{! c.closeModel }"
+                                              alternativeText="close"
+                                              variant="bare-inverse"
+                                              class="slds-modal__close"/>
+                    
+                    </header>
+                    <!--Modal/Popup Box Body Starts here-->
+                    <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                        
+                         <aura:if isTrue="{!v.isLang == 'en' }" >
+                             
+                             <lightning:recordEditForm aura:id="reviewForm"
+                                                       objectApiName="Case" >
+                                 <div style="line-height:2;">
+                                     Contact Name
+                                     <lightning:inputField variant="label-hidden"  fieldName="ContactId" value="{!v.caseRec.ContactId}"/>
+                                 </div>
+                                 <div >
+                                     Subject
+                                     <lightning:inputField variant="label-hidden"  fieldName="Subject" value="{!v.caseRec.Subject}"/>
+                                 </div> 
+                                 
+                                 <div >
+                                     Description
+                                     <lightning:inputField variant="label-hidden"  fieldName="Description" value="{!v.caseRec.Comments}"/>
+                                 </div>
+                            </lightning:recordEditForm>
+                        
+                        </aura:if>
+                        
+                        <aura:if isTrue="{!v.isLang == 'fr' }" >
+                             
+                             <lightning:recordEditForm aura:id="reviewForm"
+                                                       objectApiName="Case" >
+                                 <div style="line-height:2;">
+                                     Nom du contact
+                                     <lightning:inputField variant="label-hidden"  fieldName="ContactId" value="{!v.caseRec.ContactId}"/>
+                                 </div>
+                                 <div >
+                                     Sujet
+                                     <lightning:inputField variant="label-hidden"  fieldName="Subject" value="{!v.caseRec.Subject}"/>
+                                 </div> 
+                                 
+                                 <div >
+                                     Description
+                                     <lightning:inputField variant="label-hidden"  fieldName="Description" value="{!v.caseRec.Comments}"/>
+                                 </div>
+                            </lightning:recordEditForm>
+                        
+                        </aura:if>
+                        
+                    </div>
+                    <!--Modal/Popup Box Footer Starts here-->
+                    <footer class="slds-modal__footer">
+                        <lightning:button variant="neutral"
+                                          label="Cancel"
+                                          title="Cancel"
+                                          onclick="{! c.closeModel }"/>
+                        <lightning:button variant="brand"
+                                          label="Save"
+                                          title="Save"
+                                          onclick="{!c.submitDetails}"/>
+                    </footer>
+                </div>
+            </section>
+            <div class="slds-backdrop slds-backdrop_open"></div>
+         <!--</aura:if>-->
+    </div>
+            </aura:if>
+        
+        
+        
+        
+        
+        
+        </lightning:card>
+</aura:component>

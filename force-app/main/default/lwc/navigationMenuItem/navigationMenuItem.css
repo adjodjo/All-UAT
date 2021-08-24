@@ -1,0 +1,36 @@
+.nav-item {
+  font-size: 1.231rem;
+  letter-spacing: 0.14px;
+  line-height: 2.6rem;
+}
+
+li>a {
+  display: block;
+  color: #000;
+  padding: 0.385rem 0 .154rem 0;
+  text-decoration: none;
+}
+
+li a.active {
+  color: #E60000;
+}
+
+li a:hover:not(.active) {
+  color: #E60000;
+}
+
+.action-button>a {
+  font-size: 1.077rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  line-height: 1.385rem;
+  font-family: var(--lwc-fontFamily,barlow-medium);
+}
+
+.action-button {
+  height: 3.692rem;
+  background-color: white;
+  padding: .538rem 1.154rem .385rem;
+  border-radius: .385rem;
+  margin-top: 1.154rem;
+}

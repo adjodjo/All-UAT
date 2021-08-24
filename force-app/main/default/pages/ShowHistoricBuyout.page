@@ -1,0 +1,16 @@
+<apex:page showHeader="false" sidebar="false" standardController="Historique__c" recordSetVar="">
+    <apex:includeLightning />    
+    <apex:includeScript value="/lightning/lightning.out.js" />
+    <div id="LightningComponentid" />    
+    <script>
+    $Lightning.use("c:HistoricSearchApp", function() {
+        $Lightning.createComponent("c:HistoricSearch",
+          { 
+          },
+          "LightningComponentid",
+          function(cmp) {
+             console.log('Display Lightning component in visualforce page');
+          });
+    });
+    </script>
+</apex:page>

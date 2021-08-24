@@ -1,0 +1,13 @@
+<template>
+    <template if:true={isActionButton}>
+        <li class={cssClass}><a class={itemCss} href={href} onclick={handleClick}>{item.label}
+            <span class="slds-float_right">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16">
+                    <use xlink:href={svgURL}></use>
+                </svg>
+            </span></a></li>
+    </template>
+    <template if:false={isActionButton}>
+        <li class={cssClass}><a href={href} class={itemCss} onclick={handleClick}>{item.label}</a></li>
+    </template>
+</template>

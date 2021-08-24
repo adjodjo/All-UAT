@@ -1,0 +1,40 @@
+<aura:component controller="ExportExternalDataController" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,force:lightningQuickActionWithoutHeader" access="global" >
+	<aura:handler name="init" action="{!c.doInit}" value="{!this}"/>
+    <aura:attribute name="applicationData" type="List"/>
+    <aura:attribute name="recordId" type="String"/>
+    <aura:attribute name="selectedApp" type="String"/>
+    <aura:attribute name="spinner" type="boolean" default="false"/>
+    <aura:if isTrue="{!v.spinner}">
+        <div class="exampleHolder">
+            <lightning:spinner alternativeText="Loading" size="small" />
+        </div>
+    </aura:if>
+    <div class="slds-m-around--medium slds-align_absolute-center">
+     <div class="slds-container--medium">
+            <div class="slds-form--stacked">
+       
+        <div class="slds-modal__container">
+                    <!-- ###### MODAL BOX HEADER Start ######-->
+            <div class="modal-header slds-modal__header slds-size_1-of-1">
+                <h4 class="title slds-text-heading--medium">External Applications</h4>
+            </div>        
+    
+    </div>
+                
+                <div style="font-size: large;">
+                External Applications
+                </div>
+                <lightning:radioGroup name="radioGroup"
+                                      options="{! v.applicationData }"
+                                      value="{! v.selectedApp }"
+                                      type="radio"
+                                      />
+         </div>
+        
+   <div class="slds-size_1-of-1" style="text-align:center;margin-top:50px;">
+            <lightning:button  label="Cancel" title="Cancel" class="slds-button slds-button_neutral" onclick="{!c.backOnRecord}"/>            
+            <lightning:button variant="brand" label="Export" title="Export" onclick="{!c.exportData}"/>
+        </div>
+    </div>
+        </div>
+</aura:component>

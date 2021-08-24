@@ -1,0 +1,193 @@
+<aura:component controller="historicSearchController" implements="force:lightningQuickActionWithoutHeader,flexipage:availableForAllPageTypes" access="global">
+    
+    <aura:attribute name="isLang" type="String" default=""/>
+   
+    <aura:attribute name="isExist" type="boolean" default="false"/>
+    <aura:attribute name="historycontact" type="String" />
+    <aura:attribute name="historycontract" type="String" />
+    <aura:attribute name="historycode" type="List" />
+    <aura:attribute name="historyaccount" type="String" />
+    <aura:attribute name="historyBuyoutNum" type="String" />
+    <aura:attribute name="historyamount" type="Double" />
+    <aura:attribute name="historyvariance" type="Double" />
+    <aura:attribute name="historystartdate" type="Date" />
+    <aura:attribute name="historyenddate" type="Date" />
+    <aura:attribute name="historyinvoice" type="boolean" default="false"/>
+    <aura:attribute name="HistoriesBuyout" type="Object[]" access="global"/>
+    
+    <aura:handler name="init" value="{!this}" action="{!c.SetSearchLang}"/>
+    
+    <aura:if isTrue="{!v.isLang == 'en' }" >
+    
+    
+    <form class="slds-form--stacked" align = "">
+        <div class="slds-form-element slds-form-element_vertical slds-is-editing" >
+            
+            <div class="slds-grid slds-wrap">
+                <div class="slds-col slds-size_1-of-3">
+                    <br/>
+                    <div class="slds-text-heading_medium">
+                        Search Buyout
+                    </div>
+                    <br/>
+                    <div class="slds-box"> 
+                        
+                        <lightning:input aura:id="historyBuyoutNum" label="Buyout Number"
+                                         name="buyout" value="{!v.historyBuyoutNum}" default = "null"/>
+                        
+                        <lightning:input aura:id="historycontract" label="Contract Number"
+                                         name="contract" value="{!v.historycontract}" default = "null"/>
+
+                        
+                        <lightning:input aura:id="historyAccount" label="Account Name"
+                                         name="account" value="{!v.historyaccount}" default = "null"/>
+                        
+                        <lightning:input aura:id="historyContact" label="Contact Name"
+                                         name="contact" value="{!v.historycontact}" default = "null"/>
+                        
+                         <table>
+                            <tr>
+                                <td>
+                                    <lightning:input type= "Date" aura:id="historystartdate" label="Start Date"
+                                                     name="startDate" value="{!v.historystartdate}" default = "null"/>
+                                </td>                    
+                                <td>
+                                    <lightning:input type= "Date" aura:id="historyenddate" label="End Date"
+                                                     name="endDate" value="{!v.historyenddate}" default = "null"/>
+                                </td>
+                            </tr>
+                             <tr>
+                                  <td>
+                                  </td>
+                             </tr>
+                            
+                        </table>
+                        
+                        <table>
+                            <tr>
+                                <td>
+                                    <lightning:input type= "Double" aura:id="historyamount" label="Buyout Amount"
+                                                     name="amount" value="{!v.historyamount}" placeholder = "0" maximumFractionDigits="2"/>
+                                </td>                    
+                                <td>
+                                    <lightning:input type= "Integer" aura:id="historyvariance" label="+/- Amount"
+                                                     name="amountvar" value="{!v.historyvariance}" placeholder = "125" />
+                                </td>
+                            </tr>
+                             <tr>
+                                <td>
+                                    <lightning:input type="checkbox" label="With Invoice" name="invoice" value="{!v.historyinvoice}" checked="{!v.historyinvoice}"/>
+                                </td>                    
+                                <td>                                   
+                                </td>
+                            </tr>
+                        </table>
+                       
+                        <lightning:button label="Search Buyout" 
+                                          class="slds-m-top--medium"
+                                          variant="brand"
+                                          onclick="{!c.searchBuyout}"/>
+                        <lightning:button label="Reset" 
+                                          class="slds-m-top--medium"
+                                          variant="neutral"
+                                          onclick="{!c.resetsearch}"/>
+                    </div>
+                </div> </div> </div>
+    </form>
+         </aura:if>
+    
+    <aura:if isTrue="{!v.isLang == 'fr' }" >
+        
+        <form class="slds-form--stacked" align = "">
+        <div class="slds-form-element slds-form-element_vertical slds-is-editing" >
+            
+            <div class="slds-grid slds-wrap">
+                <div class="slds-col slds-size_1-of-3">
+                    
+                    <div class="slds-text-heading_medium">
+                        Recherche Offre d'achat
+                    </div>
+                    <div class="slds-box"> 
+                        
+                        <lightning:input aura:id="historyBuyoutNum" label="Numéro de l'offre"
+                                         name="buyout" value="{!v.historyBuyoutNum}" default = "null"/>
+                        
+                        <lightning:input aura:id="historycontract" label="Numéro de contrat"
+                                         name="contract" value="{!v.historycontract}" default = "null"/>
+
+                        
+                        <lightning:input aura:id="historyAccount" label="Nom du Compte"
+                                         name="account" value="{!v.historyaccount}" default = "null"/>
+                        
+                        <lightning:input aura:id="historyContact" label="Non du contact"
+                                         name="contact" value="{!v.historycontact}" default = "null"/>
+                        
+                        <table>
+                            <tr>
+                                <td>
+                                    <lightning:input type= "Date" aura:id="historystartdate" label="Date de début pour l'offre"
+                                                     name="startDate" value="{!v.historystartdate}" default = "null"/>
+                                </td>                    
+                                <td>
+                                    <lightning:input type= "Date" aura:id="historyenddate" label="Date de fin pour l'offre"
+                                                     name="endDate" value="{!v.historyenddate}" default = "null"/>
+                                </td>
+                            </tr>
+                            
+                        </table>
+                        
+                        <table>
+                            <tr>
+                                <td>
+                                    <lightning:input type= "Double" aura:id="historyamount" label="Montant de l'offre"
+                                                     name="amount" value="{!v.historyamount}" placeholder = "0"/>
+                                </td>                    
+                                <td>
+                                    <lightning:input type= "Integer" aura:id="historyvariance" label="+/- Montant"
+                                                     name="amountvar" value="{!v.historyvariance}" placeholder = "125" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <lightning:input type="checkbox" label="Avec facture" name="invoice" value="{!v.historyinvoice}" checked="{!v.historyinvoice}" />
+                                </td>                    
+                                <td>                                   
+                                </td>
+                            </tr>
+                        </table>
+                        
+                        
+                        <lightning:button label="Recherche Offre" 
+                                          class="slds-m-top--medium"
+                                          variant="brand"
+                                          onclick="{!c.searchBuyout}"/>
+                        <lightning:button label="initialiser" 
+                                          class="slds-m-top--medium"
+                                          variant="neutral"
+                                          onclick="{!c.resetsearch}"/>
+                    </div>
+                </div> </div> </div>
+    </form>
+        
+        
+        </aura:if>
+    
+    <br/><br/> 
+    <aura:if isTrue="{!v.HistoriesBuyout.length > 0}">
+        
+        <c:Histories_Record ListBuyout="{!v.HistoriesBuyout}"/>
+        
+    </aura:if>
+    
+    <aura:if isTrue="{!v.isExist}">
+        <br/><br/>
+        <aura:if isTrue="{!v.isLang == 'en' }" >
+        No History available for these criteria ...
+        </aura:if>
+        <aura:if isTrue="{!v.isLang == 'fr' }" >
+        Aucune Historique disponible pour ces critères ...
+        </aura:if>
+    </aura:if>
+    
+   
+</aura:component>

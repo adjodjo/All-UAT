@@ -1,0 +1,119 @@
+<template>
+    <div>
+        <nav role="navigation">
+            <div class={menuToggle}>
+                <input onchange={handleChange} class="checkbox-hamburger" type="checkbox" />
+                <span></span>
+                <span></span>
+                <span></span>
+                <ul class="menu">
+
+                    <div class="action_buttons slds-var-m-top_large">
+                        <template if:true={action_menu_items} for:each={action_menu_items} for:item="button">
+                            <c-navigation-menu-item item={button} key={button.navMenuItem.Id} index={index}>
+                            </c-navigation-menu-item>
+                        </template>
+
+                        <li if:true={home} class="nav-item slds-var-m-top_small home-font-weight">
+                            <a class={homeActive} href="#" onclick={handleHomeClick}>{home.label}</a>
+                        </li>
+
+                        <template if:true={request_items} for:each={request_items} for:item="button" for:index="index">
+                            <c-navigation-menu-item item={button} key={button.navMenuItem.Id} index={index}>
+                            </c-navigation-menu-item>
+                        </template>
+
+                        <template if:true={company_info_items} for:each={company_info_items} for:item="button"
+                            for:index="index">
+                            <c-navigation-menu-item item={button} key={button.navMenuItem.Id} index={index}>
+                            </c-navigation-menu-item>
+                        </template>
+
+                        <template if:true={customer_info_items} for:each={customer_info_items} for:item="button"
+                            for:index="index">
+                            <c-navigation-menu-item item={button} key={button.navMenuItem.Id} index={index}>
+                            </c-navigation-menu-item>
+                        </template>
+
+                        <li class="slds-border_top slds-var-m-top_large mobile-head-actions">
+                            <div class="slds-var-m-top_small">
+                                <lightning-layout multiple-rows="true">
+                                    <lightning-layout-item size="3">
+                                        <a href="javascript:void(0);">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35">
+                                                <use xlink:href={tool_tip_svg}></use>
+                                            </svg>
+                                        </a>
+                                    </lightning-layout-item>
+                                    <lightning-layout-item size="3">
+                                        <a href="javascript:void(0);">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35">
+                                                <use xlink:href={alert_svg}></use>
+                                            </svg>
+                                        </a>
+                                    </lightning-layout-item>
+                                    <lightning-layout-item size="3">
+                                        <a href="javascript:void(0);">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35">
+                                                <use xlink:href={search_svg}></use>
+                                            </svg>
+                                        </a>
+                                    </lightning-layout-item>
+                                </lightning-layout>
+                            </div>
+                        </li>
+                        <li class="slds-var-m-top_large mobile-head-actions">
+                            <a href={logoutUrl}>
+                                {logoutLabel}
+                            </a>
+                        </li>
+                        <li class="slds-var-m-top_large"
+                            style="font-size: 14px;letter-spacing: 0.1px;line-height: 18px;"><a
+                                href="javascript:void(0);" onclick={handleLanguageChange}>{language}</a></li>
+                    </div>
+
+
+                </ul>
+            </div>
+            <div>
+                <a href="#" onclick={handleHomeClick}>
+                    <img if:false={isFr} class="logo" src={logo} alt={logoAlt} aria-describeby={logoAlt} />
+                    <img if:true={isFr} class="logo" src={logoFrench} alt={logoAltFrench}
+                        aria-describeby={logoAltFrench} />
+                </a>
+            </div>
+            <div class="actionItems">
+                <span>
+                    <a href="javascript:void(0);" class="actionItem">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35">
+                            <use xlink:href={tool_tip_svg}></use>
+                        </svg>
+                    </a>
+                </span>
+                <span>
+                    <a href="javascript:void(0);" class="actionItem">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35">
+                            <use xlink:href={alert_svg}></use>
+                        </svg>
+                    </a>
+                </span>
+                <span>
+                    <a href="javascript:void(0);" class="actionItem">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35">
+                            <use xlink:href={search_svg}></use>
+                        </svg>
+                    </a>
+                </span>
+                <span>
+                    <lightning-button-menu alternative-text="Show menu" label={userFullName} variant="bare"
+                        icon-size="xx-small" icon-name="utility:chevrondown" onselect={handleOnselect}
+                        class="drop-down-menu">
+                        <lightning-menu-item value={logoutLabel} label={logoutLabel} href={logoutUrl}>
+                        </lightning-menu-item>
+                    </lightning-button-menu>
+                </span>
+            </div>
+        </nav>
+    </div>
+    <div if:true={menuOpen} class="slds-backdrop slds-backdrop_open"></div>
+</template>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="15px" height="15px" viewBox="0 0 15 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="ic-baseline-keyboard-arrow-right">
+    <title>4B0ADE8E-43AB-4063-943C-916F263C6855</title>
+    <defs>
+        <filter id="filter-1">
+            <feColorMatrix in="SourceGraphic" type="matrix" values="0 0 0 0 0.333333 0 0 0 0 0.333333 0 0 0 0 0.341176 0 0 0 1.000000 0"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Quotes--Lease" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Quotes---Home---pop-up" transform="translate(-1406.000000, -29.000000)">
+            <g id="ic-baseline-keyboard-arrow-right" transform="translate(1406.000000, 29.000000)" filter="url(#filter-1)">
+                <g transform="translate(7.500000, 7.500000) rotate(90.000000) translate(-7.500000, -7.500000) ">
+                    <g id="Icon" fill="#000000" fill-rule="nonzero">
+                        <polygon id="Icon-Path" points="5.36875 10.36875 8.23125 7.5 5.36875 4.63125 6.25 3.75 10 7.5 6.25 11.25"></polygon>
+                    </g>
+                    <rect id="ViewBox" fill-rule="nonzero" x="0" y="0" width="15" height="15"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

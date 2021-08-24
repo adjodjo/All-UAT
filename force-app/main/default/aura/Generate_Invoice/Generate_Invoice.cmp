@@ -1,0 +1,9 @@
+<aura:component controller="LightningComponentController" implements="force:lightningQuickActionWithoutHeader,force:hasRecordId" access="global" >
+    
+    <aura:attribute name="LanguageSetting" type="String" default=""/>
+    
+    <aura:attribute name="recordId" type="String"/>
+    
+    <aura:handler name="init" value="{!this}" action="{!c.handleGenerateInvoice}"/>
+	
+</aura:component>

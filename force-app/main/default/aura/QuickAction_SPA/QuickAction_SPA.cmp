@@ -1,0 +1,60 @@
+<aura:component controller="LightningComponentController" implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,force:hasSObjectName,force:lightningQuickAction"   access="global">
+    <!-- controller="LightningComponentController" implements="force:lightningQuickActionWithoutHeader,force:hasRecordId" access="global"   implements="force:lightningQuickActionWithoutHeader,force:hasRecordId,flexipage:availableForAllPageTypes"-->
+     <aura:attribute name="LanguageSetting" type="String" default=""/>
+    
+    <aura:attribute name="recordId" type="String"/>
+    <aura:attribute name="return" type="String" />
+    <aura:attribute name="caseRec" type="Object" />
+    <aura:attribute name="isClosed" type="boolean" default="false"/>    
+    <aura:attribute name="message" description="Message content, can be HTML" type="String" default=""/>
+    
+       
+    <aura:handler name="init" value="{!this}" action="{!c.handleOpenEIPApp}"/>
+    
+      <!--  <div class="slds-m-around-xx-large" align = "center">
+                  
+                   <ui:button label="Ouvrir l'application Buyout" press="{!c.openActionWindow}"   />
+                    
+                    <lightning:button label="Open the BUYOUT Application" variant="brand" onclick="{!c.handleOpenInNewWindow}" />
+        </div>  -->
+    
+    
+     <aura:if isTrue="{!v.isClosed}">
+         
+         
+    <!--###### MODAL BOX Start######--> 
+    <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+        <div class="slds-modal__container">
+            <!-- ###### MODAL BOX HEADER Start ######  bare-inverse
+            <header class="slds-modal__header">
+                <lightning:buttonIcon iconName="utility:close"
+                                    onclick="{! c.closeModel }"
+                                    alternativeText="close"
+                                    variant="brand"
+                                    class="slds-modal__close"/>
+                <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">Case Status</h2>
+            </header>-->
+            <!--###### MODAL BOX BODY Part Start######-->
+            <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                <p>
+                    <aura:unescapedHtml value="{!v.message}"/>
+                </p>
+            </div>
+            <!--###### MODAL BOX FOOTER Part Start ######-->
+            <footer class="slds-modal__footer">
+                <lightning:button variant="neutral" 
+                                label="Cancel"
+                                title="Cancel"
+                                onclick="{! c.closeModel }"/>
+            </footer>
+        </div>
+    </section>
+    <div class="slds-backdrop slds-backdrop_open"></div>
+    <!--###### MODAL BOX Part END Here ######
+
+        <c:sendBuyoutMessage aura:id="SBMComponent" />  -->
+
+    </aura:if>
+
+	
+</aura:component>

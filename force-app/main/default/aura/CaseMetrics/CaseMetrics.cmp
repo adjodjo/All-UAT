@@ -1,0 +1,92 @@
+<aura:component controller="CaseMetricsController" implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,force:hasSObjectName,force:lightningQuickAction" access="global" >
+    
+    <aura:attribute name="isLang" type="String" default=""/>
+    <aura:attribute name="recordId" type="String"/>
+    
+    <aura:attribute name="assignTime" type="String"/>    
+    <aura:attribute name="createdTime" type="String"/>
+    <aura:attribute name="pendingTime" type="String"/>
+    
+    <aura:attribute name="title" type="String" />
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+     <lightning:card >
+         <aura:set attribute="title">
+            <lightning:icon iconName="action:defer" size="xx-small"/>
+             <aura:if isTrue="{!v.isLang == 'en' }" >
+           <B>    Case Time Metrics</B>
+                 </aura:if>
+             <aura:if isTrue="{!v.isLang == 'fr' }" >
+           <B>   Mesures temps de la requête</B>
+                 </aura:if>
+        </aura:set>
+         <div class="slds-p-left_medium slds-p-right_medium">
+    <table class="slds-table slds-table_cell-buffer slds-table_bordered slds-table_col-bordered">
+        
+        <aura:if isTrue="{!v.isLang == 'en' }" >
+            <thead>
+                <tr class="slds-line-height_reset">
+                <th class="" scope="col">
+                    <div class="slds-truncate" title="Opportunity Name"><B>Case Status</B></div>
+                </th>
+                <th class="" scope="col">
+                    <div class="slds-truncate" title="Account Name"><B>Elapsed Time</B></div>
+                </th>
+            </tr>      
+            </thead>
+             <tbody>
+                        
+            <tr class="slds-hint-parent ">   
+                <td><div class="slds-truncate" title="assoc">Opened </div></td>   
+                <td><div class="slds-truncate" title="{!v.createdTime}">{!v.createdTime}</div></td>                   
+            </tr>  
+            
+            <tr class="slds-hint-parent slds-p-left_small" >   
+                <td ><div class="slds-truncate" title="assoc1">Assigned </div></td>   
+                <td align = "left"><div class="slds-truncate" title="{!v.assignTime}">{!v.assignTime}</div></td>                   
+            </tr> 
+            <tr class="slds-hint-parent slds-p-left_small">   
+                <td><div class="slds-truncate" title="assoc2">Pending </div></td>   
+                <td><div class="slds-truncate" title="{!v.pendingTime}">{!v.pendingTime}</div></td>                   
+            </tr> 
+            <tr class="slds-hint-parent slds-p-left_small">   
+                             
+            </tr> 
+        </tbody>
+        </aura:if>
+        <aura:if isTrue="{!v.isLang == 'fr' }" >
+            <thead>
+                <tr class="slds-line-height_reset">
+                <th class="" scope="col">
+                    <div class="slds-truncate" title="Opportunity Name"><B>Statut de requête</B></div>
+                </th>
+                <th class="" scope="col">
+                    <div class="slds-truncate" title="Account Name"><B>Temps écoulé</B></div>
+                </th>
+            </tr>      
+                
+            </thead>
+            <tbody>
+                        
+            <tr class="slds-hint-parent ">   
+                <td><div class="slds-truncate" title="assoc">Ouvert </div></td>   
+                <td><div class="slds-truncate" title="{!v.createdTime}">{!v.createdTime}</div></td>                   
+            </tr>  
+            
+            <tr class="slds-hint-parent slds-p-left_small" >   
+                <td ><div class="slds-truncate" title="assoc1">Assigné </div></td>   
+                <td align = "left"><div class="slds-truncate" title="{!v.assignTime}">{!v.assignTime}</div></td>                   
+            </tr> 
+            <tr class="slds-hint-parent slds-p-left_small">   
+                <td><div class="slds-truncate" title="assoc2">En traitement </div></td>   
+                <td><div class="slds-truncate" title="{!v.pendingTime}">{!v.pendingTime}</div></td>                   
+            </tr> 
+            <tr class="slds-hint-parent slds-p-left_small">   
+                             
+            </tr> 
+        </tbody>
+        </aura:if>        
+    </table>
+     </div>
+        </lightning:card>
+</aura:component>
