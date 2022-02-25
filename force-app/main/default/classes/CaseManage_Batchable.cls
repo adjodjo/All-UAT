@@ -1,6 +1,3 @@
-/*
- Batch to update unclosed case case to assign to Chantal Ducet
- */
 global class CaseManage_Batchable implements Database.Batchable<sObject>, Database.Stateful{
     
     global Map<String, List<Id>> idsFailedToUpdateByErrorMessage = new Map<String, List<Id>>();

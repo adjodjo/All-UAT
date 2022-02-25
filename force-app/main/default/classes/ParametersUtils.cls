@@ -14,11 +14,11 @@ public class ParametersUtils {
          param = (address.substringAfter('@')).substringBefore('.');
          
          System.debug('LE PARAM OrgWideEmailAddress EST'+ param);
-         if(param == 'Clecapital'){
-             param1 = 'collections@clecapital.ca';
+         if(param == 'mhccna'){
+             param1 = 'collectionsca@mhccna.com';
          }
          else{
-             param1 = 'collections@clecapital.ca'; //hitachicapital.ca';
+             param1 = 'collectionsca@mhccna.com'; //hitachicapital.ca';
          }
          
         
@@ -34,10 +34,10 @@ public class ParametersUtils {
         boolean isSend = false;
         String InstanceInfo = IsProductionOrg();
         
-        if(InstanceInfo == 'CS66'){
+        if(InstanceInfo == 'CS218'){
             
-            if(((email.substringAfter('@')).containsIgnoreCase('clecapital.ca'))
-                   				|| ((email.substringAfter('@')).containsIgnoreCase('hitachicapital.ca'))
+            if(((email.substringAfter('@')).containsIgnoreCase('mhccna.com'))
+                   				|| ((email.substringAfter('@')).containsIgnoreCase('mhccna.com'))
                                 || ((email.substringAfter('@')).containsIgnoreCase('analystik.ca'))){
                                     
                                     isSend = true;
@@ -68,16 +68,16 @@ public class ParametersUtils {
         String emailSAC, InstanceInfo;
         Organization org = [select IsSandbox, InstanceName  from Organization where Id =:UserInfo.getOrganizationId()];
         if(org.IsSandbox == false){
-            emailSAC = 'service@hitachicapital.ca';
+            emailSAC = 'service@mhccna.com';
         }
          else{
             
-            InstanceInfo = UserInfo.getUserName().substringAfterLast('.');
+            InstanceInfo = IsProductionOrg(); //UserInfo.getUserName().substringAfterLast('.');
              
-             if(InstanceInfo == 'sandboxuat'){
-                 emailSAC = 'service@hitachicapital.ca';
+             if(InstanceInfo == 'CS218'){
+                 emailSAC = 'salesforcesac@mhccna.com';
              }
-             else emailSAC = 'salesforcesac@clecapital.ca';
+             else emailSAC = 'salesforcesac@mhccna.com';
             
         }
     return emailSAC;
@@ -116,14 +116,14 @@ public class ParametersUtils {
             
         }
         else 
-            if(InstanceInfo == 'CS66'|| InstanceInfo == 'CS200'){
+            if(InstanceInfo == 'CS218'|| InstanceInfo == 'CS200'){
                 
                 dmsLink = 'http://hcwebservicedev.hcac1.com:8008/eip/dms/';  //10088
             }
         else
         	//if(InstanceInfo == 'CS69'){
             
-                dmsLink = 'http://hcwebservicedev.hcac1.com:10098/eip/dms/'; //10098
+                dmsLink = 'http://hcwebservicedev.hcac1.com:8108/eip/dms/'; //10098
            /* }
         else{
             dmsLink = 'SERVER ERROR';
@@ -216,14 +216,14 @@ public class ParametersUtils {
             
         }
         else 
-            if(InstanceInfo == 'CS66'|| InstanceInfo == 'CS200'){
+            if(InstanceInfo == 'CS218'|| InstanceInfo == 'CS200'){
                 
                 eipLink = JSON.serialize(new SettingEIPServer_Organization('http://hcwebservicedev.hcac1.com:8000/', InstanceInfo)); //10080
             }
         else
         //	if(InstanceInfo == 'CS69'){
             
-                eipLink = JSON.serialize(new SettingEIPServer_Organization('http://hcwebservicedev.hcac1.com:10090/', InstanceInfo)); //10090
+                eipLink = JSON.serialize(new SettingEIPServer_Organization('http://hcwebservicedev.hcac1.com:8100/', InstanceInfo)); //10090
          /*   }
         else{
             eipLink = 'SERVER ERROR';

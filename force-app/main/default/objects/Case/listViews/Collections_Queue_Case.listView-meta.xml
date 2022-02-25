@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Collections_Queue_Case</fullName>
+    <columns>CASES.CREATED_DATE_DATE_ONLY</columns>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>Delay_color__c</columns>
+    <columns>CASES.EMAIL</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>CASES.STATUS</columns>
+    <columns>CASES.PRIORITY</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>Create_Delay__c</columns>
+    <filterScope>Queue</filterScope>
+    <label>Collections Queue</label>
+    <queue>Collections_Queue</queue>
+    <sharedTo>
+        <role>Collection_Manager</role>
+        <roleAndSubordinatesInternal>Collection_Agent</roleAndSubordinatesInternal>
+    </sharedTo>
+</ListView>

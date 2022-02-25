@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <email>assurance@mhccna.com</email>
+    <name>Insurance Queue</name>
+    <queueMembers>
+        <roles>
+            <role>Collection_Manager</role>
+            <role>Insurance_Agent</role>
+        </roles>
+    </queueMembers>
+    <queueSobject>
+        <sobjectType>Case</sobjectType>
+    </queueSobject>
+</Queue>

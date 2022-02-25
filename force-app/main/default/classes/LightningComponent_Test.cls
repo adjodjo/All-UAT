@@ -35,7 +35,7 @@ public class LightningComponent_Test {
         RedirectController.getCaseRecord(myCase1.Id);
         RedirectController.saveCaseRecord(myCasec, cStatus );
         RedirectController.saveCaseRecord(myCasec2, cStatus1 );
-        RedirectController.getCaseRecord('t');
+        //RedirectController.getCaseRecord('t');
    
             
         

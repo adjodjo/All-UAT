@@ -34,7 +34,7 @@ public with sharing class TestUtils {
                                         BillingPostalCode = 'H4N1P8',
                                         BillingCountry = 'Canada',
                                         Phone = '5142223366',
-                                        Compagnie_Email__c = 'cle0@clecapital.ca',
+                                        Compagnie_Email__c = 'cle0@mhccna.com',
                                         Contact_Principal__c = 'Test Test'
                                         ); 
         
@@ -245,8 +245,8 @@ public with sharing class TestUtils {
             ProfileId = pf.Id,
             firstName = 'Tare',
             LastName = 'last1',
-            Email = 'test@clecapital.ca',
-            Username = 'puser0001@clecapital.ca' + System.currentTimeMillis(),
+            Email = 'test@mhccna.com',
+            Username = 'puser0001@mhccna.com' + System.currentTimeMillis(),
             CompanyName = 'TEST',
             Title = 'title',
             Alias = 'alias',
@@ -376,7 +376,7 @@ public with sharing class TestUtils {
             , Origin = 'Email'
             , subject = 'test'
             ,OwnerId = user
-            , SuppliedEmail = 'testt0@clecapital.ca'
+            , SuppliedEmail = 'testt0@mhccna.com'
             
         )); 
         insert myCase;        
@@ -393,7 +393,7 @@ public with sharing class TestUtils {
             , Origin = 'Email'
             , subject = 'test'
             ,OwnerId = user
-            , SuppliedEmail = 'testt0@clecapital.ca'
+            , SuppliedEmail = 'testt0@mhccna.com'
             
         ); 
         insert myCase;        
@@ -412,7 +412,7 @@ public with sharing class TestUtils {
             , Origin = 'Email'
             , subject = 'test'
             ,OwnerId = user
-            , SuppliedEmail = 'testt0@clecapital.ca'
+            , SuppliedEmail = 'testt0@mhccna.com'
             
         ); 
         insert myCase;        
@@ -430,7 +430,7 @@ public with sharing class TestUtils {
             , Origin = 'Email'
             , subject = 'test'
             ,OwnerId = user
-            , SuppliedEmail = 'testt0@clecapital.ca'
+            , SuppliedEmail = 'testt0@mhccna.com'
             
         ); 
         insert myCase;        
@@ -442,9 +442,9 @@ public with sharing class TestUtils {
          
          List<EmailMessage> myEmail = new List<EmailMessage>();
          EmailMessage mEmail = new EmailMessage(
-         FromAddress = 'test@abc.org',
+         FromAddress = 'test@mhccna.com',
         Incoming = True,
-        ToAddress= 'testt0@clecapital.ca',
+        ToAddress= 'testt0@mhccna.com',
         Subject = sb
         ,HtmlBody = 'Test email body'
         ,ParentId = c
@@ -463,7 +463,7 @@ public with sharing class TestUtils {
         // FromAddress = 'test@abc.org',
         Incoming = false
        // ToAddress= 'test@xyz.org',
-        , ToAddress = 'testt0@clecapital.ca'
+        , ToAddress = 'testt0@mhccna.com'
         ,HtmlBody = 'Test email body 2'
         ,RelatedToId = c
              );
@@ -653,7 +653,7 @@ public with sharing class TestUtils {
         String SF_ParentHistoryId = pHistoriId;
         String SF_HistoryId = fHistoricId;
         
-        String SendEmail = 'test@capital.ca';
+        String SendEmail = 'test@mhccna.com';
         String CcSendEmail = ccEmail;
         String IL_Contact = 'Test Test' ;
          String EIP_HistoricType = historicType;
@@ -694,7 +694,7 @@ SendCustomResponse  testsend = SendHistoric_WS.SendHistoric(sendParam, sendDoc);
         sendParam.SF_ParentHistoryId = pHistoriId;
         sendParam.SF_HistoryId = fHistoricId;
         
-        sendParam.SendEmail = 'test@capital.ca';
+        sendParam.SendEmail = 'test@mhccna.com';
         sendParam.CcSendEmail = ccEmail;
         sendParam.EIP_Contact = 'Test Test' ;
         sendParam.EIP_HistoricType = historicType;

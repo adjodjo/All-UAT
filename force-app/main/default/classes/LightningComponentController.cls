@@ -47,7 +47,7 @@ public class LightningComponentController {
     }
     
     ///////////////////////////////////////////////////////////////////////////////////// 
-    // Assign Case to connect owner
+    // Assign Case to connected owner
     // 
     @AuraEnabled
     public static String AssignCaseToMe(String caseId, String sObjectN, String cStatuts){
@@ -104,7 +104,7 @@ public class LightningComponentController {
                         myTask.add(new Task(Id = tId, OwnerId = currentUser));
                     }
                     update myTask;*/
-                     errMsg = 'message_18';
+                   //  errMsg = 'message_18';
                   //  res.status = 'warning';
                  //  res.msg = MessageUtils.ErrorMessage(userLanguage, message_18);
                     
@@ -132,8 +132,9 @@ public class LightningComponentController {
         }
         catch(Exception ex){
               system.debug('Exception --- '+ex.getMessage());
+             system.debug('Exception --- '+ex.getStackTraceString());
             If (ex.getMessage() != null){
-                 errMsg = 'message_16';
+                 errMsg = 'message_18';
               
                // res.status = 'warning';
                 //   res.msg = MessageUtils.ErrorMessage(userLanguage, message_16);
@@ -180,7 +181,7 @@ public class LightningComponentController {
                         , Priority = 'Normal'
                     );
                     
-                    Upsert task;
+                 //   Upsert task;
                     taskId = task.Id;
                     
                 }

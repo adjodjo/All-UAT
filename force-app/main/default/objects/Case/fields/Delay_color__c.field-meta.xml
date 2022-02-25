@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Delay_color__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF( RecordType.DeveloperName = &apos;Customer_Service&apos;,
+
+IMAGE(
+IF( ((Create_Delay__c &gt; 2 &amp;&amp; Create_Delay__c &lt;= 8) || ((ClosedDate  -  CreatedDate) &gt; 2 &amp;&amp; (ClosedDate  -  CreatedDate) &lt;= 8)),
+&quot;/img/samples/color_yellow.gif&quot;,
+IF( ((Create_Delay__c &gt;= 0 &amp;&amp; Create_Delay__c &lt;=2) || ((ClosedDate  -  CreatedDate)&gt;= 0  &amp;&amp; (ClosedDate  -  CreatedDate)&lt;=2)),
+&quot;/img/samples/color_green.gif&quot;,
+&quot;/img/samples/color_red.gif&quot;
+
+)),&quot;&quot;,20,20
+),
+
+IF( RecordType.DeveloperName = &apos;Collections&apos; || RecordType.DeveloperName = &apos;Admin_Support_CCS&apos; || RecordType.DeveloperName = &apos;Insurance&apos; || RecordType.DeveloperName = &apos;Insurance_Claims&apos; || RecordType.DeveloperName = &apos;Litigation&apos; || RecordType.DeveloperName = &apos;Security_Doc&apos; || RecordType.DeveloperName = &apos;Transfer&apos; || RecordType.DeveloperName = &apos;Vendor_Portal&apos;, 
+
+IMAGE(
+IF( (Create_Delay__c - 8) &lt;= 0 || (ClosedDate  -  CreatedDate)&lt;= 8 ,
+&quot;/img/samples/color_green.gif&quot;,
+&quot;/img/samples/color_red.gif&quot;
+
+),&quot;&quot;,20,20
+)
+,
+&apos;&apos;
+)
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Delay</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>
