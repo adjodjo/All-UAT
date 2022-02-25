@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Blocked_Auto_Reply_Email</fullName>
+    <active>true</active>
+    <description>Blocked Auto-Reply (Réponse Automatique) Email</description>
+    <errorConditionFormula>OR (
+CONTAINS(Subject , &apos;Auto Reply&apos;),
+
+CONTAINS(Subject , &apos;Automatic reply&apos;),
+
+CONTAINS(Subject , &apos;Réponse Automatique&apos;),
+
+CONTAINS(Subject , &apos;Thank you for contacting our &apos;),
+
+CONTAINS(Subject , &apos;Automatic reply&apos;),
+
+CONTAINS( SuppliedEmail , &apos;noreply.serviceca@mhccna.com&apos;)
+
+
+)</errorConditionFormula>
+    <errorMessage>Auto Reply / Réponse Automatique</errorMessage>
+</ValidationRule>

@@ -2,12 +2,19 @@
 
 public class EmailMessage_Test {
     
-    @testSetup
-    public static void createTestRecords(){
-         Manage_Case_Delay_Before__c delayb = new Manage_Case_Delay_Before__c();
+     @testSetup
+   public static void createTestRecords(){
+        Manage_Collection_Case_Delay_Before__c delayb = new Manage_Collection_Case_Delay_Before__c();
         delayb.Delay_Before_Assign__c = 0;
         delayb.Enable_Delay__c = true;
         insert delayb;
+    }
+    
+    public static void createCSTestRecords(){
+        Manage_CS_Case_Delay_Before__c delayCS = new Manage_CS_Case_Delay_Before__c();
+        delayCS.Delay_Before_Assign__c = 0;
+        delayCS.Enable_Delay__c = true;
+        insert delayCS;
     }
        
 

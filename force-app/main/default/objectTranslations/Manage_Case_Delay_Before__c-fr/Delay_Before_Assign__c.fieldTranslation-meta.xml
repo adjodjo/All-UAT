@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- This value to define delay before assign previous case to Queue when reopen --></help>
+    <label><!-- Delay Before Assign (hour) --></label>
+    <name>Delay_Before_Assign__c</name>
+</CustomFieldTranslation>

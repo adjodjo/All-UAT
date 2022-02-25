@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <email>collectionsca@mhccna.com</email>
+    <name>Collections Queue</name>
+    <queueMembers>
+        <roles>
+            <role>Collection_Agent</role>
+            <role>Collection_Manager</role>
+        </roles>
+    </queueMembers>
+    <queueSobject>
+        <sobjectType>Case</sobjectType>
+    </queueSobject>
+</Queue>

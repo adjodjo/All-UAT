@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Restrict_To_Closed</fullName>
+    <active>false</active>
+    <description>Restrict to close Case without Case Type</description>
+    <errorConditionFormula>AND(
+ ISPICKVAL(Status, &apos;Closed&apos;),
+ ISPICKVAL(Type, &apos;&apos;)
+)</errorConditionFormula>
+    <errorMessage>You can not closed Case without Type.</errorMessage>
+</ValidationRule>

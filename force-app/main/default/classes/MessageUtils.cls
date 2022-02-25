@@ -48,16 +48,23 @@ public with sharing class MessageUtils {
         	if(Lang == 'en_US' && indice == 'message_14') myMessage = 'Unable to take case because you will have more than expected Cases in your queue.';
             if(Lang == 'fr' && indice == 'message_14' ) myMessage = 'Impossible de prendre en charge la requête car vous aurez plus de cas que prévu de requête dans votre file d\'attente.';
         
-        	if(Lang == 'en_US' && indice == 'message_15') myMessage = 'You can not Closed Case without Case Type.';
-            if(Lang == 'fr' && indice == 'message_15' ) myMessage = 'Impossible de fermer une requête sans attribuer un type.';
+        	if(Lang == 'en_US' && indice == 'message_15') myMessage = 'You can not Closed Case without Case Type or sub-type.';
+            if(Lang == 'fr' && indice == 'message_15' ) myMessage = 'Impossible de fermer une requête sans attribuer un type ou un sous-type.';
         
         	if(Lang == 'en_US' && indice == 'message_16') myMessage = 'There are some missing information or Unable to take case because because you will have more than expected Cases in your queue.';
             if(Lang == 'fr' && indice == 'message_16' ) myMessage = 'Il y a un manque d\'information ou Impossible de prendre en charge la requête car vous aurez plus de cas que prévu de requête dans votre file d\'attente.';
 
             if(Lang == 'en_US' && indice == 'message_17') myMessage = 'You can not Close escalated Case.';
             if(Lang == 'fr' && indice == 'message_17' ) myMessage = 'Impossible de fermer une requête qui a été escaladé.';
+        
+        	if(Lang == 'en_US' && indice == 'message_18') myMessage = 'you don\'t have the necessary privileges to edit this record. See your administrator for help.';
+            if(Lang == 'fr' && indice == 'message_18' ) myMessage = 'vous ne disposez pas des privilèges nécessaires pour modifier cet enregistrement. Consultez votre administrateur pour obtenir de l\'aide.';
             
 
+        
+        
+        
+        
         return myMessage;
 
     }

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>Compagnie</label>
+    <name>Company__c</name>
+    <picklistValues>
+        <masterLabel>Clecapital</masterLabel>
+        <translation><!-- Clecapital --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Hitachicapital</masterLabel>
+        <translation><!-- Hitachicapital --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>None</masterLabel>
+        <translation><!-- None --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

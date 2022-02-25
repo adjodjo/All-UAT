@@ -1,0 +1,437 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>Sous-type</label>
+    <name>Sub_Type__c</name>
+    <picklistValues>
+        <masterLabel>3rd party agreement</masterLabel>
+        <translation>Convetion rachat tiers</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Account update</masterLabel>
+        <translation>Mise à jour du dossier</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Additionnal Debtor - Co-lessee</masterLabel>
+        <translation>Ajout débiteur - Caution</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Address change</masterLabel>
+        <translation>Changement d&apos;adresse</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Arrangement</masterLabel>
+        <translation>Arrangement</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Assigment</masterLabel>
+        <translation>Assignation</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Auto-reply</masterLabel>
+        <translation>Réponse automatique</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Banking Information</masterLabel>
+        <translation>Information bancaire</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Banko/ proposal</masterLabel>
+        <translation>Faillite / Proposition</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Bill Of Sale</masterLabel>
+        <translation>Acte de vente</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Broker / Vendor</masterLabel>
+        <translation>Courtier / Fournisseur</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Broker request</masterLabel>
+        <translation>Requête d&apos;un courtier</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Buyout</masterLabel>
+        <translation>Solde de rachat</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Buyout - Audit</masterLabel>
+        <translation>Solde de rachat - Audit</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Cash application</masterLabel>
+        <translation>Cash application</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Change payment date</masterLabel>
+        <translation>Changement de date de paiement</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Cheque received</masterLabel>
+        <translation>Chèque reçu</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Claim</masterLabel>
+        <translation>Réclamation</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Claim Info</masterLabel>
+        <translation>Information sur la réclamation</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Collection Agencies - Assignation</masterLabel>
+        <translation>Acte de vente</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Collection Letters</masterLabel>
+        <translation>Lettre de collection</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Collection Letters - NOC</masterLabel>
+        <translation>Lettre de collection - Aviterm</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Collection release</masterLabel>
+        <translation>Quittance du recouvrement</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Communication with broker</masterLabel>
+        <translation>Communication avec le courtier</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Contract Copy</masterLabel>
+        <translation>Copie de contrat</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Contract information</masterLabel>
+        <translation>Information du contrat</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Copy of POI</masterLabel>
+        <translation>Copie de PA</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Corporate merger</masterLabel>
+        <translation>Fusion d&apos;entreprise</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Customer</masterLabel>
+        <translation>Client</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Customer Information</masterLabel>
+        <translation>Information du client</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Details Of Claim</masterLabel>
+        <translation>Détails de la réclamation</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Dividend</masterLabel>
+        <translation>Dividende</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Documentation</masterLabel>
+        <translation>Documentation</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Duplicate</masterLabel>
+        <translation>Doublon</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Estoppel</masterLabel>
+        <translation>Estoppel</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Financing Detail</masterLabel>
+        <translation>Détail du financement</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Floorplan</masterLabel>
+        <translation>Floorplan</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Follow Up With Customer</masterLabel>
+        <translation>Suivi avec le client</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Follow Up With Insurer</masterLabel>
+        <translation>Suivi avec l&apos;assureur</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Follow-up</masterLabel>
+        <translation>Suivi</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Gouverment Requests</masterLabel>
+        <translation>Requête gouvernementale</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>History</masterLabel>
+        <translation>Historique</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Incorporation</masterLabel>
+        <translation>Incorporation</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Information</masterLabel>
+        <translation>Information</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Insurance</masterLabel>
+        <translation>Assurance</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Insurance Cancellation</masterLabel>
+        <translation>Annulation d&apos;assurances</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Insurance Claim</masterLabel>
+        <translation>Réclamation d&apos;assurance</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Insurance Form</masterLabel>
+        <translation>Formulaire d&apos;assurance</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Internal Communication</masterLabel>
+        <translation>Communication interne</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Invoice</masterLabel>
+        <translation>Facture</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Lawyers - Files</masterLabel>
+        <translation>Avocat - Dossier</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Lawyers - Invoice</masterLabel>
+        <translation>Avocat - Facture</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Lease transfer</masterLabel>
+        <translation>Transfer de location</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Legal name change</masterLabel>
+        <translation>Changement de nom légal</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Letter of non-interest</masterLabel>
+        <translation>Lettre de non-intérêt</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>New Contact</masterLabel>
+        <translation>Nouveau contact</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>No action</masterLabel>
+        <translation>Aucune action</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Notice</masterLabel>
+        <translation>Avis</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other</masterLabel>
+        <translation>Autre</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other - Problematic account</masterLabel>
+        <translation>Autre - Compte problématique</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Others</masterLabel>
+        <translation>Autres</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Ownership change</masterLabel>
+        <translation>Changement de responsabilité</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>POA</masterLabel>
+        <translation>Procuration</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>POC</masterLabel>
+        <translation>PDR</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>POI - Received From Broker</masterLabel>
+        <translation>PA - Reçue du courtier</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>POI - Received From Customer</masterLabel>
+        <translation>PA - Reçue du client</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>POI - Requested To Broker</masterLabel>
+        <translation>PA - Demande au courtier</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>POI - Requested To Customer</masterLabel>
+        <translation>PA - Demande au client</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>POL signed</masterLabel>
+        <translation>Demande d&apos;idemnité signée</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PPSA Discharge</masterLabel>
+        <translation>Radiation PPSA</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PPSA amendment</masterLabel>
+        <translation>Amendement au PPSA</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Payment Agreement</masterLabel>
+        <translation>Arrangement de paiement</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Payment arangement</masterLabel>
+        <translation>Arrangement de paiement</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Payment confirmation</masterLabel>
+        <translation>Confirmation de paiement</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Payment schedule</masterLabel>
+        <translation>Cédule de paiement</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Postmaster</masterLabel>
+        <translation>Postmaster</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Projects</masterLabel>
+        <translation>Projets</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Proof Of Loss</masterLabel>
+        <translation>Demande d&apos;indemnité</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Proof of payment</masterLabel>
+        <translation>Preuve de paiement</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Purchase option</masterLabel>
+        <translation>Option d&apos;achat</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Pure Transfer</masterLabel>
+        <translation>Transfert pur</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Redirected</masterLabel>
+        <translation>Redirigé</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Refund</masterLabel>
+        <translation>Remboursement</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Refund Request</masterLabel>
+        <translation>Demande de remboursement</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Related to other case</masterLabel>
+        <translation>Relatif à une autre requête</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Release Document</masterLabel>
+        <translation>Document de quittance</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Release Guarantor / Debtor</masterLabel>
+        <translation>Quittance Caution / Débiteur</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Release letter / PPSA discharge</masterLabel>
+        <translation>Document de quittance / Radiation PPSA</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Repo Process</masterLabel>
+        <translation>Processus Repo</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Report</masterLabel>
+        <translation>Rapport</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Request information on asset</masterLabel>
+        <translation>Requête d&apos;information sur l&apos;équipement</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Request to contact Insurance</masterLabel>
+        <translation>Requête de contacter l&apos;assureur</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Request to contact customer</masterLabel>
+        <translation>Requête de contacter le client</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Resquest information</masterLabel>
+        <translation>Demande d&apos;information</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Restructure</masterLabel>
+        <translation>Restructure</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sale repo</masterLabel>
+        <translation>Ventes de reprise</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sale request</masterLabel>
+        <translation>Requête des ventes</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sales</masterLabel>
+        <translation>Ventes</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sales Process</masterLabel>
+        <translation>Processus ventes</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Schedule</masterLabel>
+        <translation>Cédule</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Stop payment</masterLabel>
+        <translation>Arrêt de paiement</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sublease</masterLabel>
+        <translation>Sous-location</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Thanks</masterLabel>
+        <translation>Remerciements</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Third-party Convention</masterLabel>
+        <translation>Convention de rachat par un tiers</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Toll Violation</masterLabel>
+        <translation>Infraction au péage</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Void</masterLabel>
+        <translation>Specimen chèque</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Voluntary Surrender</masterLabel>
+        <translation>Remise volontaire</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Waiver</masterLabel>
+        <translation>Lettre de renonciation</translation>
+    </picklistValues>
+</CustomFieldTranslation>

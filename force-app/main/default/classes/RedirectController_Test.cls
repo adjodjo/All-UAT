@@ -36,7 +36,7 @@ public class RedirectController_Test {
             caseRecord.subject = 'test';
             caseRecord.OwnerId = myUser.Id;
         	caseRecord.Previous_Close_Case_User__c = myUser.Id;
-            caseRecord.SuppliedEmail = 'testt0@clecapital.ca';
+            caseRecord.SuppliedEmail = 'testt0@mhccna.com';
         	caseRecord.Contrat_InfoLease__c = '027-2569-001';
             caseRecord.CustId__c = 'C1236';
             caseRecord.ParentId = null;
@@ -54,7 +54,7 @@ public class RedirectController_Test {
             caseRecord1.subject = 'test';
             caseRecord1.OwnerId = myUser.Id;
         	caseRecord1.Previous_Close_Case_User__c = myUser.Id;
-            caseRecord1.SuppliedEmail = 'testt0@clecapital.ca';
+            caseRecord1.SuppliedEmail = 'testt0@mhccna.com';
         	caseRecord.Contrat_InfoLease__c = '027-2569-001';
             caseRecord.CustId__c = 'C1236';
             caseRecord.ParentId = null;
@@ -65,8 +65,8 @@ public class RedirectController_Test {
             	em.Incoming = true;
                 em.Subject = 'test';
                 em.TextBody = 'test';
-                em.FromAddress = 'testt0@clecapital.ca';
-                em.ToAddress = 'test@clecapital.ca';
+                em.FromAddress = 'testt0@mhccna.com';
+                em.ToAddress = 'test@mhccna.com';
                 em.htmlbody = 'test';
         		em.RelatedToId = caseRecord1.Id;
         INSERT em;
@@ -74,8 +74,8 @@ public class RedirectController_Test {
         EmailMessage em1 = new EmailMessage();        
             	em1.Incoming = true;
                 em1.Subject = 'test';
-                em1.TextBody = 'test@clecapital.ca';
-                em1.FromAddress = 'testt0@clecapital.ca';
+                em1.TextBody = 'test@mhccna.com';
+                em1.FromAddress = 'testt0@mhccna.com';
                 em1.ToAddress = 'test';
                 em1.htmlbody = 'test';
         		em1.RelatedToId = caseRecord.Id;
