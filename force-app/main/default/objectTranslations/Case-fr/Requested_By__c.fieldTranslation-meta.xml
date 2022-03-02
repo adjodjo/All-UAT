@@ -2,5 +2,5 @@
 <CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
     <label>Demandeur interne</label>
     <name>Requested_By__c</name>
-    <relationshipLabel><!-- Requêtes (Demandeur interne) --></relationshipLabel>
+    <relationshipLabel><!-- Cases (Internal Requester) --></relationshipLabel>
 </CustomFieldTranslation>
