@@ -2,5 +2,5 @@
 <CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
     <label><!-- Previous Close Case User --></label>
     <name>Previous_Close_Case_User__c</name>
-    <relationshipLabel><!-- Requêtes (Previous Close Case User) --></relationshipLabel>
+    <relationshipLabel><!-- Cases (Previous Close Case User) --></relationshipLabel>
 </CustomFieldTranslation>

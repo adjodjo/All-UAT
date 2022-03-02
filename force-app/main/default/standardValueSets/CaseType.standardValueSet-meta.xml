@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>Account Update</fullName>
+        <default>false</default>
+        <label>Account Update</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Banko / Proposal</fullName>
+        <default>false</default>
+        <label>Banko / Proposal</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Buyouts</fullName>
+        <default>false</default>
+        <label>Buyouts</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Collection agency</fullName>
+        <default>false</default>
+        <label>Collection agency</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Communication</fullName>
+        <default>false</default>
+        <label>Communication</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Contract</fullName>
+        <default>false</default>
+        <label>Contract</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Documentation</fullName>
+        <default>false</default>
+        <label>Documentation</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Insurance</fullName>
+        <default>false</default>
+        <label>Insurance</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Lawyer</fullName>
+        <default>false</default>
+        <label>Lawyer</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Legal</fullName>
+        <default>false</default>
+        <label>Legal</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Letter</fullName>
+        <default>false</default>
+        <label>Letter</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Litigation</fullName>
+        <default>false</default>
+        <label>Litigation</label>
+    </standardValue>
+    <standardValue>
+        <fullName>No action</fullName>
+        <default>false</default>
+        <label>No action</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Payment</fullName>
+        <default>false</default>
+        <label>Payment</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Proof of insurance</fullName>
+        <default>false</default>
+        <label>Proof of insurance</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Refund</fullName>
+        <default>false</default>
+        <label>Refund</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Release</fullName>
+        <default>false</default>
+        <label>Release</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Redirect To</fullName>
+        <default>false</default>
+        <label>Redirect To</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Repo / Sales</fullName>
+        <default>false</default>
+        <label>Repo / Sales</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Request</fullName>
+        <default>false</default>
+        <label>Request</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Transfer Request</fullName>
+        <default>false</default>
+        <label>Transfer Request</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Transfer request Cash reserve</fullName>
+        <default>false</default>
+        <label>Transfer request Cash reserve</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Transfer Request Non-Notification</fullName>
+        <default>false</default>
+        <label>Transfer Request Non-Notification</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Transfer Request Syndication</fullName>
+        <default>false</default>
+        <label>Transfer Request Syndication</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Other</fullName>
+        <default>false</default>
+        <label>Other</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Partner portal</fullName>
+        <default>false</default>
+        <label>Partner portal</label>
+    </standardValue>
+</StandardValueSet>
