@@ -22,9 +22,9 @@ public class CaseMetricsController {
         //system.debug('difference:::'+difference);
         Long milliseconds = difference;
         Long mins = milliseconds / 60000;
-        Long days = mins / 60 / 24 ;
-        Long dhours = (mins - days * 60 * 24) / 60 ;
-        Long dmins = (mins - days * 60 * 24) - (dhours * 60) ;
+        Long days = mins / 60 / 8 ;
+        Long dhours = (mins - days * 60 * 8) / 60 ;
+        Long dmins = (mins - days * 60 * 8) - (dhours * 60) ;
         String timeSpentOnCase = days+'D '+dhours+'H '+dmins+'M ';
         
         //System.debug('timeSpentOnCase:::'+timeSpentOnCase);
@@ -56,9 +56,9 @@ public class CaseMetricsController {
         //system.debug('difference:::'+difference);
         Long milliseconds = difference;
         Long mins = milliseconds / 60000;
-        Long days = mins / 60 / 24 ;
-        Long dhours = (mins - days * 60 * 24) / 60 ;
-        Long dmins = (mins - days * 60 * 24) - (dhours * 60) ;
+        Long days = mins / 60 / 8 ;
+        Long dhours = (mins - days * 60 * 8) / 60 ;
+        Long dmins = (mins - days * 60 * 8) - (dhours * 60) ;
         assignedTimeOnCase = days+'D '+dhours+'H '+dmins+'M ';
         }else{
         assignedTimeOnCase = '0D 0H 0M';
@@ -93,9 +93,9 @@ public class CaseMetricsController {
         //system.debug('difference:::'+difference);
         Long milliseconds = difference;
         Long mins = milliseconds / 60000;
-        Long days = mins / 60 / 24 ;
-        Long dhours = (mins - days * 60 * 24) / 60 ;
-        Long dmins = (mins - days * 60 * 24) - (dhours * 60) ;
+        Long days = mins / 60 / 8 ;
+        Long dhours = (mins - days * 60 * 8) / 60 ;
+        Long dmins = (mins - days * 60 * 8) - (dhours * 60) ;
         pendingTimeOnCase = days+'D '+dhours+'H '+dmins+'M ';
         }else{
         pendingTimeOnCase = '0D 0H 0M';
@@ -285,7 +285,7 @@ caseRec = caseMetric;
         
         
         Decimal minutes_d1 = Math.Floor( ( assd - Math.Floor(assd) ) * 60 );
-        Decimal heure_d1 = Math.round(Math.Floor(math.mod( assd.round() ,24)));
+        Decimal heure_d1 = Math.round(Math.Floor(math.mod( assd.round() ,8)));
         if(minutes_d1 <= 30) heure_d1 = heure_d1; else heure_d1 = heure_d1 - 1;
         dd1 = String.valueOf( minutes_d1 );
         if(dd1.length() <= 1)dd1 = '0'+dd1;  else dd1=dd1;
@@ -293,7 +293,7 @@ caseRec = caseMetric;
         
         Decimal minutes_d2 = Math.Floor( ( CreatedTime - Math.Floor(CreatedTime) ) * 60 );
         System.debug('minutes_d2 %%' + minutes_d2);
-        Decimal heure_d2 = Math.round(Math.Floor(math.mod( CreatedTime.round() ,24)));
+        Decimal heure_d2 = Math.round(Math.Floor(math.mod( CreatedTime.round() ,8)));
         System.debug('heure_d2 %%' + heure_d2);
         
         if(minutes_d2 <= 30) heure_d2 = heure_d2; else heure_d2 = heure_d2 - 1;

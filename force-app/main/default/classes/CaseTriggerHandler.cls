@@ -66,21 +66,15 @@ public class CaseTriggerHandler {
                                            }
                 else {
                     
-             /*       if(caseObject.status == 'Closed' && oldObject.Status == 'Escalated'){
-                        
-                        for(case caseO : caseObjects){
-                            
-                            errMsg = MessageUtils.ErrorMessage(userLanguage, message_17);
-                            //errMsg = 'You can not Closed Case without Case Type';
-                            caseO.addError(errMsg);
-                            
-                        }
-                    }*/
-
+             
                 }  
             }
             else{
-                if(caseObject.Type == null){
+           
+                Integer intValue = ControllingPicklist.getFieldDependencies('Case', 'Type', 'Sub_Type__c', caseObject.Sub_Type__c);    //= 0; // = PicklistValueCheck.getPicklistValues(field);
+
+                
+                if(caseObject.Type == null  || (caseObject.Sub_Type__c == null && intValue > 0)){
              
                     for(case caseO : caseObjects){
                         
@@ -126,5 +120,10 @@ public class CaseTriggerHandler {
         }
         
     }
+    
+    
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    
+    
   
 }

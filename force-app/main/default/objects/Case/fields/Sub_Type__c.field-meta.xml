@@ -1,0 +1,1117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sub_Type__c</fullName>
+    <externalId>false</externalId>
+    <label>SubType</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Type</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>3rd party agreement</fullName>
+                <default>false</default>
+                <label>3rd party agreement</label>
+            </value>
+            <value>
+                <fullName>Account update</fullName>
+                <default>false</default>
+                <label>Account update</label>
+            </value>
+            <value>
+                <fullName>Additionnal Debtor - Co-lessee</fullName>
+                <default>false</default>
+                <label>Additionnal Debtor - Co-lessee</label>
+            </value>
+            <value>
+                <fullName>Address change</fullName>
+                <default>false</default>
+                <label>Address change</label>
+            </value>
+            <value>
+                <fullName>Arrangement</fullName>
+                <default>false</default>
+                <label>Arrangement</label>
+            </value>
+            <value>
+                <fullName>Assigment</fullName>
+                <default>false</default>
+                <label>Assigment</label>
+            </value>
+            <value>
+                <fullName>Auto-reply</fullName>
+                <default>false</default>
+                <label>Auto-reply</label>
+            </value>
+            <value>
+                <fullName>Banking Information</fullName>
+                <default>false</default>
+                <label>Banking Information</label>
+            </value>
+            <value>
+                <fullName>Banko/ proposal</fullName>
+                <default>false</default>
+                <label>Banko/ proposal</label>
+            </value>
+            <value>
+                <fullName>Bill Of Sale</fullName>
+                <default>false</default>
+                <label>Bill Of Sale</label>
+            </value>
+            <value>
+                <fullName>Broker / Vendor</fullName>
+                <default>false</default>
+                <label>Broker / Vendor</label>
+            </value>
+            <value>
+                <fullName>Broker request</fullName>
+                <default>false</default>
+                <label>Broker request</label>
+            </value>
+            <value>
+                <fullName>Buyout</fullName>
+                <default>false</default>
+                <label>Buyout</label>
+            </value>
+            <value>
+                <fullName>Buyout - Audit</fullName>
+                <default>false</default>
+                <label>Buyout - Audit</label>
+            </value>
+            <value>
+                <fullName>Cash application</fullName>
+                <default>false</default>
+                <label>Cash application</label>
+            </value>
+            <value>
+                <fullName>Change payment date</fullName>
+                <default>false</default>
+                <label>Change payment date</label>
+            </value>
+            <value>
+                <fullName>Cheque received</fullName>
+                <default>false</default>
+                <label>Cheque received</label>
+            </value>
+            <value>
+                <fullName>Claim</fullName>
+                <default>false</default>
+                <label>Claim</label>
+            </value>
+            <value>
+                <fullName>Claim Info</fullName>
+                <default>false</default>
+                <label>Claim Info</label>
+            </value>
+            <value>
+                <fullName>Collection Letters - NOC</fullName>
+                <default>false</default>
+                <label>Collection Letters - NOC</label>
+            </value>
+            <value>
+                <fullName>Collection Letters</fullName>
+                <default>false</default>
+                <label>Collection Letters</label>
+            </value>
+            <value>
+                <fullName>Collection Agencies - Assignation</fullName>
+                <default>false</default>
+                <label>Collection Agencies - Assignation</label>
+            </value>
+            <value>
+                <fullName>Collection release</fullName>
+                <default>false</default>
+                <label>Collection release</label>
+            </value>
+            <value>
+                <fullName>Communication with broker</fullName>
+                <default>false</default>
+                <label>Communication with broker</label>
+            </value>
+            <value>
+                <fullName>Contract Copy</fullName>
+                <default>false</default>
+                <label>Contract Copy</label>
+            </value>
+            <value>
+                <fullName>Contract information</fullName>
+                <default>false</default>
+                <label>Contract information</label>
+            </value>
+            <value>
+                <fullName>Copy of POI</fullName>
+                <default>false</default>
+                <label>Copy of POI</label>
+            </value>
+            <value>
+                <fullName>Corporate merger</fullName>
+                <default>false</default>
+                <label>Corporate merger</label>
+            </value>
+            <value>
+                <fullName>Customer</fullName>
+                <default>false</default>
+                <label>Customer</label>
+            </value>
+            <value>
+                <fullName>Customer Information</fullName>
+                <default>false</default>
+                <label>Customer Information</label>
+            </value>
+            <value>
+                <fullName>Details Of Claim</fullName>
+                <default>false</default>
+                <label>Details Of Claim</label>
+            </value>
+            <value>
+                <fullName>Dividend</fullName>
+                <default>false</default>
+                <label>Dividend</label>
+            </value>
+            <value>
+                <fullName>Documentation</fullName>
+                <default>false</default>
+                <label>Documentation</label>
+            </value>
+            <value>
+                <fullName>Duplicate</fullName>
+                <default>false</default>
+                <label>Duplicate</label>
+            </value>
+            <value>
+                <fullName>Estoppel</fullName>
+                <default>false</default>
+                <label>Estoppel</label>
+            </value>
+            <value>
+                <fullName>Financing Detail</fullName>
+                <default>false</default>
+                <label>Financing Detail</label>
+            </value>
+            <value>
+                <fullName>Floorplan</fullName>
+                <default>false</default>
+                <label>Floorplan</label>
+            </value>
+            <value>
+                <fullName>Follow-up</fullName>
+                <default>false</default>
+                <label>Follow-up</label>
+            </value>
+            <value>
+                <fullName>Follow Up With Customer</fullName>
+                <default>false</default>
+                <label>Follow Up With Customer</label>
+            </value>
+            <value>
+                <fullName>Follow Up With Insurer</fullName>
+                <default>false</default>
+                <label>Follow Up With Insurer</label>
+            </value>
+            <value>
+                <fullName>Gouverment Requests</fullName>
+                <default>false</default>
+                <label>Gouverment Requests</label>
+            </value>
+            <value>
+                <fullName>History</fullName>
+                <default>false</default>
+                <label>History</label>
+            </value>
+            <value>
+                <fullName>Incorporation</fullName>
+                <default>false</default>
+                <label>Incorporation</label>
+            </value>
+            <value>
+                <fullName>Information</fullName>
+                <default>false</default>
+                <label>Information</label>
+            </value>
+            <value>
+                <fullName>Insurance</fullName>
+                <default>false</default>
+                <label>Insurance</label>
+            </value>
+            <value>
+                <fullName>Insurance Cancellation</fullName>
+                <default>false</default>
+                <label>Insurance Cancellation</label>
+            </value>
+            <value>
+                <fullName>Insurance Claim</fullName>
+                <default>false</default>
+                <label>Insurance Claim</label>
+            </value>
+            <value>
+                <fullName>Insurance Form</fullName>
+                <default>false</default>
+                <label>Insurance Form</label>
+            </value>
+            <value>
+                <fullName>Internal Communication</fullName>
+                <default>false</default>
+                <label>Internal Communication</label>
+            </value>
+            <value>
+                <fullName>Invoice</fullName>
+                <default>false</default>
+                <label>Invoice</label>
+            </value>
+            <value>
+                <fullName>Lawyers - Files</fullName>
+                <default>false</default>
+                <label>Lawyers - Files</label>
+            </value>
+            <value>
+                <fullName>Lawyers - Invoice</fullName>
+                <default>false</default>
+                <label>Lawyers - Invoice</label>
+            </value>
+            <value>
+                <fullName>Lease transfer</fullName>
+                <default>false</default>
+                <label>Lease transfer</label>
+            </value>
+            <value>
+                <fullName>Legal name change</fullName>
+                <default>false</default>
+                <label>Legal name change</label>
+            </value>
+            <value>
+                <fullName>Letter of non-interest</fullName>
+                <default>false</default>
+                <label>Letter of non-interest</label>
+            </value>
+            <value>
+                <fullName>New Contact</fullName>
+                <default>false</default>
+                <label>New Contact</label>
+            </value>
+            <value>
+                <fullName>No action</fullName>
+                <default>false</default>
+                <label>No action</label>
+            </value>
+            <value>
+                <fullName>Notice</fullName>
+                <default>false</default>
+                <label>Notice</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Other - Problematic account</fullName>
+                <default>false</default>
+                <label>Other - Problematic account</label>
+            </value>
+            <value>
+                <fullName>Others</fullName>
+                <default>false</default>
+                <label>Others</label>
+            </value>
+            <value>
+                <fullName>Ownership change</fullName>
+                <default>false</default>
+                <label>Ownership change</label>
+            </value>
+            <value>
+                <fullName>Payment Agreement</fullName>
+                <default>false</default>
+                <label>Payment Agreement</label>
+            </value>
+            <value>
+                <fullName>Payment arangement</fullName>
+                <default>false</default>
+                <label>Payment arangement</label>
+            </value>
+            <value>
+                <fullName>Payment confirmation</fullName>
+                <default>false</default>
+                <label>Payment confirmation</label>
+            </value>
+            <value>
+                <fullName>Payment schedule</fullName>
+                <default>false</default>
+                <label>Payment schedule</label>
+            </value>
+            <value>
+                <fullName>POA</fullName>
+                <default>false</default>
+                <label>POA</label>
+            </value>
+            <value>
+                <fullName>POC</fullName>
+                <default>false</default>
+                <label>POC</label>
+            </value>
+            <value>
+                <fullName>POI - Received From Broker</fullName>
+                <default>false</default>
+                <label>POI - Received From Broker</label>
+            </value>
+            <value>
+                <fullName>POI - Received From Customer</fullName>
+                <default>false</default>
+                <label>POI - Received From Customer</label>
+            </value>
+            <value>
+                <fullName>POI - Requested To Broker</fullName>
+                <default>false</default>
+                <label>POI - Requested To Broker</label>
+            </value>
+            <value>
+                <fullName>POI - Requested To Customer</fullName>
+                <default>false</default>
+                <label>POI - Requested To Customer</label>
+            </value>
+            <value>
+                <fullName>POL signed</fullName>
+                <default>false</default>
+                <label>POL signed</label>
+            </value>
+            <value>
+                <fullName>Postmaster</fullName>
+                <default>false</default>
+                <label>Postmaster</label>
+            </value>
+            <value>
+                <fullName>PPSA amendment</fullName>
+                <default>false</default>
+                <label>PPSA amendment</label>
+            </value>
+            <value>
+                <fullName>PPSA Discharge</fullName>
+                <default>false</default>
+                <label>PPSA Discharge</label>
+            </value>
+            <value>
+                <fullName>Projects</fullName>
+                <default>false</default>
+                <label>Projects</label>
+            </value>
+            <value>
+                <fullName>Proof Of Loss</fullName>
+                <default>false</default>
+                <label>Proof Of Loss</label>
+            </value>
+            <value>
+                <fullName>Proof of payment</fullName>
+                <default>false</default>
+                <label>Proof of payment</label>
+            </value>
+            <value>
+                <fullName>Purchase option</fullName>
+                <default>false</default>
+                <label>Purchase option</label>
+            </value>
+            <value>
+                <fullName>Pure Transfer</fullName>
+                <default>false</default>
+                <label>Pure Transfer</label>
+            </value>
+            <value>
+                <fullName>Redirected</fullName>
+                <default>false</default>
+                <label>Redirected</label>
+            </value>
+            <value>
+                <fullName>Refund</fullName>
+                <default>false</default>
+                <label>Refund</label>
+            </value>
+            <value>
+                <fullName>Refund Request</fullName>
+                <default>false</default>
+                <label>Refund Request</label>
+            </value>
+            <value>
+                <fullName>Related to other case</fullName>
+                <default>false</default>
+                <label>Related to other case</label>
+            </value>
+            <value>
+                <fullName>Release Document</fullName>
+                <default>false</default>
+                <label>Release Document</label>
+            </value>
+            <value>
+                <fullName>Release Guarantor / Debtor</fullName>
+                <default>false</default>
+                <label>Release Guarantor / Debtor</label>
+            </value>
+            <value>
+                <fullName>Release letter / PPSA discharge</fullName>
+                <default>false</default>
+                <label>Release letter / PPSA discharge</label>
+            </value>
+            <value>
+                <fullName>Repo Process</fullName>
+                <default>false</default>
+                <label>Repo Process</label>
+            </value>
+            <value>
+                <fullName>Report</fullName>
+                <default>false</default>
+                <label>Report</label>
+            </value>
+            <value>
+                <fullName>Request information on asset</fullName>
+                <default>false</default>
+                <label>Request information on asset</label>
+            </value>
+            <value>
+                <fullName>Request to contact customer</fullName>
+                <default>false</default>
+                <label>Request to contact customer</label>
+            </value>
+            <value>
+                <fullName>Request to contact Insurance</fullName>
+                <default>false</default>
+                <label>Request to contact Insurance</label>
+            </value>
+            <value>
+                <fullName>Resquest information</fullName>
+                <default>false</default>
+                <label>Resquest information</label>
+            </value>
+            <value>
+                <fullName>Restructure</fullName>
+                <default>false</default>
+                <label>Restructure</label>
+            </value>
+            <value>
+                <fullName>Sale repo</fullName>
+                <default>false</default>
+                <label>Sale repo</label>
+            </value>
+            <value>
+                <fullName>Sale request</fullName>
+                <default>false</default>
+                <label>Sale request</label>
+            </value>
+            <value>
+                <fullName>Sales</fullName>
+                <default>false</default>
+                <label>Sales</label>
+            </value>
+            <value>
+                <fullName>Sales Process</fullName>
+                <default>false</default>
+                <label>Sales Process</label>
+            </value>
+            <value>
+                <fullName>Schedule</fullName>
+                <default>false</default>
+                <label>Schedule</label>
+            </value>
+            <value>
+                <fullName>Stop payment</fullName>
+                <default>false</default>
+                <label>Stop payment</label>
+            </value>
+            <value>
+                <fullName>Sublease</fullName>
+                <default>false</default>
+                <label>Sublease</label>
+            </value>
+            <value>
+                <fullName>Thanks</fullName>
+                <default>false</default>
+                <label>Thanks</label>
+            </value>
+            <value>
+                <fullName>Third-party Convention</fullName>
+                <default>false</default>
+                <label>Third-party Convention</label>
+            </value>
+            <value>
+                <fullName>Toll Violation</fullName>
+                <default>false</default>
+                <label>Toll Violation</label>
+            </value>
+            <value>
+                <fullName>Void</fullName>
+                <default>false</default>
+                <label>Void</label>
+            </value>
+            <value>
+                <fullName>Voluntary Surrender</fullName>
+                <default>false</default>
+                <label>Voluntary Surrender</label>
+            </value>
+            <value>
+                <fullName>Waiver</fullName>
+                <default>false</default>
+                <label>Waiver</label>
+            </value>
+            <value>
+                <fullName>Add New Contact</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Add New Contact</label>
+            </value>
+            <value>
+                <fullName>Bank info (VOID check)</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Bank info (VOID check)</label>
+            </value>
+            <value>
+                <fullName>Broker Reception</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Broker Reception</label>
+            </value>
+            <value>
+                <fullName>Collection Agencies - Report</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Collection Agencies - Report</label>
+            </value>
+            <value>
+                <fullName>Contact Info Change</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Contact Info Change</label>
+            </value>
+            <value>
+                <fullName>Contract Package</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Contract Package</label>
+            </value>
+            <value>
+                <fullName>Customer Reception</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Customer Reception</label>
+            </value>
+            <value>
+                <fullName>Detail</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Detail</label>
+            </value>
+            <value>
+                <fullName>Files</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Files</label>
+            </value>
+            <value>
+                <fullName>Insurance Form request</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Insurance Form request</label>
+            </value>
+            <value>
+                <fullName>Process</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Process</label>
+            </value>
+            <value>
+                <fullName>Project</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Project</label>
+            </value>
+            <value>
+                <fullName>Release</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Release</label>
+            </value>
+            <value>
+                <fullName>Request copy of POI</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Request copy of POI</label>
+            </value>
+            <value>
+                <fullName>Request to broker</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Request to broker</label>
+            </value>
+            <value>
+                <fullName>Request to customer</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Request to customer</label>
+            </value>
+            <value>
+                <fullName>Voluntory surrender</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Voluntory surrender</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Refund</controllingFieldValue>
+            <valueName>Refund</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Contract</controllingFieldValue>
+            <valueName>Account update</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Contract</controllingFieldValue>
+            <valueName>Contract information</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Contract</controllingFieldValue>
+            <valueName>Lease transfer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Contract</controllingFieldValue>
+            <valueName>Request information on asset</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Contract</controllingFieldValue>
+            <valueName>Resquest information</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Contract</controllingFieldValue>
+            <valueName>Restructure</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Insurance</controllingFieldValue>
+            <valueName>Claim</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Insurance</controllingFieldValue>
+            <valueName>Claim Info</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Insurance</controllingFieldValue>
+            <valueName>Details Of Claim</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Insurance</controllingFieldValue>
+            <valueName>Insurance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Insurance</controllingFieldValue>
+            <valueName>Insurance Cancellation</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Insurance</controllingFieldValue>
+            <valueName>Insurance Form</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Insurance</controllingFieldValue>
+            <controllingFieldValue>Request</controllingFieldValue>
+            <controllingFieldValue>Documentation</controllingFieldValue>
+            <valueName>POA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Insurance</controllingFieldValue>
+            <valueName>POL signed</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Insurance</controllingFieldValue>
+            <valueName>Proof Of Loss</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Lawyer</controllingFieldValue>
+            <valueName>Lawyers - Files</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Lawyer</controllingFieldValue>
+            <valueName>Lawyers - Invoice</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Legal</controllingFieldValue>
+            <valueName>Estoppel</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Legal</controllingFieldValue>
+            <valueName>Letter of non-interest</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Legal</controllingFieldValue>
+            <controllingFieldValue>Release</controllingFieldValue>
+            <controllingFieldValue>Other</controllingFieldValue>
+            <controllingFieldValue>Documentation</controllingFieldValue>
+            <controllingFieldValue>No action</controllingFieldValue>
+            <controllingFieldValue>Buyouts</controllingFieldValue>
+            <controllingFieldValue>Payment</controllingFieldValue>
+            <controllingFieldValue>Account Update</controllingFieldValue>
+            <valueName>Other</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Legal</controllingFieldValue>
+            <valueName>PPSA amendment</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Legal</controllingFieldValue>
+            <controllingFieldValue>Release</controllingFieldValue>
+            <valueName>PPSA Discharge</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Legal</controllingFieldValue>
+            <controllingFieldValue>Release</controllingFieldValue>
+            <valueName>Waiver</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Letter</controllingFieldValue>
+            <valueName>Collection Letters - NOC</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Letter</controllingFieldValue>
+            <valueName>Collection Letters</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Litigation</controllingFieldValue>
+            <valueName>Banko/ proposal</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Litigation</controllingFieldValue>
+            <valueName>Other - Problematic account</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Litigation</controllingFieldValue>
+            <valueName>Voluntary Surrender</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Proof of insurance</controllingFieldValue>
+            <valueName>Copy of POI</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Proof of insurance</controllingFieldValue>
+            <valueName>POI - Received From Broker</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Proof of insurance</controllingFieldValue>
+            <valueName>POI - Received From Customer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Proof of insurance</controllingFieldValue>
+            <valueName>POI - Requested To Broker</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Proof of insurance</controllingFieldValue>
+            <valueName>POI - Requested To Customer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Release</controllingFieldValue>
+            <valueName>3rd party agreement</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Release</controllingFieldValue>
+            <valueName>Buyout - Audit</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Release</controllingFieldValue>
+            <controllingFieldValue>Collection agency</controllingFieldValue>
+            <valueName>Collection release</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Release</controllingFieldValue>
+            <valueName>Insurance Claim</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Release</controllingFieldValue>
+            <valueName>Release Document</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Release</controllingFieldValue>
+            <valueName>Release letter / PPSA discharge</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Repo / Sales</controllingFieldValue>
+            <controllingFieldValue>Collection agency</controllingFieldValue>
+            <valueName>Assigment</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Repo / Sales</controllingFieldValue>
+            <valueName>Documentation</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Repo / Sales</controllingFieldValue>
+            <valueName>Invoice</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Repo / Sales</controllingFieldValue>
+            <valueName>Repo Process</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Repo / Sales</controllingFieldValue>
+            <valueName>Sales Process</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Request</controllingFieldValue>
+            <valueName>Broker request</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Request</controllingFieldValue>
+            <valueName>Sale request</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Transfer Request</controllingFieldValue>
+            <controllingFieldValue>Transfer request Cash reserve</controllingFieldValue>
+            <controllingFieldValue>Transfer Request Non-Notification</controllingFieldValue>
+            <controllingFieldValue>Transfer Request Syndication</controllingFieldValue>
+            <valueName>Additionnal Debtor - Co-lessee</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Transfer Request</controllingFieldValue>
+            <controllingFieldValue>Transfer request Cash reserve</controllingFieldValue>
+            <controllingFieldValue>Transfer Request Non-Notification</controllingFieldValue>
+            <controllingFieldValue>Transfer Request Syndication</controllingFieldValue>
+            <valueName>Corporate merger</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Transfer Request</controllingFieldValue>
+            <controllingFieldValue>Transfer request Cash reserve</controllingFieldValue>
+            <controllingFieldValue>Transfer Request Non-Notification</controllingFieldValue>
+            <controllingFieldValue>Transfer Request Syndication</controllingFieldValue>
+            <valueName>Incorporation</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Transfer Request</controllingFieldValue>
+            <controllingFieldValue>Transfer request Cash reserve</controllingFieldValue>
+            <controllingFieldValue>Transfer Request Non-Notification</controllingFieldValue>
+            <controllingFieldValue>Transfer Request Syndication</controllingFieldValue>
+            <valueName>Legal name change</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Transfer Request</controllingFieldValue>
+            <controllingFieldValue>Transfer request Cash reserve</controllingFieldValue>
+            <controllingFieldValue>Transfer Request Non-Notification</controllingFieldValue>
+            <controllingFieldValue>Transfer Request Syndication</controllingFieldValue>
+            <valueName>Ownership change</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Transfer Request</controllingFieldValue>
+            <controllingFieldValue>Transfer request Cash reserve</controllingFieldValue>
+            <controllingFieldValue>Transfer Request Non-Notification</controllingFieldValue>
+            <controllingFieldValue>Transfer Request Syndication</controllingFieldValue>
+            <valueName>Pure Transfer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Transfer Request</controllingFieldValue>
+            <controllingFieldValue>Transfer request Cash reserve</controllingFieldValue>
+            <controllingFieldValue>Transfer Request Non-Notification</controllingFieldValue>
+            <controllingFieldValue>Transfer Request Syndication</controllingFieldValue>
+            <valueName>Release Guarantor / Debtor</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Transfer Request</controllingFieldValue>
+            <controllingFieldValue>Transfer request Cash reserve</controllingFieldValue>
+            <controllingFieldValue>Transfer Request Non-Notification</controllingFieldValue>
+            <controllingFieldValue>Transfer Request Syndication</controllingFieldValue>
+            <valueName>Sublease</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Other</controllingFieldValue>
+            <valueName>Gouverment Requests</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Other</controllingFieldValue>
+            <valueName>Others</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Other</controllingFieldValue>
+            <valueName>Postmaster</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Other</controllingFieldValue>
+            <valueName>Projects</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Other</controllingFieldValue>
+            <valueName>Toll Violation</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Documentation</controllingFieldValue>
+            <valueName>Bill Of Sale</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Documentation</controllingFieldValue>
+            <valueName>Contract Copy</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Documentation</controllingFieldValue>
+            <valueName>Third-party Convention</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>No action</controllingFieldValue>
+            <valueName>Auto-reply</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>No action</controllingFieldValue>
+            <valueName>Duplicate</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>No action</controllingFieldValue>
+            <valueName>Follow-up</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>No action</controllingFieldValue>
+            <valueName>Internal Communication</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>No action</controllingFieldValue>
+            <valueName>Redirected</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>No action</controllingFieldValue>
+            <valueName>Related to other case</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>No action</controllingFieldValue>
+            <valueName>Thanks</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Buyouts</controllingFieldValue>
+            <valueName>Broker / Vendor</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Buyouts</controllingFieldValue>
+            <valueName>Customer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Buyouts</controllingFieldValue>
+            <valueName>Sales</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Payment</controllingFieldValue>
+            <valueName>Arrangement</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Payment</controllingFieldValue>
+            <valueName>Buyout</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Payment</controllingFieldValue>
+            <valueName>Cash application</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Payment</controllingFieldValue>
+            <valueName>Change payment date</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Payment</controllingFieldValue>
+            <valueName>Cheque received</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Payment</controllingFieldValue>
+            <valueName>Financing Detail</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Payment</controllingFieldValue>
+            <valueName>Floorplan</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Payment</controllingFieldValue>
+            <valueName>History</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Payment</controllingFieldValue>
+            <valueName>Information</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Payment</controllingFieldValue>
+            <valueName>Payment Agreement</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Payment</controllingFieldValue>
+            <valueName>Payment confirmation</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Payment</controllingFieldValue>
+            <valueName>Proof of payment</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Payment</controllingFieldValue>
+            <valueName>Purchase option</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Payment</controllingFieldValue>
+            <valueName>Refund Request</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Payment</controllingFieldValue>
+            <valueName>Sale repo</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Payment</controllingFieldValue>
+            <valueName>Schedule</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Payment</controllingFieldValue>
+            <valueName>Stop payment</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Payment</controllingFieldValue>
+            <valueName>Void</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Account Update</controllingFieldValue>
+            <valueName>Address change</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Account Update</controllingFieldValue>
+            <valueName>Banking Information</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Account Update</controllingFieldValue>
+            <valueName>Customer Information</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Account Update</controllingFieldValue>
+            <valueName>New Contact</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Banko / Proposal</controllingFieldValue>
+            <valueName>Dividend</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Banko / Proposal</controllingFieldValue>
+            <valueName>Notice</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Banko / Proposal</controllingFieldValue>
+            <valueName>POC</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Collection agency</controllingFieldValue>
+            <valueName>Collection Agencies - Assignation</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Collection agency</controllingFieldValue>
+            <valueName>Report</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Communication</controllingFieldValue>
+            <valueName>Communication with broker</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Communication</controllingFieldValue>
+            <valueName>Follow Up With Customer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Communication</controllingFieldValue>
+            <valueName>Follow Up With Insurer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Communication</controllingFieldValue>
+            <valueName>Request to contact customer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Communication</controllingFieldValue>
+            <valueName>Request to contact Insurance</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

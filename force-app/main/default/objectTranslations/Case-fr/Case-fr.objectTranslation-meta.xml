@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <layouts>
+        <layout>AccountsReceiv Page Layout</layout>
+        <sections>
+            <label>Contenu du Email</label>
+            <section>Email Content</section>
+        </sections>
+        <sections>
+            <label><!-- Useful Links --></label>
+            <section>Useful Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>AdminCSS Page Layout</layout>
+        <sections>
+            <label>Contenu du Email</label>
+            <section>Email Content</section>
+        </sections>
+        <sections>
+            <label><!-- Useful Links --></label>
+            <section>Useful Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>CS Page Layout</layout>
+        <sections>
+            <label>Contenu du Email</label>
+            <section>Email Content</section>
+        </sections>
+        <sections>
+            <label><!-- Useful Links --></label>
+            <section>Useful Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Collection Page Layout</layout>
+        <sections>
+            <label>Contenu du Email</label>
+            <section>Email Content</section>
+        </sections>
+        <sections>
+            <label><!-- Useful Links --></label>
+            <section>Useful Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Insurance</layout>
+        <sections>
+            <label>Contenu du Email</label>
+            <section>Email Content</section>
+        </sections>
+        <sections>
+            <label><!-- Useful Links --></label>
+            <section>Useful Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>InsuranceClaim Page Layout</layout>
+        <sections>
+            <label>Contenu du Email</label>
+            <section>Email Content</section>
+        </sections>
+        <sections>
+            <label><!-- Useful Links --></label>
+            <section>Useful Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>SecurityDoc Page Layout</layout>
+        <sections>
+            <label>Contenu du Email</label>
+            <section>Email Content</section>
+        </sections>
+        <sections>
+            <label><!-- Useful Links --></label>
+            <section>Useful Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Transfer Page Layout</layout>
+        <sections>
+            <label>Contenu du Email</label>
+            <section>Email Content</section>
+        </sections>
+        <sections>
+            <label><!-- Useful Links --></label>
+            <section>Useful Links</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <description><!-- Record Type specific for Accounts Receivable Cases --></description>
+        <label><!-- Accounts Receivable --></label>
+        <name>Accounts_Receivable</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Record Type specific for Admin Support CCS Cases --></description>
+        <label><!-- Admin Support CCS --></label>
+        <name>Admin_Support_CCS</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Record Type specific for Origin Email to Collection Queue --></description>
+        <label>Collection</label>
+        <name>Collection</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Record Type specific for Origin Email to Collection Queue --></description>
+        <label>Collection</label>
+        <name>Collections</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Record Type specific for Origin Email to Customer Service Queue --></description>
+        <label>Service à la clientèle</label>
+        <name>Customer_Service</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Default Record Type for Origin Phone and Web --></description>
+        <label>Défaut</label>
+        <name>Default</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- External --></label>
+        <name>External</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Record Type specific for Insurance Cases --></description>
+        <label><!-- Insurance --></label>
+        <name>Insurance</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Record Type specific for Insurance Claim Cases --></description>
+        <label><!-- Insurance Claims --></label>
+        <name>Insurance_Claims</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Record Type specific for Litigation Case --></description>
+        <label><!-- Litigation --></label>
+        <name>Litigation</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Sales --></label>
+        <name>Sales</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Record Type specific for Security Doc Case --></description>
+        <label><!-- Security Doc --></label>
+        <name>Security_Doc</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Record Type specific for Transfer Cases --></description>
+        <label><!-- Transfer --></label>
+        <name>Transfer</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Record Type specific for Vendor Portal support requests --></description>
+        <label><!-- Vendor Portal --></label>
+        <name>Vendor_Portal</name>
+    </recordTypes>
+    <validationRules>
+        <errorMessage><!-- Auto Reply / Réponse Automatique --></errorMessage>
+        <name>Blocked_Auto_Reply_Email</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Need Contact or Account validation --></errorMessage>
+        <name>Contact_selection</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Select target Department before Case redirection --></errorMessage>
+        <name>Department_Controller</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Can not changed Case owner --></errorMessage>
+        <name>Restrict_Change_Owner</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You can not closed Case without Type. --></errorMessage>
+        <name>Restrict_To_Closed</name>
+    </validationRules>
+</CustomObjectTranslation>

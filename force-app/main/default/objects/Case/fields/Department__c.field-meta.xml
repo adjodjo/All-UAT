@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Department__c</fullName>
+    <externalId>false</externalId>
+    <label>Department</label>
+    <required>false</required>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Type</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Credit</fullName>
+                <default>false</default>
+                <label>Credit</label>
+            </value>
+            <value>
+                <fullName>Legal</fullName>
+                <default>false</default>
+                <label>Legal</label>
+            </value>
+            <value>
+                <fullName>Sales</fullName>
+                <default>false</default>
+                <label>Sales</label>
+            </value>
+            <value>
+                <fullName>Accounting</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Accounting</label>
+            </value>
+            <value>
+                <fullName>Accounts_Receivable</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Accounts Receivable</label>
+            </value>
+            <value>
+                <fullName>Admin Support CCS</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Admin Support CCS</label>
+            </value>
+            <value>
+                <fullName>Collection</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Collection</label>
+            </value>
+            <value>
+                <fullName>Insurance</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Insurance</label>
+            </value>
+            <value>
+                <fullName>Insurance_Claims</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Insurance Claims</label>
+            </value>
+            <value>
+                <fullName>Marketing</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Marketing</label>
+            </value>
+            <value>
+                <fullName>Providers_Account</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Providers Account</label>
+            </value>
+            <value>
+                <fullName>Quittance</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Quittance</label>
+            </value>
+            <value>
+                <fullName>Transfer</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Transfer</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Redirect To</controllingFieldValue>
+            <valueName>Credit</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Redirect To</controllingFieldValue>
+            <valueName>Legal</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Redirect To</controllingFieldValue>
+            <valueName>Sales</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

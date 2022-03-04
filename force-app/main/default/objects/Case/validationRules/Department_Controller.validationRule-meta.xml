@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Department_Controller</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+ISPICKVAL(Origin , &apos;Email&apos;),
+ISPICKVAL( Type , &apos;Redirect To&apos;),
+ISPICKVAL(Department__c, &quot;&quot;)
+
+)</errorConditionFormula>
+    <errorDisplayField>Department__c</errorDisplayField>
+    <errorMessage>Select target Department before Case redirection</errorMessage>
+</ValidationRule>

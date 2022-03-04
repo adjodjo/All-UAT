@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Request Type --></label>
+    <name>Request_Type__c</name>
+    <picklistValues>
+        <masterLabel>BUYOUT</masterLabel>
+        <translation><!-- BUYOUT --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Grille de paiement</masterLabel>
+        <translation><!-- Grille de paiement --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Modifications compte client</masterLabel>
+        <translation><!-- Modifications compte client --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>POA</masterLabel>
+        <translation><!-- POA --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PREPAYH</masterLabel>
+        <translation><!-- PREPAYH --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Renouvèlement</masterLabel>
+        <translation><!-- Renouvèlement --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Régulières</masterLabel>
+        <translation><!-- Régulières --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Résiliation</masterLabel>
+        <translation><!-- Résiliation --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Tiers</masterLabel>
+        <translation><!-- Tiers --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>VOID</masterLabel>
+        <translation><!-- VOID --></translation>
+    </picklistValues>
+</CustomFieldTranslation>
