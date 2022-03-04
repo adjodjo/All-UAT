@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Translations xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customLabels>
+        <label><!-- Portal Navigation Name --></label>
+        <name>Portal_Navigation_Name</name>
+    </customLabels>
     <flowDefinitions>
         <flows/>
         <fullName>Case_Status_Manage</fullName>
-    </flowDefinitions>
-    <flowDefinitions>
-        <flows/>
-        <fullName>Flow_CR_Case_Notification</fullName>
     </flowDefinitions>
     <flowDefinitions>
         <flows/>
@@ -19,6 +19,10 @@
     <flowDefinitions>
         <flows/>
         <fullName>Flow_Cases_Manage</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows/>
+        <fullName>Flow_CR_Case_Notification</fullName>
     </flowDefinitions>
     <flowDefinitions>
         <flows/>
@@ -38,10 +42,10 @@
     </flowDefinitions>
     <flowDefinitions>
         <flows/>
-        <fullName>Sub_Flow_CAse_Status_Update</fullName>
+        <fullName>Sub_Flow_Case_Status_Complate</fullName>
     </flowDefinitions>
     <flowDefinitions>
         <flows/>
-        <fullName>Sub_Flow_Case_Status_Complate</fullName>
+        <fullName>Sub_Flow_CAse_Status_Update</fullName>
     </flowDefinitions>
 </Translations>
