@@ -1,0 +1,111 @@
+.container{
+    width: 100%;
+    background: white;
+    margin: auto;
+    font-family: barlow-regular, Arial, Helvetica, sans-serif;
+}
+
+.main-container{
+    padding: 81px 90px;
+}
+.back-button{
+    background: #E60000;
+    color: white;
+    padding: 0;
+    border-radius: 5px;
+    font-size: 14px;
+    line-height: 21px;
+    height: 25px;
+    width: 25px;
+    text-align: center;
+    display: inline-block; 
+    margin-right: 20px;
+}
+
+.back-button:hover{
+    background: #A50000;
+}
+
+.back-button-container{
+    margin-top: 15px;
+}
+
+.breadcrumb-slash {
+    padding: 0 8px;
+}
+
+.breadcrumb-text {
+    color: #000000;
+}
+.breadcrumb-text:hover{
+    color: #E60000;
+    text-decoration: underline;
+}
+
+.hccc-button {
+    min-height: 60px;
+    border: 1px solid;
+    border-radius: 4px;
+    margin-top: 6px;
+    margin-left: 10px;
+    min-width: 60px;
+}
+.hccc-button_stretch {
+    display: block;
+}
+.hccc-button_red {
+    border-color: #E60000;
+    background-color: #E60000;
+    color: #FFFFFF;
+}
+
+.hccc-button_red:hover {
+    background-color: #A50000;
+    border-color: #A50000;
+}
+
+.hccc-button_black {
+    border-color: #000000;
+    background-color:#000000;
+    color: #FFFFFF;
+}
+
+.hccc-button_black:hover {
+    border-color: #555557;
+   background-color:#555557;
+}
+
+.icon-container{
+    padding: 10px;
+}
+
+.divider{
+    height:1px;
+    background: #CFCFCF;
+    width: 100%;
+    margin: 10px 0px;
+}
+
+.total-result-css {
+    padding-bottom: 24px;
+}
+
+
+@media screen and (max-width:768px) {
+    .main-container{
+        padding: 32px 24px;
+    }
+    .hccc-button{
+        width: 42px;
+    }
+}
+
+.resultHeading {
+    height: 26px;
+    width: 78px;
+    color: rgba(0,0,0,0.87);
+    font-family: Barlow;
+    font-size: 18px;
+    letter-spacing: 0.14px;
+    line-height: 26px;
+  }

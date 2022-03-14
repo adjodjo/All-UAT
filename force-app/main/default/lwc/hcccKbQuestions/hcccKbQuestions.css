@@ -1,0 +1,41 @@
+.custom-bottom-padding{
+    padding-bottom: 37px;
+}
+
+.support-form-container{
+    background: #000000;
+    border-radius: 5px;
+    margin-top: 4rem;
+    color:#ffffff;
+    padding: 3rem 3rem;
+    padding-bottom: 2rem;
+}
+
+.questionDiv{
+    padding: 8px 0;
+}
+
+.question{
+    line-height: 20px;
+}
+
+.questionText:hover{
+    color: #E60000;
+    cursor: pointer;
+}
+
+.custom-top-bottom-padding{
+    padding-top: 37px;
+    padding-bottom: 37px;
+}
+
+@media screen and (max-width:768px) {
+    .custom-bottom-padding{
+        padding-bottom: 24px;
+    }
+
+    .custom-top-bottom-padding{
+        padding-top: 24px;
+        padding-bottom: 24px;
+    }
+}

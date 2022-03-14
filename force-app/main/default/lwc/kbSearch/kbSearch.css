@@ -1,0 +1,119 @@
+.container{
+    width: 100%;
+    background: white;
+    margin: auto;
+    font-family: barlow-regular, Arial, Helvetica, sans-serif;
+}
+.main-container{
+    padding-top: 81px;
+    /* padding-bottom: 81px; */
+}
+
+.main-left-padding{
+    padding-left: 90px;
+    padding-right: 90px;
+}
+
+.divider{
+    height:1px;
+    background: #CFCFCF;
+    width: 100%;
+    margin: 10px 0px;
+}
+
+.pagination-container{
+    float: right;
+    padding: 1rem;
+}
+
+.page_no{
+    width: 20px;
+    height: 10px; 
+}
+
+.page_title{
+    font-size: xxx-large; margin-left: 51px;
+} 
+.button_section{
+    text-align: center;
+}
+.button_section a{
+    text-decoration: none;
+}
+.status_arrow{
+    margin-left: auto;
+    cursor: pointer;
+}
+.page_no{
+    width: 20px;
+    height: 10px; 
+}
+.next-prev-button{
+    color: #717176;
+    border: 1px solid #717176;
+    border-radius: 50%;
+    height: 32px;
+}
+.chevron-icon{
+    height: 15px;
+}
+
+
+.hccc-button {
+    min-height: 60px;
+    border: 1px solid;
+    border-radius: 4px;
+    margin-top: 6px;
+    margin-left: 10px;
+    min-width: 60px;
+}
+.hccc-button_stretch {
+    display: block;
+}
+.hccc-button_red {
+    border-color: #E60000;
+    background-color: #E60000;
+    color: #FFFFFF;
+}
+
+.hccc-button_red:hover {
+    background-color: #A50000;
+    border-color: #A50000;
+}
+
+.hccc-button_black {
+    border-color: #000000;
+    background-color:#000000;
+    color: #FFFFFF;
+}
+
+.icon-container{
+    padding: 10px;
+}
+.hccc-button_black:hover {
+    border-color: #555557;
+   background-color:#555557;
+}
+
+.total-result-css{
+    padding: 70px 0 10px 0;
+}
+
+@media screen and (max-width:768px) {
+    .main-container{
+        padding: 32px 0 0 0;
+    }
+
+    .main-left-padding{
+        padding: 0 24px;
+    }
+
+    .total-result-css{
+        padding: 32px 0 10px 0;
+    }
+
+    .hccc-button{
+        width: 42px;
+    }
+    
+}

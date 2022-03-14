@@ -1,0 +1,48 @@
+.container{
+    background: #F4F4F6;
+    font-family: barlow-regular, Arial, Helvetica, sans-serif;
+    padding: 25px;
+    border-radius: 5px;
+    min-height: 260px;
+    margin: 10px;
+}
+.back-button{
+    background: #E60000;
+    color: white;
+    float: right;
+    padding: 0rem 0.6rem 0.3rem 0.6rem;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    line-height: 43px;
+    height: 48px;
+    width: 50px;
+    text-align: center;
+}
+
+.back-button:hover{
+    background: #A50000;
+}
+
+.back-button-container{
+    margin-top: 15px;
+}
+
+.text-container{
+    min-height: 120px;
+    padding-top: 10px;
+}
+
+@media screen and (max-width:768px) {
+    .main-container{
+        padding: 15px 5px;
+    }
+
+    .container{
+        min-height: 150px;
+    }
+
+    .text-container{
+        min-height: 50px;
+        padding-top: 10px;
+    }
+}

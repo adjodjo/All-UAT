@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>Ago</fullName>
+        <categories>Knowledge</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Ago</shortDescription>
+        <value>Ago</value>
+    </labels>
+    <labels>
+        <fullName>All_Topics</fullName>
+        <categories>Knowledge</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>All_Topics</shortDescription>
+        <value>All topics</value>
+    </labels>
+    <labels>
+        <fullName>Button_topics</fullName>
+        <categories>Knowledge</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Button topics</shortDescription>
+        <value>See all topics</value>
+    </labels>
+    <labels>
+        <fullName>Common_Question_1</fullName>
+        <categories>Knowledge</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Common Question 1</shortDescription>
+        <value>How to contact your sales team?</value>
+    </labels>
+    <labels>
+        <fullName>Common_Question_2</fullName>
+        <categories>Knowledge</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>The Common Question 2</shortDescription>
+        <value>The Question 2</value>
+    </labels>
+    <labels>
+        <fullName>Common_Question_3</fullName>
+        <categories>Knowledge</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Common Question 3</shortDescription>
+        <value>Question 3</value>
+    </labels>
+    <labels>
+        <fullName>Common_Question_4</fullName>
+        <categories>Knowledge</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Common Question 4</shortDescription>
+        <value>Question 4</value>
+    </labels>
+    <labels>
+        <fullName>Edited</fullName>
+        <categories>Knowledge</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Edited</shortDescription>
+        <value>Edited</value>
+    </labels>
+    <labels>
+        <fullName>Help_CTA_text</fullName>
+        <categories>Contact Us and Help</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Help CTA text</shortDescription>
+        <value>Looking for Assistance? Send Us a Request.</value>
+    </labels>
+    <labels>
+        <fullName>Help_CTA_title</fullName>
+        <categories>Contact Us and Help</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Help CTA title</shortDescription>
+        <value>TECHNICAL SUPPORT</value>
+    </labels>
+    <labels>
+        <fullName>KB_Feature_Article_Number</fullName>
+        <categories>Home Dashboard</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>KB_Feature_Article_Number</shortDescription>
+        <value>000001007</value>
+    </labels>
+    <labels>
+        <fullName>KB_Feature_Summary</fullName>
+        <categories>Home Dashboard</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>KB_Feature_Summary</shortDescription>
+        <value>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut</value>
+    </labels>
+    <labels>
+        <fullName>KB_Feature_Title</fullName>
+        <categories>Home Dashboard</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>KB_Feature_Title</shortDescription>
+        <value>Knowledge Article Feature</value>
+    </labels>
+    <labels>
+        <fullName>Knowledge_Related_Articles</fullName>
+        <categories>Knowledge</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Knowledge Related Articles</shortDescription>
+        <value>Related article</value>
+    </labels>
+    <labels>
+        <fullName>Months</fullName>
+        <categories>Quote Options, Knowledge</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Months</shortDescription>
+        <value>months</value>
+    </labels>
+    <labels>
+        <fullName>OL_Days</fullName>
+        <categories>HomeDashboard, Knowledge</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OL Days</shortDescription>
+        <value>Days</value>
+    </labels>
+    <labels>
+        <fullName>Programs_Learn_More</fullName>
+        <categories>Products and Services</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Programs_Learn_More</shortDescription>
+        <value>LEARN MORE</value>
+    </labels>
+    <labels>
+        <fullName>Question_1_Article</fullName>
+        <categories>Knowledge</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Question 1 Article</shortDescription>
+        <value>000001010</value>
+    </labels>
+    <labels>
+        <fullName>Question_2_Article</fullName>
+        <categories>Knowledge</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Question 2 Article</shortDescription>
+        <value>na</value>
+    </labels>
+    <labels>
+        <fullName>Question_3_Article</fullName>
+        <categories>Knowledge</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Question 3 Article</shortDescription>
+        <value>0TO3J0000009puCWAQ</value>
+    </labels>
+    <labels>
+        <fullName>Question_4_Article</fullName>
+        <categories>Knowledge</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Question 4 Article</shortDescription>
+        <value>0TO3J0000009puCWAQ</value>
+    </labels>
+    <labels>
+        <fullName>Resources</fullName>
+        <categories>Knowledge</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Resources</shortDescription>
+        <value>Resources</value>
+    </labels>
+    <labels>
+        <fullName>Results</fullName>
+        <categories>Knowledge</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Results</shortDescription>
+        <value>result</value>
+    </labels>
+    <labels>
+        <fullName>Search_Bar</fullName>
+        <categories>Knowledge</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Search Bar</shortDescription>
+        <value>How can we help you today?</value>
+    </labels>
+    <labels>
+        <fullName>Search_bar_placeholder</fullName>
+        <categories>Knowledge</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Search bar placeholder</shortDescription>
+        <value>Search resources...</value>
+    </labels>
+    <labels>
+        <fullName>Search_topic_placeholder</fullName>
+        <categories>Knowledge</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Search topic placeholder</shortDescription>
+        <value>Search topics...</value>
+    </labels>
+    <labels>
+        <fullName>Title_common_questions</fullName>
+        <categories>Knowledge</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Title common questions</shortDescription>
+        <value>Common questions</value>
+    </labels>
+    <labels>
+        <fullName>Title_popular_articles</fullName>
+        <categories>Knowledge</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Title popular articles</shortDescription>
+        <value>Popular Articles</value>
+    </labels>
+    <labels>
+        <fullName>Title_topics</fullName>
+        <categories>Knowledge</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Title topics</shortDescription>
+        <value>Browse Topics</value>
+    </labels>
+    <labels>
+        <fullName>Today</fullName>
+        <categories>Knowledge</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Today</shortDescription>
+        <value>today</value>
+    </labels>
+    <labels>
+        <fullName>Topic_1</fullName>
+        <categories>Knowledge</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Topic 1</shortDescription>
+        <value>0TO8F000000CauEWAS</value>
+    </labels>
+    <labels>
+        <fullName>Topic_2</fullName>
+        <categories>Knowledge</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Topic 2</shortDescription>
+        <value>0TO8F000000CavRWAS</value>
+    </labels>
+    <labels>
+        <fullName>Topic_3</fullName>
+        <categories>Knowledge</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Topic 3</shortDescription>
+        <value>0TO8F000000Cav2WAC</value>
+    </labels>
+</CustomLabels>

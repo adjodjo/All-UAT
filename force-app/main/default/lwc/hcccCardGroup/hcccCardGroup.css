@@ -1,0 +1,12 @@
+.container{
+    width: 100%;
+    background: white;
+    margin: auto;
+    font-family: barlow-regular, Arial, Helvetica, sans-serif;
+}
+.main-container{
+    margin:  0 -10px;
+}
+@media screen and (max-width:768px) {
+
+}

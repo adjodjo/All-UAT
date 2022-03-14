@@ -1,0 +1,118 @@
+.container{
+    width: 100%;
+    background: white;
+    margin: auto;
+    font-family: barlow-regular, Arial, Helvetica, sans-serif;
+}
+.main-container{
+    padding-top: 81px;
+    padding-bottom: 81px;
+}
+
+.main-left-padding{
+    padding-left: 90px;
+    padding-right: 90px;
+}
+.back-button{
+    background: #E60000;
+    color: white;
+    padding: 0;
+    border-radius: 5px;
+    font-size: 14px;
+    line-height: 21px;
+    height: 25px;
+    width: 25px;
+    text-align: center;
+    display: inline-block; 
+    margin-right: 20px;
+}
+
+.back-button:hover{
+    background: #A50000;
+}
+
+.back-button-container{
+    margin-top: 15px;
+}
+
+.breadcrumb-slash {
+    padding: 0 8px;
+}
+
+.breadcrumb-text {
+    color: #000000;
+}
+.breadcrumb-text:hover{
+    color: #E60000;
+    text-decoration: underline;
+}
+
+.support-form-title{
+    color: #FFFFFF;
+    font-family: barlow-regular, Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    line-height: 18px;
+    padding-bottom: 1rem;
+}
+.support-form-large-text{
+    color: #FFFFFF;
+    font-family: barlow-regular, Arial, Helvetica, sans-serif;
+    font-size: 40px;
+    letter-spacing: 0.3px;
+    line-height: 42px;
+    padding-bottom: 10px;
+}
+
+.support-form-container{
+    background: #000000;
+    border-radius: 5px;
+    margin-top: 4rem;
+    color:#ffffff;
+    padding: 4rem 3rem;
+    padding-bottom: 4rem;
+}
+.back-button1{
+    background: #E60000;
+    color: white;
+    float: right;
+    padding: 0rem 0.6rem 0.3rem 0.6rem;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    line-height: 44px;
+    height: 48px;
+    width: 50px;
+    text-align: center;
+}
+
+.back-button:hover{
+    background: #A50000;
+}
+.back-button1:hover{
+    background: #A50000;
+}
+
+.related-article-container {
+    padding-bottom: 37px;
+    padding-top: 190px;
+}
+
+@media screen and (max-width:768px) {
+    .main-container{
+        padding: 32px 0px;
+    }
+    .main-left-padding{
+        padding: 0px 24px;
+    }
+    .hccc-button{
+        width: 42px;
+    }
+
+    .icon-container{
+        padding: 0px;
+    }
+    .related-article-container {
+        padding-bottom: 24px;
+        padding-top: 50px;
+    }
+}

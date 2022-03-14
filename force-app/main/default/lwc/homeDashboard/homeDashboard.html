@@ -1,0 +1,205 @@
+<template>
+
+    <div class="container">
+        <div class="slds-grid slds-wrap main-container backgroundImg">
+            <div class="slds-col slds-size_1-of-1 slds-medium-size_12-of-12 slds-large-size_12-of-12">
+                
+                <div class="slds-grid slds-wrap">
+                    <div class="slds-col slds-size_1-of-1 slds-medium-size_12-of-12 slds-large-size_12-of-12">
+                        
+                        <div class="slds-grid slds-wrap">
+                            <div class="slds-col slds-size_1-of-1 slds-medium-size_12-of-12 slds-large-size_12-of-12 main-title-container">
+                                <!-- <div class="hello-title">
+                                    {label.HomeDashboard_Hello}, {userFirstName}!
+                                </div> -->
+                                <div class="hello-title">
+                                    <c-hccc-text color="hccc-text_black" size="hccc-text_h1">{label.HomeDashboard_Hello}, {userFirstName}</c-hccc-text>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slds-grid slds-wrap">                    
+                            <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-4">                        
+                                <div class="quote-stats-container">
+                                    <div class="slds-grid slds-wrap">
+                                        <div class="slds-col slds-size_1-of-1 slds-medium-size_12-of-12 slds-large-size_12-of-12">
+                                            <!-- <div class="monthly-volume-quoted">                                                 -->
+                                                <!-- {label.HomeDashboard_Monthly_Volume_Quote}                                        -->
+                                                <c-hccc-text color="hccc-text_white" size="hccc-text_caption1">{label.HomeDashboard_Monthly_Volume_Quote} </c-hccc-text>
+                                            <!-- </div> -->
+                                        </div>
+                                    </div>
+                                    <div class="slds-grid slds-wrap">
+                                        <div class="slds-col slds-size_1-of-1 slds-medium-size_12-of-12 slds-large-size_12-of-12">
+                                            <c-hccc-text color="hccc-text_white" size="hccc-text_h2">
+                                                <template if:true={kPIInfo}>
+                                                    {kPIInfo.totalQuoteVolume}
+                                                </template>
+                                            </c-hccc-text>                                              
+                                        </div>
+                                    </div>                                                                                  
+                                </div>
+                            </div>
+                            <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-4">                        
+                                <div class="quote-stats-container">
+                                    <div class="slds-grid slds-wrap">
+                                        <div class="slds-col slds-size_1-of-1 slds-medium-size_12-of-12 slds-large-size_12-of-12">
+                                            <c-hccc-text color="hccc-text_white" size="hccc-text_caption1">{label.HomeDashboard_Total_Quoted_Commission} </c-hccc-text>                                           
+                                        </div>
+                                    </div>
+                                    <div class="slds-grid slds-wrap">
+                                        <div class="slds-col slds-size_1-of-1 slds-medium-size_12-of-12 slds-large-size_12-of-12">
+                                            <c-hccc-text color="hccc-text_white" size="hccc-text_h2">
+                                                <template if:true={kPIInfo}>
+                                                    {kPIInfo.quotePotentialCommissions}
+                                                </template>
+                                            </c-hccc-text>                                             
+                                        </div>
+                                    </div>                                                                               
+                                </div>
+                            </div>
+
+                            <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-4">                        
+                                <div class="quote-stats-container">
+                                    <div class="slds-grid slds-wrap">
+                                        <div class="slds-col slds-size_1-of-1 slds-medium-size_12-of-12 slds-large-size_12-of-12">
+                                            <c-hccc-text color="hccc-text_white" size="hccc-text_caption1">{label.HomeDashboard_No_Of_Accepted_Quotes} </c-hccc-text>                                            
+                                        </div>
+                                    </div>
+                                    <div class="slds-grid slds-wrap">
+                                        <div class="slds-col slds-size_1-of-1 slds-medium-size_12-of-12 slds-large-size_12-of-12">                                            
+                                            <c-hccc-text color="hccc-text_white" size="hccc-text_h2">
+                                                <template if:true={kPIInfo}>
+                                                    {kPIInfo.totalAcceptedQuotes}
+                                                </template>  
+                                            </c-hccc-text>                                                                                       
+                                        </div>
+                                    </div>                                                                                
+                                </div>
+                            </div>
+                            <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-4">                        
+                                <div class="quote-stats-container">
+                                    <div class="slds-grid slds-wrap">
+                                        <div class="slds-col slds-size_1-of-1 slds-medium-size_12-of-12 slds-large-size_12-of-12">                                            
+                                            <c-hccc-text color="hccc-text_white" size="hccc-text_caption1">{label.HomeDashboard_No_Of_Quote_Expiring} </c-hccc-text>
+                                        </div>
+                                    </div>
+                                    <div class="slds-grid slds-wrap">
+                                        <div class="slds-col slds-size_1-of-1 slds-medium-size_12-of-12 slds-large-size_12-of-12">
+                                            <c-hccc-text color="hccc-text_white" size="hccc-text_h2">
+                                                <template if:true={kPIInfo}>
+                                                    {kPIInfo.quotesExpiringin30Days}
+                                                </template>  
+                                            </c-hccc-text>                                             
+                                        </div>
+                                    </div>                                                                               
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="slds-grid slds-wrap slds-p-vertical_large">
+                    <div class="slds-col slds-size_1-of-1 slds-medium-size_12-of-12 slds-large-size_12-of-12">
+                            <c-hcc-quote-table-list></c-hcc-quote-table-list>
+                    </div>
+                </div>
+
+
+                <div class="slds-grid slds-wrap">
+                    <div class="slds-col slds-size_1-of-1 slds-medium-size_12-of-12 slds-large-size_12-of-12 account-manager-section">
+                        <div class="slds-grid slds-wrap">
+                            <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-1 slds-large-size_4-of-12 account-manager-main-container">
+                                <div class="slds-grid slds-wrap">
+                                    <div class="slds-col slds-size_1-of-1 slds-medium-size_12-of-12 slds-large-size_12-of-12">                                                                                                       
+                                        <div class="slds-grid slds-wrap">
+                                            <div class="slds-col slds-size_1-of-1 slds-medium-size_12-of-12 slds-large-size_12-of-12">
+                                                <span class="slds-avatar slds-avatar_circle slds-avatar_large">                                                           
+                                                    <template if:true={accountManagerImageURL}>
+                                                        <img alt="Person name" src={accountManagerImageURL} title={accountManagerName} />
+                                                    </template>                                                           
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="slds-grid slds-wrap">
+                                            <div class="slds-col slds-size_1-of-1 slds-medium-size_12-of-12 slds-large-size_12-of-12">
+                                                <div class="team-name">                                                    
+                                                    <c-hccc-text color="hccc-text_black" size="hccc-text_h5">
+                                                        {accountManagerName},&nbsp;{label.Help_Account_Manager}
+                                                    </c-hccc-text>                                                    
+                                                </div>
+                                                <div>
+                                                    <img src={mailIcon} alt="Mail" />
+                                                   <!--<lightning-icon icon-name="utility:email" alternative-text="email" size="xx-small" title="xx-small size mail-icon"></lightning-icon> --> 
+                                                   <a href={accountManagerEmailMailto} onclick={handleEmailClick} style="text-decoration: none;color:#E60000;">
+                                                        <span class="slds-p-left_small email">
+                                                            <c-hccc-text size="hccc-text_body1">
+                                                                {accountManagerEmail}
+                                                            </c-hccc-text>
+                                                        </span>
+                                                    </a>
+                                                </div>
+                                                <div>
+                                                    <img src={phoneIcon} alt="Phone" />
+                                                    <!--<lightning-icon icon-name="utility:dialing" alternative-text="dialing" size="xx-small" title="xx-small size"></lightning-icon>  -->
+                                                    <span class="slds-p-left_small phone-text">
+                                                        <c-hccc-text color="hccc-text_black" size="hccc-text_body1">
+                                                            {accountManagerPhone}
+                                                        </c-hccc-text> 
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>                                                                                    
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-1 slds-large-size_8-of-12 right-account-main-container featureFlex">
+                                <div class="flex-container">
+                                    <div class="flex-child slds-text-align_left" >
+                                        <div class="textDiv">
+                                            <c-hccc-text size="hccc-text_h5">{label.KB_Feature_Title}</c-hccc-text></br></br>
+                                            <c-hccc-text size="hccc-text_body1">{label.KB_Feature_Summary}</c-hccc-text>
+                                        </div>
+                                        <div class="slds-p-vertical_x-large">
+                                            <div class="feature-button">
+                                                <a style="color: white;text-decoration: none;" title={label.KB_Feature_Article_Number} onclick={handleFeatureClick}>
+                                                    <svg  width="16px" height="16px" focusable="false" viewBox="0 0 24 24" aria-hidden="true">                                                    
+                                                            <path style="fill: white;" d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"></path>                                                    
+                                                    </svg>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <img class="imageCSS" src={ArticleFeatureImg}> 
+                                </div>
+                            </div>
+                            <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-1 slds-large-size_8-of-12 right-account-main-container featureStack">
+                                <div>
+                                    <div class="slds-p-vertical_x-large slds-align_absolute-center">
+                                        <img class="imageCSS" src={ArticleFeatureImg}> 
+                                    </div>
+                                    <div class="slds-text-align_left" >
+                                        <div class="textDiv">
+                                            <c-hccc-text size="hccc-text_h5">{label.KB_Feature_Title}</c-hccc-text></br></br>
+                                            <c-hccc-text size="hccc-text_body1">{label.KB_Feature_Summary}</c-hccc-text>
+                                        </div>
+                                        <div class="slds-p-vertical_x-large">
+                                            <div class="feature-button">
+                                                <a style="color: white;text-decoration: none;" title={label.KB_Feature_Article_Number} onclick={handleFeatureClick}>
+                                                    <svg  width="16px" height="16px" focusable="false" viewBox="0 0 24 24" aria-hidden="true">                                                    
+                                                            <path style="fill: white;" d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"></path>                                                    
+                                                    </svg>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>

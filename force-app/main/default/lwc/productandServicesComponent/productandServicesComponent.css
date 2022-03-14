@@ -1,0 +1,232 @@
+.desktop {
+    display: block;
+}
+
+.mobile {
+    display: none;
+}
+
+.container {
+    background: white;
+    margin: 50px 77px 77px 77px;
+}
+
+table{
+    margin-left: -21px;
+    max-width: 1000px;
+    font-size: large;
+    border-top: 0.1px solid #d4cfcf;
+} 
+table, th, tr {
+    border-bottom: 1px solid #ddd;
+}
+.hccc-button {
+    height: 48px;
+    border: 1px solid;
+    border-radius: 4px;
+}
+
+.hccc-button_stretch {
+    display: block;
+    width: 100%;
+}
+
+.hccc-button_disabled {
+    border-color: #F4F4F6;
+    background-color: #F4F4F6;
+    color: #717176;
+    cursor: not-allowed;
+}
+
+.hccc-button_black {
+    border-color: #000000;
+    background-color:#000000;
+    color: #FFFFFF;
+}
+
+.hccc-button_white {
+    border-color: #D4D4D6;
+    background-color:#FFFFFF;
+    color: #000000;
+}
+
+.contact-form-container{
+    background: #000000;
+    border-radius: 5px;
+    margin-top: 4rem;
+    color:#ffffff;
+    padding: 3rem 3rem;
+    max-width: 703px;
+    padding-bottom: 2rem;
+}
+
+.back-button{
+    background: #E60000;
+    color: white;
+    float: right;
+    padding: 0rem 0.6rem 0.3rem 0.6rem;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    line-height: 42px;
+    height: 48px;
+    width: 50px;
+    text-align: center;
+}
+
+.back-button:hover{
+    background: #A50000;
+}
+
+.hccc-button_red {
+    border-color: #E60000;
+    background-color: #E60000;
+    color: #FFFFFF;
+    margin-top: 45px;
+}
+
+.hccc-button_white:hover {
+    border-color: #000000;
+    background-color:#000000;
+    color: #FFFFFF;
+}
+
+.hccc-button_red:hover {
+    background-color: #A50000;
+    border-color: #A50000;
+}
+
+.hccc-button_black:hover {
+    background-color: #555557;
+    border-color: #555557;
+}
+
+.mobile {
+    display: none;
+}
+
+.optionsClass:hover{
+    color: #E60000;
+    fill: #E60000;
+}
+.optionsClass{
+    cursor: pointer;
+}
+
+.hccc-arrow-icon{
+    transform: rotate(90deg);
+    width: 1.2rem;
+    height: 1.2rem;
+    fill: #717176;
+}
+
+.optionsClass:hover .hccc-arrow-icon{
+    fill: #E60000;
+}
+
+.learn-more {
+    color: #717176 !important;
+}
+
+.learn-more-arrow {
+    transform: translateY(-2px);
+    width: 16px;
+    height: 16px;
+    fill: #717176;
+}
+
+.learn-more:hover,
+.learn-more:focus {
+    color: #E60000 !important;
+    text-decoration: none;
+}
+
+.learn-more:hover .learn-more-arrow,
+.learn-more:focus .learn-more-arrow {
+    fill: #E60000;
+}
+
+details[open] summary .optionsClass .arrowOpen {
+    transform: rotate(270deg);
+}
+
+.textDiv1 {
+    padding-left: 80px;
+}
+
+.textDivMob {
+    margin-right: 16px;
+}
+.paraText{
+    font-size: 20px;
+}
+
+.textDiv {
+    max-width: 523px;
+}
+
+.imageCSS {
+    height: auto;
+    border-radius: 10px;
+
+}
+.svg {
+    position: relative;
+    top: -50px;
+    left: 90%;
+}
+
+.accoordian-block{
+    border-bottom: 1px solid #ddd;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.progress-summary-container{
+    white-space: pre-wrap;
+    font-size:initial;
+    padding-left:80px;
+}
+
+@media screen and (max-width: 1024px){
+    .textDiv1 {
+        padding: 30px 0px 0px 0px;
+    }
+}
+
+@media screen and (max-width:767px) {
+    .desktop {
+        display: none;
+    }
+    
+    .mobile {
+        display: block;
+    }
+
+    .imageCSS {
+        max-width: 100%;
+    }
+    
+    .container {
+        margin: 32px 24px 32px 24px;
+    }
+
+    .progress-summary-container{
+        margin-right:0px;
+        padding-left:0px;
+    }
+}
+
+.products-and-services-search:hover .oval-serach-icon{
+    fill: white !important;
+}
+.products-and-services-search:hover .oval-serach-icon-line{
+    fill: white !important;
+    stroke: white !important;
+}
+.products-and-services-search:hover .oval-main-ontainer{
+    fill: black !important;
+}
+
+.equipment-data-container{
+    padding-right: 20px;
+}

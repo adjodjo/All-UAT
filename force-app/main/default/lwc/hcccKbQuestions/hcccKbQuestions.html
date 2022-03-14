@@ -1,0 +1,69 @@
+<template>
+    <div class="slds-grid slds-wrap">
+        <div
+            class="slds-col slds-size_1-of-1 slds-medium-size_12-of-12 slds-large-size_12-of-12 custom-bottom-padding">
+            <div class="slds-grid slds-wrap">
+                <div
+                    class="slds-col slds-size_1-of-1 slds-medium-size_12-of-12 slds-large-size_12-of-12">
+                    <div class="support-form-container">
+
+                        <div class="slds-grid slds-wrap">
+                            <div
+                                class="slds-col slds-size_1-of-1 slds-medium-size_12-of-12 slds-large-size_12-of-12 custom-bottom-padding">
+                                <c-hccc-text hcccclass="hccc-text_h2" color="hccc-text_white">
+                                    {label.Title_common_questions}
+                                </c-hccc-text>
+                            </div>
+                        </div>
+
+                        <div class="slds-grid slds-wrap">
+                            <div
+                                class="slds-col slds-size_1-of-1 slds-medium-size_12-of-12 slds-large-size_12-of-12">
+                                <div class="slds-grid slds-wrap questionDiv">
+                                    <div
+                                        class="slds-col slds-size_1-of-1 slds-medium-size_12-of-12 slds-large-size_12-of-12 question">
+                                        <c-hccc-text hcccclass="hccc-text-navigation_item"
+                                            color="hccc-text_white">
+                                            <span class="questionText" title={label.Question_1_Article}
+                                                onclick={handleQuestionClick}>{label.Common_Question_1}</span>
+                                        </c-hccc-text>
+                                    </div>
+                                </div>
+                                <div class="slds-grid slds-wrap questionDiv">
+                                    <div
+                                        class="slds-col slds-size_1-of-1 slds-medium-size_12-of-12 slds-large-size_12-of-12">
+                                        <c-hccc-text hcccclass="hccc-text-navigation_item"
+                                            color="hccc-text_white">
+                                            <span class="questionText" title={label.Question_2_Article}
+                                                onclick={handleQuestionClick}>{label.Common_Question_2}</span>
+                                        </c-hccc-text>
+                                    </div>
+                                </div>
+                                <div class="slds-grid slds-wrap questionDiv">
+                                    <div
+                                        class="slds-col slds-size_1-of-1 slds-medium-size_12-of-12 slds-large-size_12-of-12">
+                                        <c-hccc-text hcccclass="hccc-text-navigation_item"
+                                            color="hccc-text_white">
+                                            <span class="questionText" title={label.Question_3_Article}
+                                                onclick={handleQuestionClick}>{label.Common_Question_3}</span>
+                                        </c-hccc-text>
+                                    </div>
+                                </div>
+                                <div class="slds-grid slds-wrap questionDiv">
+                                    <div
+                                        class="slds-col slds-size_1-of-1 slds-medium-size_12-of-12 slds-large-size_12-of-12">
+                                        <c-hccc-text hcccclass="hccc-text-navigation_item"
+                                            color="hccc-text_white">
+                                            <span class="questionText" title={label.Question_4_Article}
+                                                onclick={handleQuestionClick}>{label.Common_Question_4}</span>
+                                        </c-hccc-text>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>

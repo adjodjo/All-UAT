@@ -1,0 +1,72 @@
+.container{
+    width: 100%;
+    background: white;
+    margin: auto;
+    font-family: barlow-regular, Arial, Helvetica, sans-serif;
+}
+.main-container{
+    padding: 81px 90px;
+}
+
+.back-button{
+    background: #E60000;
+    color: white;
+    padding: 0;
+    border-radius: 5px;
+    font-size: 14px;
+    line-height: 21px;
+    height: 25px;
+    width: 25px;
+    text-align: center;
+    display: inline-block; 
+    margin-right: 20px;
+}
+
+.back-button:hover{
+    background: #A50000;
+}
+
+.back-button-container{
+    margin-top: 15px;
+}
+
+.breadcrumb-slash {
+    padding: 0 8px;
+}
+
+.breadcrumb-text {
+    color: #000000;
+}
+.breadcrumb-text:hover{
+    color: #E60000;
+    text-decoration: underline;
+}
+
+.divider{
+    height:1px;
+    background: #CFCFCF;
+    width: 100%;
+    margin: 10px 0px;
+}
+
+.custom-top-bottom-padding{
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.custom-bottom-padding{
+    padding-bottom: 50px;
+}
+
+@media screen and (max-width:768px) {
+    .main-container{
+        padding: 32px 24px;
+    }
+    .hccc-button{
+        width: 42px;
+    }
+
+    .icon-container{
+        padding: 0px;
+    }
+}

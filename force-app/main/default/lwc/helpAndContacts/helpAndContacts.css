@@ -1,0 +1,121 @@
+.container{
+    width: 100%;
+    background: white;
+    margin: auto;
+}
+
+.main-container{
+    padding: 48.5px 76px;
+}
+.common-questions-container{
+    width: 100%;
+    background: #000000;
+    border-radius: 5px;
+    margin-top: 4rem;
+    color:#ffffff;
+    padding: 3rem 3rem;
+}
+.common-questions{
+    font-size: 2.5rem;
+    padding-bottom: 1rem;
+}
+.common-questions-inner-text{
+    padding: 0.4rem 0rem;
+}
+
+.sub-title{
+    padding: 2.5rem 0rem;
+}
+
+.sales-team-text{
+    padding-bottom: 1rem;
+}
+
+.sales-team-box{
+    text-align: left;
+    border: 1px solid #717176;
+    border-radius: 5px;
+    padding: 1rem;
+    max-width: 703px;
+    margin: 0px 0px 24px 0px;
+}
+.team-name{
+    padding-bottom: 0.8rem;
+    padding-bottom: 1rem;
+}
+
+.slds-avatar_circle{
+    margin-top: 0.3rem;
+    width: 79px;
+    height: 79px;
+}
+
+.slds-avatar_circle img{
+    width: 81px;
+    height: 82px;
+}
+
+.customer-service-box{
+    text-align: left;
+    border: 1px solid #717176;
+    border-radius: 5px;
+    padding: 21px 29px 58px 29px;
+    max-width: 703px;
+    margin: 0px 0px 24px 0px;
+}
+
+.customer-service-container{
+    max-width: 703px;
+}
+
+.customer-service-phone{
+    font-size: 1.2rem;
+    padding-top: 1rem;    
+}
+
+.support-form-title{
+    padding-bottom: 1rem;
+}
+
+.support-form-large-text{
+    padding-bottom: 2rem;
+}
+
+.support-form-container{
+    background: #000000;
+    border-radius: 5px;
+    margin-top: 4rem;
+    color:#ffffff;
+    padding: 3rem 3rem;
+    max-width: 703px;
+    padding-bottom: 2rem;
+}
+.back-button{
+    background: #E60000;
+    color: white;
+    float: right;
+    padding: 0rem 0.6rem 0.3rem 0.6rem;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    line-height: 42px;
+    height: 48px;
+    width: 50px;
+    text-align: center;
+}
+
+.back-button:hover{
+    background: #A50000;
+}
+
+.kb-questions-box{
+    max-width: 1000px;
+}
+
+@media screen and (max-width:768px) {
+    .main-container{
+    padding: 32px 24px;
+    }
+    .team-name{
+        padding-top: 16px;
+    }
+}

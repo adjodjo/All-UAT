@@ -1,0 +1,124 @@
+<template>
+    <div class="container">
+        <div class="slds-grid slds-wrap main-container">
+            <div class="slds-col slds-size_1-of-1 slds-medium-size_12-of-12 slds-large-size_12-of-12">
+                <!-- breadcrumbs start -->
+                <div class="slds-grid slds-wrap main-left-padding">
+                    <div class="slds-col slds-size_1-of-1 slds-medium-size_12-of-12 slds-large-size_12-of-12">
+                        <div class="back-button">
+                            <a style="color: white;text-decoration: none;" href="/vendorportal/s/knowledge-base">
+                                <svg class="hccc-arrow-icon" transform="rotate(180)" width="14px" height="14px" focusable="false" viewBox="0 0 24 24" aria-hidden="true">                                                    
+                                    <path style="fill: white;" d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"></path>                                                    
+                               </svg> 
+                            </a>                        
+                        </div>
+                        <span>
+                            <a class="breadcrumb-text" href="/vendorportal/s/knowledge-base">
+                                <c-hccc-text hcccclass="hccc-text_body2">{label.Knowledge_Resources}</c-hccc-text> 
+                            </a>                                
+                        </span>
+                    </div>
+                </div>
+                <!-- breadcrumbs end -->
+                <div class="slds-grid slds-wrap">
+                    <div class="slds-col slds-size_1-of-1 slds-medium-size_12-of-12 slds-large-size_12-of-12"
+                        style="padding-bottom: 40px; padding-top: 35px">
+                        <c-hccc-text hcccclass="hccc-text_h1" color="hccc-text_black">
+                            {label.Knowledge_Base_Topics}
+                        </c-hccc-text>
+                    </div>
+                </div>
+                <div class="slds-grid slds-wrap">
+                    <div class="slds-col slds-size_10-of-12 slds-medium-size_8-of-12 slds-large-size_6-of-12">
+                        <template if:true={refreshTextInput}>
+                            <c-hccc-input label={label.Search_Bar} value=""
+                                place-holder={label.Search_bar_placeholder} onchange={handleValueChangeSearch}>
+                            </c-hccc-input>
+                        </template>
+                    </div>
+                    <div class="slds-col slds-size_2-of-12 slds-medium-size_1-of-12 slds-large-size_1-of-12">
+                        <template if:false={isSearchApply}>
+                            <button data-id="hcccButtonContent" class="hccc-button hccc-button_stretch hccc-button_red"
+                                onclick={handleSearchClick}>
+                                <svg viewBox="0 0 35 35" class="icon-container">
+                                    <title>Search</title>
+                                    <g stroke="none" stroke-width="1" fill="transparent">
+                                        <g transform="translate(-1286.000000, -19.000000)">
+                                            <g transform="translate(1286.000000, 19.000000)">
+                                                <g transform="translate(8.000000, 8.000000)">
+                                                    <polygon points="0 0 20 0 20 20 0 20"></polygon>
+                                                    <circle class="search-glass" stroke="#FFFFFF" stroke-width="1.5"
+                                                        stroke-linecap="round" stroke-linejoin="round" cx="8.33333333"
+                                                        cy="8.33333333" r="10"></circle>
+                                                    <line class="search-line" x1="26.5" y1="26.5" x2="15" y2="15"
+                                                        stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round"
+                                                        stroke-linejoin="round"></line>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </svg>
+                            </button>
+                        </template>
+                        <template if:true={isSearchApply}>
+                            <button data-id="hcccButtonContent"
+                                class="hccc-button hccc-button_stretch hccc-button_black" onclick={handleSearchClick}>
+                                <svg focusable="false" data-key="close" aria-hidden="true" viewBox="0 0 52 52"
+                                    class="slds-icon slds-icon-text-default" style="fill: white;height: 20px;">
+                                    <g>
+                                        <path
+                                            d="M31 25.4l13-13.1c.6-.6.6-1.5 0-2.1l-2-2.1c-.6-.6-1.5-.6-2.1 0L26.8 21.2c-.4.4-1 .4-1.4 0L12.3 8c-.6-.6-1.5-.6-2.1 0l-2.1 2.1c-.6.6-.6 1.5 0 2.1l13.1 13.1c.4.4.4 1 0 1.4L8 39.9c-.6.6-.6 1.5 0 2.1l2.1 2.1c.6.6 1.5.6 2.1 0L25.3 31c.4-.4 1-.4 1.4 0l13.1 13.1c.6.6 1.5.6 2.1 0L44 42c.6-.6.6-1.5 0-2.1L31 26.8c-.4-.4-.4-1 0-1.4z">
+                                        </path>
+                                    </g>
+                                </svg>
+                            </button>
+                        </template>
+                    </div>
+                </div>
+                
+
+            </div>
+        </div>
+
+        <div class="slds-grid slds-wrap">
+            <div class="slds-col slds-size_1-of-1 slds-medium-size_12-of-12 slds-large-size_12-of-12">
+                <div class="divider">
+                </div>
+            </div>
+        </div>
+
+        <div class="slds-grid slds-wrap main-container">
+            <div class="slds-col slds-size_1-of-1 slds-medium-size_12-of-12 slds-large-size_12-of-12">
+
+                <template if:true={showResultCount}>
+                    <div class="total-result-css">
+                        <c-hccc-text hcccclass="hccc-text-navigation_item">
+                            {resultCount}
+                        </c-hccc-text>
+                    </div>
+                </template>
+
+                <!--Cards-->
+                <div class="slds-grid slds-wrap">
+                    <div class="slds-col slds-size_1-of-1 slds-medium-size_12-of-12 slds-large-size_12-of-12"
+                        style="padding-bottom: 40px;">
+                        <c-hccc-card-group>
+                            <template if:true={topicList}>
+                                <template for:each={topicList} for:item="topicObj">
+                                    <c-hccc-card key={topicObj.topicId} title={topicObj.totalArticlesStr}
+                                        url={topicObj.topicURL}
+                                        class="slds-col slds-size_1-of-1 slds-medium-size_6-of-12 slds-large-size_4-of-12">
+                                        <c-hccc-text hcccclass="hccc-text_h4" color="hccc-text_black">
+                                            {topicObj.topicName}
+                                        </c-hccc-text>
+                                    </c-hccc-card>
+                                </template>
+                            </template>
+                        </c-hccc-card-group>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</template>
