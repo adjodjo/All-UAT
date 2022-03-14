@@ -1,0 +1,140 @@
+<template>
+
+    <div class="container">
+        <div class="slds-grid slds-wrap main-container">
+            <div class="slds-col slds-size_1-of-1 slds-medium-size_12-of-12 slds-large-size_12-of-12">
+                <div class="slds-grid slds-wrap main-left-padding">
+                    <div class="slds-col slds-size_1-of-1 slds-medium-size_12-of-12 slds-large-size_12-of-12"
+                        style="padding-bottom: 55.5px;">
+                        <c-hccc-text hcccclass="hccc-text_h1" color="hccc-text_black">
+                            {label.Knowledge_BASE}
+                        </c-hccc-text>
+                    </div>
+                    <div class="slds-col slds-size_9-of-12 slds-medium-size_8-of-12 slds-large-size_6-of-12">
+                        <template if:true={refreshTextInput} >
+                            <c-hccc-input label={label.Knowledge_Search_Text} value=""
+                                place-holder={label.Knowledge_Search_Resources_Placeholder} onchange={handleValueChangeSearch}>
+                            </c-hccc-input>
+                        </template>
+                    </div>
+                    <div class="slds-col slds-size_3-of-12 slds-medium-size_1-of-12 slds-large-size_1-of-12">
+                        <template if:true={showSearchButton}>
+                            <button data-id="hcccButtonContent" class="hccc-button hccc-button_stretch hccc-button_red"
+                                onclick={handleSearchClick}>
+                                <svg viewBox="0 0 35 35" class="icon-container">
+                                    <title>Search</title>
+                                    <g stroke="none" stroke-width="1" fill="transparent">
+                                        <g transform="translate(-1286.000000, -19.000000)">
+                                            <g transform="translate(1286.000000, 19.000000)">
+                                                <g transform="translate(8.000000, 8.000000)">
+                                                    <polygon points="0 0 20 0 20 20 0 20"></polygon>
+                                                    <circle class="search-glass" stroke="#FFFFFF" stroke-width="1.5"
+                                                        stroke-linecap="round" stroke-linejoin="round" cx="8.33333333"
+                                                        cy="8.33333333" r="10"></circle>
+                                                    <line class="search-line" x1="26.5" y1="26.5" x2="15" y2="15"
+                                                        stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round"
+                                                        stroke-linejoin="round"></line>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </svg>
+                            </button>
+                        </template>
+                        <template if:false={showSearchButton}>
+                            <button data-id="hcccButtonContent"
+                                class="hccc-button hccc-button_stretch hccc-button_black" onclick={handleClearClick}>
+                                <svg focusable="false" data-key="close" aria-hidden="true" viewBox="0 0 52 52"
+                                    class="slds-icon slds-icon-text-default" style="fill: white;height: 20px;">
+                                    <g>
+                                        <path
+                                            d="M31 25.4l13-13.1c.6-.6.6-1.5 0-2.1l-2-2.1c-.6-.6-1.5-.6-2.1 0L26.8 21.2c-.4.4-1 .4-1.4 0L12.3 8c-.6-.6-1.5-.6-2.1 0l-2.1 2.1c-.6.6-.6 1.5 0 2.1l13.1 13.1c.4.4.4 1 0 1.4L8 39.9c-.6.6-.6 1.5 0 2.1l2.1 2.1c.6.6 1.5.6 2.1 0L25.3 31c.4-.4 1-.4 1.4 0l13.1 13.1c.6.6 1.5.6 2.1 0L44 42c.6-.6.6-1.5 0-2.1L31 26.8c-.4-.4-.4-1 0-1.4z">
+                                        </path>
+                                    </g>
+                                </svg>
+                            </button>
+                        </template>
+                    </div>
+                </div>
+
+                <div class="slds-grid slds-wrap">
+                    <div class="slds-col slds-size_1-of-1 slds-medium-size_12-of-12 slds-large-size_12-of-12" style="padding-top: 70px;">
+                        <div class="divider">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slds-grid slds-wrap main-left-padding">
+                    <div class="slds-col slds-size_1-of-1 slds-medium-size_12-of-12 slds-large-size_12-of-12">
+                        <div class="total-result-css">
+                            <template if:true={totalTopics} >
+                                <c-hccc-text hcccclass="hccc-text-navigation_item">
+                                    {resultText}
+                                </c-hccc-text>
+                            </template>
+                        </div>
+                    </div>
+                </div>
+
+                 <!--Cards-->
+                 <div class="slds-grid slds-wrap main-left-padding">
+                    <div class="slds-col slds-size_1-of-1 slds-medium-size_12-of-12 slds-large-size_12-of-12">
+                            <template if:true={topicList} >
+                                <template for:each={currentPageData} for:item="topicObj" >
+                                    <div class="slds-grid slds-wrap" key={topicObj.id}>                    
+                                        <div class="slds-col slds-size_1-of-1 slds-medium-size_12-of-12 slds-large-size_12-of-12">
+                                            <c-hccc-list-item title={topicObj.topicName} body-title={topicObj.articleName} body-text={topicObj.articleBody} url={topicObj.articleURL} ></c-hccc-list-item>
+                                        </div>
+                                    </div>
+                                </template>
+                            </template>
+                    </div>
+                </div>
+
+                <div class="slds-grid slds-wrap main-left-padding" if:true={isSearchApply}>
+                    <div class="slds-col slds-size_1-of-1 slds-medium-size_12-of-12 slds-large-size_12-of-12" style="padding-bottom: 40px;padding-top:10px;">
+                        <div class="slds-clearfix slds-p-top_medium pagination-container">
+                            <ul class="slds-button-group-row">
+                                <template if:true={hasPrev}>
+                                    <li class="slds-button-group-item">
+                                        <button class="slds-button next-prev-button" onclick={onPrev}>
+                                            <svg focusable="false" data-key="chevronleft" aria-hidden="true" viewBox="0 0 52 52"
+                                                class="slds-icon slds-icon-text-default chevron-icon">
+                                                <g>
+                                                    <path
+                                                        d="M34.2 47.7L13.4 27.2c-.6-.6-.6-1.6 0-2.2L34.2 4.5c.6-.6 1.6-.6 2.2 0l2.2 2.2c.6.6.6 1.6 0 2.2L22.1 25c-.6.6-.6 1.6 0 2.2l16.3 16.1c.6.6.6 1.6 0 2.2l-2.2 2.2c-.5.5-1.4.5-2 0z">
+                                                    </path>
+                                                </g>
+                                            </svg>
+                                        </button>
+                                    </li>
+                                </template>
+                                <template for:each={pagesList} for:item="pageNumber">
+                                    <li class="slds-button-group-item page_no" key={pageNumber}>
+                                        <button data-id={pageNumber} class="slds-button" onclick={onPageClick}>{pageNumber}</button>
+                                    </li>
+                                </template>
+                                <template if:true={hasNext}>
+                                    <li class="slds-button-group-item">
+                                        <button class="slds-button next-prev-button" onclick={onNext}>
+                                            <svg focusable="false" data-key="chevronright" aria-hidden="true" viewBox="0 0 52 52"
+                                                class="slds-icon slds-icon-text-default chevron-icon">
+                                                <g>
+                                                    <path
+                                                        d="M17.9 4.4l20.7 20.5c.6.6.6 1.6 0 2.2L17.9 47.6c-.6.6-1.6.6-2.2 0l-2.2-2.2c-.6-.6-.6-1.6 0-2.2l16.3-16.1c.6-.6.6-1.6 0-2.2L13.6 8.8c-.6-.6-.6-1.6 0-2.2l2.2-2.2c.6-.5 1.5-.5 2.1 0z">
+                                                    </path>
+                                                </g>
+                                            </svg>
+                                        </button>
+                                    </li>
+                                </template>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</template>

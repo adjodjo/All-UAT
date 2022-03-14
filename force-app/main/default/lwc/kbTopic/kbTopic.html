@@ -1,0 +1,68 @@
+<template>
+    <div if:true={topic} class="container">
+        <div class="slds-grid slds-wrap main-container">
+            <div class="slds-col slds-size_1-of-1 slds-medium-size_12-of-12 slds-large-size_12-of-12">
+                <!-- breadcrumbs start -->
+                <div class="slds-grid slds-wrap main-left-padding">
+                    <div class="slds-col slds-size_1-of-1 slds-medium-size_12-of-12 slds-large-size_12-of-12">
+                        <div class="back-button">
+                            <a style="color: white;text-decoration: none;" href="/vendorportal/s/knowledge-base-topics">
+                                <svg class="hccc-arrow-icon" transform="rotate(180)" width="14px" height="14px" focusable="false" viewBox="0 0 24 24" aria-hidden="true">                                                    
+                                    <path style="fill: white;" d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"></path>                                                    
+                               </svg>
+                            </a>                        
+                        </div>
+                        <span>
+                            <a class="breadcrumb-text" href="/vendorportal/s/knowledge-base">
+                                <c-hccc-text hcccclass="hccc-text_body2">{label.Knowledge_Resources}</c-hccc-text> 
+                            </a>                                
+                        </span>
+                        <span class="breadcrumb-slash">
+                            <c-hccc-text hcccclass="hccc-text_body2 hccc-text_red">/</c-hccc-text>                              
+                        </span>
+                        <span>
+                            <a class="breadcrumb-text" href="/vendorportal/s/knowledge-base-topics">
+                                <c-hccc-text hcccclass="hccc-text_body2">{label.All_Topics}</c-hccc-text> 
+                            </a>                                
+                        </span>
+                    </div>
+                </div>
+                <!-- breadcrumbs end -->
+                <div class="slds-grid slds-wrap">
+                    <div class="slds-col slds-size_1-of-1 slds-medium-size_12-of-12 slds-large-size_12-of-12"
+                    style="padding-top: 35px;">
+                        <c-hccc-text hcccclass="hccc-text_h2" color="hccc-text_black">
+                            {topic.topicName}
+                        </c-hccc-text>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slds-grid slds-wrap">
+            <div class="slds-col slds-size_1-of-1 slds-medium-size_12-of-12 slds-large-size_12-of-12">
+                <div class="divider">
+                </div>
+            </div>
+        </div>
+
+        <div class="slds-grid slds-wrap main-container">
+            <div class="slds-col slds-size_1-of-1 slds-medium-size_12-of-12 slds-large-size_12-of-12">
+                <div class="slds-grid slds-wrap">
+                    <div
+                        class="slds-col slds-size_1-of-1 slds-medium-size_12-of-12 slds-large-size_12-of-12 custom-padding custom-bottom-padding">
+                        <template for:each={articles} for:item="article">
+                            <div class="slds-grid slds-wrap" key={article.Id}>
+                                <div
+                                    class="slds-col slds-size_1-of-1 slds-medium-size_12-of-12 slds-large-size_12-of-12">
+                                    <c-hccc-list-item title={topic.topicName} body-title={article.Title}
+                                        body-text={article.Summary} url={article.url}></c-hccc-list-item>
+                                </div>
+                            </div>
+                        </template>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>

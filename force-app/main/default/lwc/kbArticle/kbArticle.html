@@ -1,0 +1,142 @@
+<template>
+    <template if:true={topicWrpObj}>
+        <div class="container">
+            <div class="slds-grid slds-wrap main-container">
+                <div class="slds-col slds-size_1-of-1 slds-medium-size_12-of-12 slds-large-size_12-of-12">
+                    <!-- breadcrumbs start -->
+                    <div class="slds-grid slds-wrap main-left-padding">
+                        <div class="slds-col slds-size_1-of-1 slds-medium-size_12-of-12 slds-large-size_12-of-12">
+                            <div class="back-button">
+                                <a style="color: white;text-decoration: none;" href={topicWrpObj.topicURL}>
+                                    <svg class="hccc-arrow-icon" transform="rotate(180)" width="14px" height="14px" focusable="false" viewBox="0 0 24 24" aria-hidden="true">                                                    
+                                        <path style="fill: white;" d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"></path>                                                    
+                                   </svg>
+                                </a>
+                            </div>
+                            <span>
+                                <a class="breadcrumb-text" href="/vendorportal/s/knowledge-base">
+                                    <c-hccc-text hcccclass="hccc-text_body2">{label.Knowledge_Resources}</c-hccc-text>
+                                </a>
+                            </span>
+                            <span class="breadcrumb-slash">
+                                <c-hccc-text hcccclass="hccc-text_body2 hccc-text_red">/</c-hccc-text>
+                            </span>
+                            <span>
+                                <a class="breadcrumb-text" href="/vendorportal/s/knowledge-base-topics">
+                                    <c-hccc-text hcccclass="hccc-text_body2">{label.All_Topics}</c-hccc-text>
+                                </a>
+                            </span>
+                            <template if:true={topicWrpObj.topicName}>
+                                <span class="breadcrumb-slash">
+                                    <c-hccc-text hcccclass="hccc-text_body2 hccc-text_red">/</c-hccc-text>
+                                </span>
+                                <span>
+                                    <a class="breadcrumb-text" href={topicWrpObj.topicURL}>
+                                        <c-hccc-text hcccclass="hccc-text_body2">{topicWrpObj.topicName}</c-hccc-text>
+                                    </a>
+                                </span>
+                            </template>
+
+                        </div>
+                    </div>
+                    <!-- breadcrumbs end -->
+                    <div class="slds-grid slds-wrap main-left-padding">
+                        <div class="slds-col slds-size_1-of-1 slds-medium-size_12-of-12 slds-large-size_12-of-12"
+                            style="padding-bottom: 10px;padding-top: 35px;">
+                            <c-hccc-text hcccclass="hccc-text_h2" color="hccc-text_black">
+                                <template if:true={topicWrpObj}>
+                                    {topicWrpObj.articleName}
+                                </template>
+                            </c-hccc-text>
+                        </div>
+                    </div>
+                    <div class="slds-grid slds-wrap main-left-padding">
+                        <div class="slds-col slds-size_1-of-1 slds-medium-size_12-of-12 slds-large-size_12-of-12"
+                            style="padding-bottom: 15px;padding-top: 20px;">
+                            <c-hccc-text hcccclass="hccc-text_body7" color="hccc-text_grey">
+                                {label.Edited} <span style="text-transform: lowercase;">{topicWrpObj.agoStr}</span>
+                            </c-hccc-text>
+                        </div>
+                    </div>
+                    <div class="slds-grid slds-wrap main-left-padding">
+                        <div class="slds-col slds-size_1-of-1 slds-medium-size_12-of-12 slds-large-size_12-of-12">
+                            <lightning-formatted-rich-text value={topicWrpObj.articleBody}>
+                            </lightning-formatted-rich-text>
+                        </div>
+                    </div>
+
+
+                    <div class="slds-grid slds-wrap main-left-padding">
+                        <div class="slds-col slds-size_1-of-1 slds-medium-size_12-of-12 slds-large-size_12-of-12">
+                            <div class="support-form-container">
+                                <div class="slds-grid slds-wrap">
+                                    <div
+                                        class="slds-col slds-size_1-of-1 slds-medium-size_12-of-12 slds-large-size_12-of-12">
+                                        <div class="support-form-title">
+                                            {label.Help_CTA_title}
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="slds-grid slds-wrap">
+                                    <div
+                                        class="slds-col slds-size_1-of-1 slds-medium-size_12-of-12 slds-large-size_12-of-12">
+                                        <div class="support-form-large-text">
+                                            {label.Help_CTA_text}
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="slds-grid slds-wrap">
+                                    <div
+                                        class="slds-col slds-size_1-of-1 slds-medium-size_12-of-12 slds-large-size_12-of-12">
+
+                                        <div class="back-button1">
+                                            <a style="color: white;text-decoration: none;" href={supportURL}>
+                                                <svg class="hccc-arrow-icon" width="16px" height="16px"
+                                                    focusable="false" viewBox="0 0 24 24" aria-hidden="true">
+                                                    <path style="fill: white;"
+                                                        d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z">
+                                                    </path>
+                                                </svg>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <template if:true={showRelatedList}>
+
+                        <div class="slds-grid slds-wrap main-left-padding">
+                            <div
+                                class="slds-col slds-size_1-of-1 slds-medium-size_12-of-12 slds-large-size_12-of-12 related-article-container">
+                                <c-hccc-text hcccclass="hccc-text_h2" color="hccc-text_black">
+                                    {label.Related_Articles}
+                                </c-hccc-text>
+                            </div>
+                        </div>
+
+                        <div class="slds-grid slds-wrap main-left-padding">
+                            <div
+                                class="slds-col slds-size_1-of-1 slds-medium-size_12-of-12 slds-large-size_12-of-12 custom-padding custom-bottom-padding">
+                                <template if:true={topicWrpObj.relatedArticleList}>
+                                    <template for:each={topicWrpObj.relatedArticleList} for:item="relatedArticle">
+                                        <div key={relatedArticle.articleId} class="slds-grid slds-wrap">
+                                            <div
+                                                class="slds-col slds-size_1-of-1 slds-medium-size_12-of-12 slds-large-size_12-of-12">
+                                                <c-hccc-list-item title={topicWrpObj.topicName}
+                                                    body-title={relatedArticle.articleName}
+                                                    body-text={relatedArticle.articleBody}
+                                                    url={relatedArticle.articleURL}></c-hccc-list-item>
+                                            </div>
+                                        </div>
+                                    </template>
+                                </template>
+                            </div>
+                        </div>
+
+                    </template>
+                </div>
+            </div>
+        </div>
+    </template>
+</template>

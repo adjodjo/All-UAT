@@ -1,0 +1,92 @@
+<template>
+
+    <div class="container">
+        <c-kb-search ontogglesearch={handleToggleSearch}></c-kb-search>
+        <!-- if search results are shown then hide everything on the component. -->
+        <template if:false={hideAll}>
+            <div class="slds-grid slds-wrap main-container">
+                <div class="slds-col slds-size_1-of-1 slds-medium-size_12-of-12 slds-large-size_12-of-12">
+
+                    <div class="slds-grid slds-wrap">
+                        <div class="slds-col slds-size_1-of-1 slds-medium-size_12-of-12 slds-large-size_12-of-12 custom-bottom-padding">
+                            <c-hccc-text hcccclass="hccc-text_h2" color="hccc-text_black">
+                                {label.Title_popular_articles}
+                            </c-hccc-text>
+                        </div>
+                    </div>
+                    <div class="slds-grid slds-wrap">
+                        <div
+                            class="slds-col slds-size_1-of-1 slds-medium-size_12-of-12 slds-large-size_12-of-12 custom-bottom-padding">
+                            <template for:each={articles} for:item="article">
+                                <div class="slds-grid slds-wrap" key={article.Id}>
+                                    <div
+                                        class="slds-col slds-size_1-of-1 slds-medium-size_12-of-12 slds-large-size_12-of-12">
+                                        <c-hccc-list-item title={article.topicName} body-title={article.Title}
+                                            body-text={article.Summary} url={article.url}></c-hccc-list-item>
+                                    </div>
+                                </div>
+                            </template>
+                        </div>
+                    </div>
+
+                    <div class="slds-grid slds-wrap">
+                        <div
+                            class="slds-col slds-size_1-of-1 slds-medium-size_12-of-12 slds-large-size_12-of-12 custom-top-bottom-padding">
+                            <c-hccc-text hcccclass="hccc-text_h2" color="hccc-text_black">
+                                {label.Title_topics}
+                            </c-hccc-text>
+                        </div>
+                    </div>
+
+                    <!--Cards-->
+                    <div class="slds-grid slds-wrap">
+                        <div class="slds-col slds-size_1-of-1 slds-medium-size_12-of-12 slds-large-size_12-of-12">
+                            <c-hccc-card-group>
+                                <template if:true={topicList}>
+                                    <template for:each={topicList} for:item="topicObj">
+                                        <c-hccc-card key={topicObj.topicId} title={topicObj.totalArticlesStr}
+                                            url={topicObj.topicURL}
+                                            class="slds-col slds-size_1-of-1 slds-medium-size_6-of-12 slds-large-size_4-of-12">
+                                            <c-hccc-text hcccclass="hccc-text_h4" color="hccc-text_black">
+                                                {topicObj.topicName}
+                                            </c-hccc-text>
+                                        </c-hccc-card>
+                                    </template>
+                                </template>
+                            </c-hccc-card-group>
+                        </div>
+                    </div>
+
+                    <br/>
+                    <div class="slds-grid slds-wrap">
+                        <div
+                            class="slds-col slds-size_1-of-1 slds-medium-size_12-of-12 slds-large-size_12-of-12">
+                            <div class="slds-grid slds-wrap view-all-topics-container">
+                                <div
+                                    class="slds-col slds-size_1-of-1 slds-medium-size_12-of-12 slds-large-size_12-of-12">
+                                    <a href="/vendorportal/s/knowledge-base-topics">
+                                        <button class="view-all-button">
+                                            <span class="plus-css">
+                                                <svg fill="#CFCFCF" width="16px" height="16px" transform="rotate(-45) translate(0.5,-0.5)" focusable="false" viewBox="0 0 24 24" aria-hidden="true"
+                                                    aria-label="fontSize medium">
+                                                    <path
+                                                        d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z">
+                                                    </path>
+                                                </svg>
+                                            </span>
+                                            <span class="view-all">{label.Button_topics}</span>
+                                        </button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="custom-top-bottom-padding">
+                        <c-hccc-kb-questions></c-hccc-kb-questions>
+                    </div>
+                </div>
+            </div>
+        </template>
+        <lightning-spinner if:true={isLoading}></lightning-spinner>
+    </div>
+</template>

@@ -1,0 +1,27 @@
+<template>
+    <div class="container">
+        <div class="slds-grid slds-wrap">
+            <div class="slds-col slds-size_1-of-1 slds-medium-size_12-of-12 slds-large-size_12-of-12">
+                <div class="slds-grid slds-wrap">
+                    <div class="slds-col slds-size_1-of-1 slds-medium-size_12-of-12 slds-large-size_12-of-12">
+                        <c-hccc-text hcccclass="hccc-text_caption1" color="hccc-text_black">
+                            {title}
+                        </c-hccc-text>
+                    </div>
+                    <div class="slds-col slds-size_1-of-1 slds-medium-size_12-of-12 slds-large-size_11-of-12 text-container">
+                    <slot></slot>
+                    </div>
+                    <div class="slds-col slds-size_1-of-1 slds-medium-size_12-of-12 slds-large-size_12-of-12 back-button-container">
+                        <div class="back-button">
+                            <a style="color: white;text-decoration: none;" href={url}>
+                                <svg class="hccc-arrow-icon" width="16px" height="16px" focusable="false" viewBox="0 0 24 24" aria-hidden="true">                                                    
+                                    <path style="fill: white;" d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"></path>                                                    
+                                </svg>
+                            </a>                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>

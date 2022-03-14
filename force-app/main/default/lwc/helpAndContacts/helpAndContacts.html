@@ -1,0 +1,224 @@
+<template>
+    <div class="container">
+        <div class="slds-grid slds-wrap main-container">
+            <div class="slds-col slds-size_1-of-1 slds-medium-size_12-of-12 slds-large-size_12-of-12">
+                <div class="slds-grid slds-wrap">
+                    <div class="slds-col slds-size_1-of-1 slds-medium-size_12-of-12 slds-large-size_12-of-12">
+                        <c-hccc-text size="hccc-text_h1">{label.Help_and_Contacts}</c-hccc-text>
+                    </div>
+                </div>
+
+                <div class="slds-grid slds-wrap">
+                    <div class="slds-col slds-size_1-of-1 slds-medium-size_12-of-12 slds-large-size_12-of-12 kb-questions-box">
+                        <c-hccc-kb-questions></c-hccc-kb-questions>
+                    </div>
+                </div>
+
+
+                <div class="slds-grid slds-wrap">
+                    <div class="slds-col slds-size_1-of-1 slds-medium-size_12-of-12 slds-large-size_12-of-12">
+                        <div class="slds-grid slds-wrap">
+                            <div class="slds-col slds-size_1-of-1 slds-medium-size_12-of-12 slds-large-size_12-of-12">
+                                <div class="sub-title">
+                                    <c-hccc-text size="hccc-text_h2">{label.Help_Title}</c-hccc-text>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="slds-grid slds-wrap">
+                            <div class="slds-col slds-size_1-of-1 slds-medium-size_12-of-12 slds-large-size_12-of-12">
+                                <div class="sales-team-container">
+                                    <div class="slds-grid slds-wrap">
+                                        <div class="slds-col slds-size_1-of-1 slds-medium-size_12-of-12 slds-large-size_12-of-12">
+                                            <div class="sales-team-text">                                                
+                                                <c-hccc-text size="hccc-text_caption1">{label.Help_Subtitle_1}</c-hccc-text>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="slds-grid slds-wrap">
+                                        <div class="slds-col slds-size_1-of-1 slds-medium-size_12-of-12 slds-large-size_12-of-12">
+                                            <div class="sales-team-box">
+                                                <div class="slds-grid slds-wrap">
+                                                    <div class="slds-col slds-size_1-of-1 slds-medium-size_3-of-12 slds-large-size_2-of-12">
+                                                        <span class="slds-avatar slds-avatar_circle slds-avatar_large">                                                           
+                                                            <template if:true={accountManagerImageURL}>
+                                                                <img alt="Person name" src={accountManagerImageURL} title={accountManagerName} />
+                                                            </template>                                                           
+                                                        </span>
+                                                    </div>
+                                                    <div class="slds-col slds-size_1-of-1 slds-medium-size_9-of-12 slds-large-size_10-of-12">
+                                                        <div class="team-name">
+                                                           <c-hccc-text size="hccc-text_h5">
+                                                            {accountManagerName},&nbsp;{label.Help_Account_Manager}
+                                                        </c-hccc-text>
+                                                        </div>
+                                                        <div class="team-email">
+                                                            <img src={mailIcon} alt="Mail" />
+                                                            <a href={accountManagerEmailMailto} onclick={handleEmailClick} style="text-decoration: none; color:#E60000;">
+                                                                <span class="slds-p-left_small">
+                                                                    <c-hccc-text size="hccc-text_body1">
+                                                                        {accountManagerEmail}
+                                                                    </c-hccc-text>
+                                                                </span>
+                                                            </a>
+                                                        </div>
+                                                        <div class="team-phone">
+                                                            <img src={phoneIcon} alt="Phone" />
+                                                            <span class="slds-p-left_small">
+                                                                <c-hccc-text size="hccc-text_body1">
+                                                                    {accountManagerPhone}
+                                                                </c-hccc-text>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="slds-grid slds-wrap">
+                                        <div class="slds-col slds-size_1-of-1 slds-medium-size_12-of-12 slds-large-size_12-of-12">
+                                            <div class="sales-team-box">
+                                                <div class="slds-grid slds-wrap">
+                                                    <div class="slds-col slds-size_1-of-1 slds-medium-size_3-of-12 slds-large-size_2-of-12">
+                                                        <span class="slds-avatar slds-avatar_circle slds-avatar_large">                                                           
+                                                            <template if:true={assistantManagerImageURL}>
+                                                                <img alt="Person name" src={assistantManagerImageURL} title={assistantManagerName} />
+                                                            </template>                                                           
+                                                        </span>
+                                                    </div>
+                                                    <div class="slds-col slds-size_1-of-1 slds-medium-size_9-of-12 slds-large-size_10-of-12">
+                                                        <div class="team-name">
+                                                            <c-hccc-text size="hccc-text_h5">
+                                                                {assistantManagerName},&nbsp;{label.Help_Associate_Director}
+                                                            </c-hccc-text>
+                                                        </div>
+                                                        <div class="team-email">
+                                                            <img src={mailIcon} alt="Mail" />
+                                                            <a href={assistantManagerEmailMailto} onclick={handleEmailClick} style="text-decoration: none;color:#E60000;">
+                                                                <span class="slds-p-left_small">
+                                                                    <c-hccc-text size="hccc-text_body1">
+                                                                        {assistantManagerEmail}
+                                                                    </c-hccc-text>
+                                                                </span>
+                                                            </a>
+                                                        </div>
+                                                        <div class="team-phone">
+                                                            <img src={phoneIcon} alt="Phone" />
+                                                            <span class="slds-p-left_small">
+                                                                <c-hccc-text size="hccc-text_body1">
+                                                                    {assistantManagerPhone}
+                                                                </c-hccc-text>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="slds-grid slds-wrap">
+                            <div class="slds-col slds-size_1-of-1 slds-medium-size_12-of-12 slds-large-size_12-of-12">
+                                <div class="sales-team-container">
+                                    <div class="slds-grid slds-wrap">
+                                        <div class="slds-col slds-size_1-of-1 slds-medium-size_12-of-12 slds-large-size_12-of-12">
+                                            <div class="sales-team-text slds-p-top_x-large">                                               
+                                               <c-hccc-text size="hccc-text_caption1">{label.Help_Subtitle_2}</c-hccc-text>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="customer-service-container">
+                                        <div class="slds-grid slds-wrap slds-gutters">                                        
+                                            <div class="slds-col slds-size_1-of-1 slds-medium-size_6-of-12 slds-large-size_6-of-12">
+                                                <div class="customer-service-box">
+                                                    <div class="team-name">
+                                                        <c-hccc-text size="hccc-text_h5">
+                                                            {label.Help_Office_1_Title}  
+                                                        </c-hccc-text>                                                            
+                                                    </div>
+                                                    <div class="customer-service-address">
+                                                        <c-hccc-text size="hccc-text_body1">
+                                                            <lightning-formatted-text value={label.Help_Office_1_Address}></lightning-formatted-text>
+                                                        </c-hccc-text>                                                                                           
+                                                    </div>                                                            
+                                                    <div class="customer-service-phone">
+                                                        <c-hccc-text size="hccc-text_h5">
+                                                            {label.Help_Office_1_Phone} 
+                                                        </c-hccc-text>                                                            
+                                                    </div>                                                         
+                                                </div>                                                       
+                                            </div>
+                                            <div class="slds-col slds-size_1-of-1 slds-medium-size_6-of-12 slds-large-size_6-of-12">
+                                                <div class="customer-service-box">
+                                                    <div class="team-name">
+                                                        <c-hccc-text size="hccc-text_h5">
+                                                            {label.Help_Office_2_Title}  
+                                                        </c-hccc-text>                                                               
+                                                    </div>
+                                                    <div class="customer-service-address">
+                                                        <c-hccc-text size="hccc-text_body1">
+                                                            <lightning-formatted-text value={label.Help_Office_3_Address}></lightning-formatted-text>
+                                                        </c-hccc-text>                                                                                                                                                                                           
+                                                    </div>                                                                                                                        
+                                                    <div class="customer-service-phone">
+                                                        <c-hccc-text size="hccc-text_h5">
+                                                            {label.Help_Office_4_Phone} 
+                                                        </c-hccc-text>                                                               
+                                                    </div>
+                                                </div>                                                       
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="slds-grid slds-wrap">
+                            <div class="slds-col slds-size_1-of-1 slds-medium-size_12-of-12 slds-large-size_12-of-12">
+                                <div class="support-form-container">
+                                    <div class="slds-grid slds-wrap">
+                                        <div class="slds-col slds-size_1-of-1 slds-medium-size_12-of-12 slds-large-size_12-of-12">
+                                            <div class="support-form-title">                                                
+                                                <c-hccc-text color="hccc-text_white" size="hccc-text_caption1">{label.Help_CTA_title}</c-hccc-text>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="slds-grid slds-wrap">
+                                        <div class="slds-col slds-size_1-of-1 slds-medium-size_12-of-12 slds-large-size_12-of-12">
+                                            <div class="support-form-large-text">                                                
+                                                <c-hccc-text color="hccc-text_white" size="hccc-text_h3">{label.Help_CTA_text}</c-hccc-text>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="slds-grid slds-wrap">
+                                        <div class="slds-col slds-size_1-of-1 slds-medium-size_12-of-12 slds-large-size_12-of-12">
+                                            <div class="back-button">
+                                                <a style="color: white;text-decoration: none;" href={supportURL}>
+                                                    <svg class="hccc-arrow-icon" width="16px" height="16px" focusable="false" viewBox="0 0 24 24" aria-hidden="true">                                                    
+                                                         <path style="fill: white;" d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"></path>                                                    
+                                                    </svg>
+                                                </a>
+                                               
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                   
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</template>

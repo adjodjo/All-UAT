@@ -1,0 +1,189 @@
+.container{
+    width: 100%;
+    background: white;
+    margin: auto;
+    font-family: barlow-regular, Arial, Helvetica, sans-serif;
+}
+.main-container{
+    padding: 81px 90px;
+    padding-top:0px;
+}
+.backgroundImg{
+    background-image: linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.75)), url('/vendorportal/resource/Portal_homebanner');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0px -350px;
+    background-size: 100% 650px;
+}
+.main-title-container{
+    padding-bottom: 63px;padding-top: 81px;
+}
+
+.mail-icon{
+    box-sizing: border-box;
+    height: 10.33px;
+    width: 13px;
+    border: 1px solid #000000;
+    border-radius: 1.33px; 
+}
+.email{
+    height: 20px; 
+}
+
+.phone-icon {
+    height: 16px;
+    width: 16px;
+}
+.phone-text{
+    height: 20px;
+}
+
+.quote-stats-container{
+    background: #000000;
+    border-radius: 10px;
+    color: #ffffff;
+    padding: 30px 30px;
+    margin: 0.5rem;
+    min-height: 9.5rem;
+}
+
+.back-button{
+    background: #E60000;
+    color: white;
+    float: right;
+    padding: 0rem 0.6rem 0.3rem 0.6rem;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    line-height: 48px;
+    height: 48px;
+    width: 50px;
+    text-align: center;
+}
+
+.back-button:hover{
+    background: #A50000;
+}
+
+.account-manager-section{
+    border-top: 1px solid #979797;
+    border-bottom: 1px solid #979797;
+    margin-top: 3rem;
+}
+.account-manager-main-container{
+    display: flex; 
+    justify-content: 
+    center; align-items: center;
+    height: 400px;
+    padding:1rem;
+    text-align: center;
+}
+.right-account-main-container{
+    border-left: 1px solid #979797;
+}
+
+.flex-container {
+    display: flex;
+    margin: 50px 0px 50px 70px;
+}
+
+.flex-child {
+    flex: 1;
+}  
+
+.flex-child:first-child {
+    margin-right: 30px;
+} 
+
+.imageCSS {
+    height: 300px;
+    width: auto;
+    border-radius: 10px;
+    float: right;
+}
+
+.slds-avatar_circle{
+    margin-top: 0.6rem;
+    width: 140px;
+    height: 140px;
+}
+.slds-avatar_circle img{
+    width: 140px;
+    height: 140px;
+}
+
+.team-name{
+    padding-top: 1.3rem;
+    padding-bottom: 1rem;
+}
+
+.feature-button{
+    background: #E60000;
+    color: white;
+    padding: 0rem 0.6rem 0.3rem 0.6rem;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    line-height: 42px;
+    height: 48px;
+    width: 50px;
+    text-align: center;
+}
+
+.feature-button:hover{
+    background: #A50000;
+}
+
+.featureFlex{
+    display: block;
+}
+.featureStack{
+    display: none;
+}
+
+@media only screen and (max-width: 1023px) {
+    .account-manager-section{
+        border-top: none;
+        border-bottom: none;
+    }
+    .account-manager-main-container{
+        height: auto;
+        border-right:none;
+        padding-bottom: 2rem;
+    }
+    .right-account-main-container{
+        border-left: none;
+        border-top: 1px solid #979797;
+    }
+    .flex-container {
+        margin: 50px 0px 50px 0px;
+    }
+    .flex-child:first-child {
+        margin-right: 30px;
+    }
+}
+
+@media only screen and (max-width: 768px) { 
+    .main-container{
+        padding: 5px 24px;
+        padding-top:0px;
+    }
+    .main-title-container{
+        padding-bottom: 40px;padding-top: 40px;
+    }
+    .hello-title{
+        height: 40px;
+        margin-left: 5px;
+    }
+}
+
+@media only screen and (max-width: 580px) { 
+    .imageCSS {
+        height: 300px;
+        width: auto;
+    } 
+    .featureFlex{
+        display: none;
+    }
+    .featureStack{
+        display: block;
+    }
+}

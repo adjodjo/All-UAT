@@ -1,0 +1,82 @@
+.container{
+    width: 100%;
+    background: white;
+    margin: 0;
+    font-family: barlow-regular, Arial, Helvetica, sans-serif;
+}
+.main-container{
+    padding: 0px 90px 20px 90px;
+}
+
+
+.custom-top-bottom-padding{
+    padding-top: 37px;
+    padding-bottom: 37px;
+}
+
+.custom-bottom-padding{
+    padding-bottom: 37px;
+}
+
+.see-all-topics{
+    border-radius: 500px;
+    background: transparent;
+    border: 1px solid #717176;
+    width: 150px;
+    height: 35px;
+    font-size: 12px;
+    color: #717176;
+}
+.view-all-topics-container{
+    padding-top: 12px;
+    text-align: right;
+}
+
+.view-all-button{
+    border-radius: 500px;
+    background: transparent;
+    height: 33px;
+    padding: 0 18px;
+    border: 1px solid #D4D4D6;
+    border-radius: 16px;
+    color: rgba(0,0,0,0.87);
+    font-size: 14px;
+    letter-spacing: 0.1px;
+    line-height: 18px;
+}
+
+.view-all {
+    padding: 8px 0 8px 8px;
+}
+
+.view-all-button:hover{
+    border-color: #000000;
+    background-color: #000000;
+    color: #FFFFFF;
+}
+
+@media screen and (max-width:768px) {
+    .main-container{
+        padding: 0 24px 20px 24px;
+    }
+    .hccc-button{
+        width: 42px;
+    }
+
+    .icon-container{
+        padding: 0px;
+    }
+
+    .custom-top-bottom-padding{
+        padding-top: 24px;
+        padding-bottom: 24px;
+    }
+    
+    .custom-bottom-padding{
+        padding-bottom: 24px;
+    }
+
+    .view-all-topics-container{
+        padding-top: 0;
+    }
+}

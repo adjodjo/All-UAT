@@ -1,0 +1,237 @@
+<template>
+    <div class="container">
+        <div class="slds-grid slds-wrap">
+            <div class="slds-col slds-size_1-of-1 slds-medium-size_12-of-12 slds-large-size_12-of-12">
+                <div class="slds-m-bottom_medium">
+                    <c-hccc-text size="hccc-text_h1">{productsTitle}</c-hccc-text>
+                </div>
+            </div>
+        </div>
+        
+        <div class="slds-grid slds-wrap">
+            <div class="slds-col slds-size_1-of-1 slds-medium-size_12-of-12 slds-large-size_12-of-12">
+                <div class="slds-m-vertical_x-large">
+                    <c-hccc-text size="hccc-text_h2">{productsSpecialOffers}</c-hccc-text>
+                </div>
+            </div>
+        </div>
+    
+        <div class="slds-grid slds-wrap">
+            <div class="slds-col slds-size_1-of-1 slds-medium-size_12-of-12 slds-large-size_12-of-12">
+                <div class="slds-grid slds-wrap" style="max-width: 1046px;">
+                    <div class="slds-col slds-size_1-of-1 slds-medium-size_12-of-12 slds-large-size_6-of-12">
+                        <div class="textDiv">
+                            <span style="position: relative;display:inline-block;">
+                                <img class="imageCSS" src={specialOffersImg}> 
+                                <!-- <c-hccc-button-icon icon-name="zoom"></c-hccc-button-icon> -->
+                                <a href={specialOffersImg} target="_blank" style="bottom: 20px;position: absolute;right: 20px;">
+                                    <svg class="products-and-services-search" xmlns="http://www.w3.org/2000/svg"  width="48px" height="48px" viewBox="0 0 48 48" version="1.1">
+                                        <title>Full Image</title>
+                                        <g id="Products-and-services" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                            <g id="products-and-services" transform="translate(-742.000000, -921.000000)">
+                                                <g id="Group-2" transform="translate(742.000000, 921.000000)">
+                                                    <circle class="oval-main-ontainer" id="Oval" fill="#FFFFFF" cx="24" cy="24" r="24"/>
+                                                    <g id="Group" transform="translate(10.000000, 10.000000)">
+                                                        <polygon id="Path" points="0 0 28 0 28 28 0 28"></polygon>
+                                                        <circle class="oval-serach-icon" id="Oval1" stroke="#2C3E50" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" cx="11.6666667" cy="11.6666667" r="8.16666667"/>
+                                                        <line  x1="8.16666667" y1="11.6666667" x2="15.1666667" y2="11.6666667" id="Path1" stroke="#2C3E50" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        <line  x1="11.6666667" y1="8.16666667" x2="11.6666667" y2="15.1666667" id="Path2" stroke="#2C3E50" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        <line class="oval-serach-icon-line" x1="24.5" y1="24.5" x2="17.5" y2="17.5" id="Path3" stroke="#2C3E50" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    </g>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </svg>
+                                </a>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="slds-col slds-size_1-of-1 slds-medium-size_12-of-12 slds-large-size_6-of-12">
+                        <div class="textDiv1">
+                            <c-hccc-text size="hccc-text_h5">{specialOffersTitle}</c-hccc-text></br></br>
+                            <c-hccc-text size="hccc-text_body1">{specialOffersContent}</c-hccc-text>
+                        </div>
+                    </div>
+                    <!-- <div class="slds-col slds-size_1-of-1 slds-medium-size_12-of-12 slds-large-size_3-of-12"></div> -->
+                </div>
+            </div>
+        </div>
+        <br/>
+        <br/>
+        
+        <div class="slds-m-vertical_x-large">
+            <c-hccc-text size="hccc-text_h2">{EquipmentFinancingPrograms}</c-hccc-text>
+        </div>
+        <template if:true={renderTable}>
+            <div class="slds-grid slds-wrap" style="max-width: 1046px;">
+                <div class="slds-col slds-size_1-of-1 slds-medium-size_12-of-12 slds-large-size_12-of-12">
+                    <template for:each={salesPrograms} for:item="item" for:index="indexVar">
+                        
+                        <div class="slds-grid slds-wrap slds-p-vertical_medium" key={item.Id}>
+                            <div class="slds-col slds-size_1-of-1 slds-medium-size_6-of-12 slds-large-size_6-of-12 slds-p-vertical_small">
+                                <div style="white-space: pre-wrap;font-size:initial;">                                        
+                                    <div style="padding-bottom: 10px;">
+                                        <c-hccc-text size="hccc-text_h5">
+                                            <template if:false={isFr}>{item.Sales_Program__r.EnglishPortal__c}</template>
+                                            <template if:true={isFr}>{item.Sales_Program__r.FrancaisPortail__c}</template>
+                                        </c-hccc-text>
+                                    </div>
+                                    <div>
+                                        <c-hccc-text size="hccc-text_body2">
+                                            <template if:false={isFr}>{item.Sales_Program__r.Program_Description__c}</template>
+                                            <template if:true={isFr}>{item.Sales_Program__r.Program_Description_FR__c}</template>
+                                        </c-hccc-text>
+                                    </div>   
+                                    <div if:true={item.Sales_Program__r.KB_Article_Link__c} class="desktop slds-m-top_x-large" style="max-width: 200px">
+                                        <button title={item.Sales_Program__r.KB_Article_Link__c} onclick={handleProgramButton} 
+                                        class="hccc-button hccc-button_black hccc-button_stretch">
+                                            <c-hccc-text size="hccc-text_caption1">{Programs_Learn_More}</c-hccc-text>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slds-col slds-size_1-of-1 slds-medium-size_6-of-12 slds-large-size_6-of-12 slds-p-vertical_small">
+                                <div class="progress-summary-container" > 
+                                    <hr style="margin-top: 9px;margin-bottom: 15px;" />                               
+                                    <div style="margin-bottom:5px;">
+                                        <c-hccc-text size="hccc-text_body5">{programSummary}</c-hccc-text> 
+                                    </div>
+                                    <div if:false={isFr}>
+                                        <lightning-formatted-rich-text
+                                            value={item.Sales_Program__r.Program_Summary__c}
+                                        ></lightning-formatted-rich-text>
+                                    </div>
+                                    <div if:true={isFr}>
+                                        <lightning-formatted-rich-text
+                                            value={item.Sales_Program__r.Program_Summary_FR__c}
+                                        ></lightning-formatted-rich-text>
+                                    </div>
+                                </div>
+                                <div if:true={item.Sales_Program__r.KB_Article_Link__c} class="mobile slds-m-top_x-large" style="max-width: 200px">
+                                    <button title={item.Sales_Program__r.KB_Article_Link__c} onclick={handleProgramButton} 
+                                    class="hccc-button hccc-button_black hccc-button_stretch">
+                                        <c-hccc-text size="hccc-text_caption1">{Programs_Learn_More}</c-hccc-text>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </template>
+
+                </div>
+            </div>
+        </template>
+        <div style="margin-top:50px;" class="slds-p-bottom_medium slds-m-vertical_x-large">
+            <c-hccc-text size="hccc-text_h2">{productsOptionTitle}</c-hccc-text>
+        </div> 
+        <div class="slds-grid slds-wrap">
+            <div style="border-top: 1px solid #ddd; max-width: 1046px;" class="slds-col slds-size_1-of-1">
+                <template for:each={productOptions} for:item="pO" for:index="indexVar">
+                    <div class="slds-grid slds-wrap" key={pO.option}>
+                        <div class="slds-col slds-size_1-of-1 slds-medium-size_12-of-12 slds-large-size_12-of-12 accoordian-block">
+                            <details class="detailsWidth" style="white-space: break-spaces;">
+                                <summary>
+                                    <div class="optionsClass">
+                                        <c-hccc-text size="hccc-text_caption1">{pO.option}</c-hccc-text>
+                                        <svg width="16px" height="16px" focusable="false" viewBox="0 0 24 24" aria-hidden="true" class="slds-float_right hccc-arrow-icon arrowOpen">
+                                            <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z" rot></path>
+                                        </svg>
+                                    </div>
+                                </summary>
+                                <p style="font-size: initial; margin-top: 28px;margin-right: 38px;"><c-hccc-text size="hccc-text_body1">{pO.content}</c-hccc-text></p>
+                                <template if:true={pO.url}>
+                                    <br/>
+                                    <a class="learn-more" href={pO.url} target="_blank">
+                                        <c-hccc-text size="hccc-text_body2">{learnMore} </c-hccc-text>
+                                        <span><svg width="16px" height="16px" focusable="false" viewBox="0 0 24 24" aria-hidden="true" class="learn-more-arrow">
+                                            <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z" rot></path>
+                                        </svg></span>
+                                    </a>
+                                </template>
+                                <button type=button onclick={handleClick}  class="slds-p-around_medium slds-m-bottom_large hccc-button hccc-button_stretch hccc-button_red hccbuttonMobile" style="color:#FFFFFF;width: 160px;float:right;margin-right: 38px;">
+                                    <c-hccc-text size="hccc-text_caption1">{productsContactUs}</c-hccc-text>
+                                </button>
+                            </details>
+                        </div>
+                    </div>    
+                </template>
+            </div>
+        </div>
+        <div class="slds-p-bottom_medium slds-m-vertical_x-large" style="margin-top:78px;">
+            <c-hccc-text size="hccc-text_h2">{productsBOptionsTitle}</c-hccc-text>
+        </div>
+
+
+        <div class="slds-grid slds-wrap">
+            <div style="border-top: 1px solid #ddd; max-width: 1046px;" class="slds-col slds-size_1-of-1">
+                <template for:each={productOptionsPB} for:item="pO" for:index="indexVar">
+                    <div class="slds-grid slds-wrap" key={pO.option}>
+                        <div class="slds-col slds-size_1-of-1 slds-medium-size_12-of-12 slds-large-size_12-of-12 accoordian-block">
+                            <details class="detailsWidth" style="white-space: break-spaces;">
+                                <summary>
+                                    <div class="optionsClass">
+                                        <c-hccc-text size="hccc-text_caption1">{pO.option}</c-hccc-text>
+                                        <svg width="16px" height="16px" focusable="false" viewBox="0 0 24 24" aria-hidden="true" class="slds-float_right hccc-arrow-icon arrowOpen">
+                                            <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z" rot></path>
+                                        </svg>
+                                    </div>
+                                </summary>
+                                <p style="font-size: initial; margin-top: 28px;margin-right: 38px;"><c-hccc-text size="hccc-text_body1">{pO.content}</c-hccc-text></p>
+                                <template if:true={pO.url}>
+                                    <br/>
+                                    <a class="learn-more" href={pO.url} target="_blank">
+                                        <c-hccc-text size="hccc-text_body2">{learnMore} </c-hccc-text>
+                                        <span><svg width="16px" height="16px" focusable="false" viewBox="0 0 24 24" aria-hidden="true" class="learn-more-arrow">
+                                            <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z" rot></path>
+                                        </svg></span>
+                                    </a>
+                                </template>
+                                <button type=button onclick={handleClick}  class="slds-p-around_medium slds-m-bottom_large hccc-button hccc-button_stretch hccc-button_red hccbuttonMobile" style="color:#FFFFFF;width: 160px;float:right; margin-right: 38px;">
+                                    <c-hccc-text size="hccc-text_caption1">{productsContactUs}</c-hccc-text>
+                                </button>
+                            </details>
+                        </div>
+                    </div>    
+                </template>
+            </div>
+        </div>
+
+        <div class="slds-grid slds-wrap">
+            <div class="slds-col slds-size_1-of-1 slds-medium-size_12-of-12 slds-large-size_12-of-12">
+                <div class="contact-form-container">
+                    <div class="slds-grid slds-wrap">
+                        <div class="slds-col slds-size_1-of-1 slds-medium-size_12-of-12 slds-large-size_12-of-12">
+                            <div style="padding-bottom: 1rem;">                                                
+                                <c-hccc-text color="hccc-text_white" size="hccc-text_caption1">{contactSalesTitle}</c-hccc-text>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slds-grid slds-wrap">
+                        <div class="slds-col slds-size_1-of-1 slds-medium-size_12-of-12 slds-large-size_12-of-12">
+                            <div style="padding-bottom: 2rem;">                                                
+                                <c-hccc-text color="hccc-text_white" size="hccc-text_h3">{contactSalesPara}</c-hccc-text>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="slds-grid slds-wrap">
+                        <div class="slds-col slds-size_1-of-1 slds-medium-size_12-of-12 slds-large-size_12-of-12">
+                            <div class="back-button">
+                                <a style="color: white;text-decoration: none;"  onclick={handleClick}>
+                                    <svg  width="16px" height="16px" focusable="false" viewBox="0 0 24 24" aria-hidden="true">                                                    
+                                            <path style="fill: white;" d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"></path>                                                    
+                                    </svg>
+                                </a>
+                                
+                            </div>
+
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+
+    </div>
+</template>
